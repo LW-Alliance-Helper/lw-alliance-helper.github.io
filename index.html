@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LW Alliance Helper</title><link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="Alliance Helper bot logo"><span>LW Alliance Helper</span></a><div class="nav-links"><a class="active" href="index.html">Home</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><section class="hero"><div class="hero-card"><div class="eyebrow">Discord bot for alliance leadership</div><h1>LW Alliance Helper</h1><p>A friendly command center for Last War alliance leadership teams. Built to make announcements, event prep, manage train schedules and birthdays, create squad power surveys, and make growth tracking easier.</p><div class="cta-row"><a href="https://discord.com/oauth2/authorize?client_id=1488378654709780510&permissions=395405519952&integration_type=0&scope=applications.commands+bot" class="button invite">Invite to Server</a></div></div><div class="hero-art"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper friendly robot mascot logo"></div></section><main class="container"><article class="content-card">
+<h2 id="what-it-does" style="margin-top:0;">What It Does</h2>
+<p><strong>📣 Event Announcements</strong> — Schedule Plague Marauder, Zombie Siege, and any other recurring events. The bot posts a draft to leadership for review at your chosen time each event day, then sends the final announcement to your public channel once approved. A 5-minute warning fires automatically before the event starts.</p>
+<p><strong>🚂 Train Schedule</strong> — Track who gets the alliance train each day and generate a personalised ChatGPT prompt to help write a blurb for that member. Birthdays can be automatically added to the schedule in advance.</p>
+<p><strong>🎂 Birthdays</strong> — Read birthday data from your Google Sheet and optionally add members to the train schedule on their birthday, post birthday announcements in Discord, or both.</p>
+<p><strong>⚔️ Desert Storm</strong> — Generate ready-to-copy team mail drafts for Team A and Team B each week. Log sit-outs and participation data after each event.</p>
+<p><strong>🏜️ Canyon Storm</strong> — Same as Desert Storm — mail generation, team tracking, and participation logging.</p>
+<p><strong>📋 Survey</strong> — Let members submit their stats through a private Discord thread. Responses are saved directly to your Google Sheet and leadership gets a notification for each submission.</p>
+<p><strong>📈 Growth Tracking</strong> — Take monthly snapshots of squad powers across your alliance and track growth over time in your Google Sheet.</p>
+<div class="cta-row"><a class="button primary" href="#core-setup">Begin setup</a><a class="button secondary" href="#day-to-day-quick-reference">Command quick reference</a></div>
+<hr>
+<h2 id="before-you-start">Before You Start</h2>
+<p>You&#x27;ll need:</p>
+<ul><li><strong>A Discord server</strong> where you have Administrator permissions</li><li><strong>A Google Sheet</strong> — this is where all your data lives. One sheet per alliance, shared with the bot&#x27;s service account (details below)</li></ul>
+<p>That&#x27;s it. No coding, no Google Cloud setup — just a sheet and a Discord server.</p>
+<hr>
+<h2 id="inviting-the-bot">Inviting the Bot</h2>
+<p>Use the provided button to invite the bot to your server. When prompted, select your server from the dropdown and click <strong>Authorise</strong>.</p>
+<p>Once the bot has joined, you&#x27;ll see it appear in your member list. It won&#x27;t do anything until you run <code>/setup</code>.</p>
+<p><a href="https://discord.com/oauth2/authorize?client_id=1488378654709780510&permissions=395405519952&integration_type=0&scope=applications.commands+bot" class="button invite">Invite to Server</a></p>
+<hr>
+<h2 id="setting-up-your-google-sheet">Setting Up Your Google Sheet</h2>
+<p>Before running <code>/setup</code>, create a new Google Sheet. You don&#x27;t need to add any tabs or columns yet — the bot will tell you what to create as you go through each feature&#x27;s setup.</p>
+<p>The one thing you need to do upfront is <strong>share your sheet</strong> with the bot&#x27;s service account so it can read and write data. You&#x27;ll be prompted to do this during <code>/setup</code> with a direct link to your sheet&#x27;s sharing settings and the exact email address to use.</p>
+<p>Set the permission to <strong>Editor</strong> when sharing.</p>
+<blockquote><p><strong>Keep your Sheet ID handy.</strong> You can find it in your sheet&#x27;s URL: <code>https://docs.google.com/spreadsheets/d/</code><strong><code>YOUR_SHEET_ID_HERE</code></strong><code>/edit</code></p></blockquote>
+<hr>
+<h2 id="core-setup">Core Setup</h2>
+<p>Run <code>/setup</code> in your leadership channel to get started. This covers the essentials that every feature depends on.</p>
+<p><strong>What it asks for:</strong></p>
+<ol><li><strong>Member role</strong> — the role all alliance members have. Used to gate the survey.</li><li><strong>Leadership role</strong> — the elevated role for alliance leadership. Required to use most commands.</li><li><strong>Leadership channel</strong> — the private channel where commands are used and drafts appear.</li><li><strong>Timezone</strong> — your alliance&#x27;s local timezone. Used for all event times, reminders, and Desert Storm/Canyon Storm time displays throughout the bot.</li><li><strong>Google Sheet ID</strong> — paste the ID from your sheet&#x27;s URL.</li><li><strong>Sheet sharing</strong> — a guided step to share your sheet with the bot&#x27;s service account.</li></ol>
+<p>Once complete, the bot will list all the available feature setup commands so you know what to configure next.</p>
+<blockquote><p><strong>Tip:</strong> You can run <code>/setup</code> again at any time to update any of these settings.</p></blockquote>
+<hr>
+<h2 id="feature-setup">Feature Setup</h2>
+<p>Each feature is configured independently. Set up only what you need — features you don&#x27;t configure simply won&#x27;t be active.</p>
+<hr>
+<h3 id="event-announcements-setup-events">📣 Event Announcements — <code>/setup_events</code></h3>
+<p><strong>What to create in your sheet:</strong> Nothing required for this feature.</p>
+<p>Run <code>/setup_events</code> to configure your events. The wizard first asks for settings that apply to all events:</p>
+<ul><li><strong>Draft channel</strong> — where leadership sees the draft before it goes public</li><li><strong>Announcement channel</strong> — where the final approved announcement posts</li><li><strong>Draft posting time</strong> — when the draft is posted each event day</li><li><strong>5-minute warning</strong> — whether the bot auto-posts a warning before events start</li></ul>
+<p>You&#x27;ll then see your event list with options to add, edit, or remove events. For each event you add:</p>
+<ul><li><strong>Event name</strong> (e.g. <code>Plague Marauder (AE)</code>, <code>Zombie Siege</code>)</li><li><strong>Default time</strong> — when this event usually starts, in your timezone</li><li><strong>Schedule</strong> — repeating cycle (with anchor date and interval) or manual</li><li><strong>Announcement blurb</strong> — the message posted when this event fires, using <code>{time}</code> and <code>{server_time}</code> as placeholders</li></ul>
+<blockquote><p><strong>Example blurb:</strong> <code>Plague Marauder (AE) at {time} ({server_time} Server Time). Make sure to have offline participation checked!</code></p></blockquote>
+<hr>
+<h3 id="train-schedule-setup-train">🚂 Train Schedule — <code>/setup_train</code></h3>
+<p><strong>What to create in your sheet:</strong> A tab for your train schedule (e.g. <code>Train Schedule</code>).</p>
+<p>Run <code>/setup_train</code> to configure the train schedule:</p>
+<ol><li><strong>Schedule tab</strong> — which tab in your sheet stores the train schedule</li><li><strong>Blurb generation</strong> — whether you want the bot to generate a ChatGPT prompt each day. If yes:</li></ol>
+<ul><li><strong>Themes</strong> — a list of themes leadership can choose from (e.g. <code>Birthday, Milestone, Welcome</code>)</li><li><strong>Tones</strong> — a list of tone options (e.g. <code>Default, More casual, More intense</code>)</li><li><strong>Default tone</strong> — which tone is pre-selected</li><li><strong>Prompt template</strong> — the full prompt you&#x27;d give ChatGPT, using <code>{name}</code>, <code>{theme}</code>, <code>{tone}</code>, and <code>{notes}</code> as placeholders</li></ul>
+<ol><li><strong>Reminders</strong> — whether the bot should post a reminder when someone is assigned the train, and if so, which channel and what time</li></ol>
+<p><strong>Day-to-day use:</strong></p>
+<ul><li>Use <code>/schedule_set</code> to add upcoming train entries</li><li>Use <code>/schedule</code> to view the current schedule</li><li>At your configured reminder time, the bot posts a reminder in your chosen channel. If blurb generation is enabled, a button lets you pull up the ChatGPT prompt instantly</li><li>Use <code>/trainprompt [date]</code> as a manual fallback at any time</li></ul>
+<hr>
+<h3 id="birthdays-setup-birthdays">🎂 Birthdays — <code>/setup_birthdays</code></h3>
+<p><strong>What to create in your sheet:</strong> A tab containing your member roster with name and birthday columns (e.g. <code>Birthdays</code>, or your existing member tab).</p>
+<p>Run <code>/setup_birthdays</code> to configure birthday tracking:</p>
+<ol><li><strong>Sheet tab</strong> — which tab contains birthday data</li><li><strong>Name column</strong> — the column letter containing member names (e.g. <code>A</code>)</li><li><strong>Birthday column</strong> — the column letter containing birthdays (e.g. <code>B</code>)</li><li><strong>Discord ID column</strong> <em>(optional)</em> — if you store Discord IDs, the bot can @mention members in birthday announcements</li><li><strong>Train integration</strong> — whether birthdays are automatically added to the train schedule</li></ol>
+<ul><li>If yes: choose whether to place on the exact birthday only, or allow 1 day before/after if the birthday is taken</li><li>If yes: how many days in advance to look ahead (we recommend 14)</li></ul>
+<ol><li><strong>Birthday reminders</strong> — whether the bot posts a birthday message in Discord</li></ol>
+<ul><li>If yes: which channel and what time</li></ul>
+<p>Birthday messages say: <em>🎂 Today is <strong>[name]</strong>&#x27;s birthday!</em></p>
+<hr>
+<h3 id="desert-storm-setup-desertstorm">⚔️ Desert Storm — <code>/setup_desertstorm</code></h3>
+<p><strong>What to create in your sheet:</strong> A tab for Desert Storm assignments (e.g. <code>DS Assignments</code>).</p>
+<p>Run <code>/setup_desertstorm</code> to configure Desert Storm:</p>
+<ol><li><strong>Sheet tab</strong> — the bot manages the data structure here automatically, no formatting needed</li><li><strong>Teams</strong> — whether you run Team A &amp; B, Team A only, or Team B only</li><li><strong>Log channel</strong> — where participation logs are posted after each event</li><li><strong>Mail template</strong> — if you run both teams, choose one template for both or separate templates per team. A default template is provided — use it as-is or paste your own</li></ol>
+<p><strong>Available placeholders in your template:</strong></p>
+<ul><li><code>{alliance_name}</code> — your alliance name</li><li><code>{zones}</code> — zone assignments block</li><li><code>{subs}</code> — substitute members</li><li><code>{time}</code> — event time (auto-filled when drafting)</li></ul>
+<p><strong>Day-to-day use:</strong></p>
+<ul><li>Use <code>/draftds</code> to generate a mail draft. You&#x27;ll select the team and time slot (Desert Storm runs at 18:00 and 23:00 Server Time, displayed in your timezone)</li><li>Review the pre-filled draft, edit as needed, then approve to save and get a copyable mail block</li><li>After the event, use <code>/logds</code> to record participation data</li><li>Use <code>/viewlog DS [date]</code> to look up past log entries</li></ul>
+<hr>
+<h3 id="canyon-storm-setup-canyonstorm">🏜️ Canyon Storm — <code>/setup_canyonstorm</code></h3>
+<p><strong>What to create in your sheet:</strong> A tab for Canyon Storm assignments (e.g. <code>CS Assignments</code>).</p>
+<p>Run <code>/setup_canyonstorm</code> — the setup is identical to Desert Storm above.</p>
+<p>Canyon Storm runs at 12:00 and 23:00 Server Time (displayed in your timezone).</p>
+<p><strong>Day-to-day use:</strong></p>
+<ul><li><code>/draftcs</code> — generate a Canyon Storm mail draft</li><li><code>/logcs</code> — log participation after the event</li><li><code>/viewlog CS [date]</code> — look up past log entries</li></ul>
+<hr>
+<h3 id="survey-setup-survey">📋 Survey — <code>/setup_survey</code></h3>
+<p><strong>What to create in your sheet:</strong> Two tabs — one for current member stats (e.g. <code>Squad Powers</code>) and one for submission history (e.g. <code>Survey History</code>).</p>
+<p>Run <code>/setup_survey</code> to configure the survey:</p>
+<ol><li><strong>Survey channel</strong> — where the survey button is posted for members to access</li><li><strong>Notification channel</strong> — where leadership is notified when a member submits</li><li><strong>Stats tab</strong> — updated with each submission (one row per member)</li><li><strong>History tab</strong> — a timestamped record of every submission</li><li><strong>Intro message</strong> — the message members see before starting the survey</li><li><strong>Questions</strong> — choose from the default Last War question set, edit individual questions, or build your own from scratch</li></ol>
+<p>The question builder supports two question types:</p>
+<ul><li><strong>Text</strong> — the member types a value, with an optional help text hint</li><li><strong>Dropdown</strong> — the member picks from a list of options you define (up to 25)</li></ul>
+<p><strong>Day-to-day use:</strong></p>
+<ul><li>Run <code>/postsurvey</code> to post the survey button in your survey channel</li><li>Members click <strong>Answer</strong>, complete the survey in a private thread, and their data is saved automatically</li><li>Leadership sees a notification embed in the notification channel for each submission</li></ul>
+<hr>
+<h2 id="day-to-day-quick-reference">Day-to-Day Quick Reference</h2>
+<table><thead><tr><th>Situation</th><th>Command</th></tr></thead><tbody><tr><td>Post or repost the survey button</td><td><code>/postsurvey</code></td></tr><tr><td>View the train schedule</td><td><code>/schedule</code></td></tr><tr><td>Add entries to the train schedule</td><td><code>/schedule_set</code></td></tr><tr><td>Get a ChatGPT prompt for today&#x27;s train</td><td><code>/trainprompt</code></td></tr><tr><td>Update the active member tab for a new season</td><td><code>/setmembertab [tab name]</code></td></tr><tr><td>Manually run the birthday check</td><td><code>/checkbirthdays</code></td></tr><tr><td>Open the event editor</td><td><code>/events</code></td></tr><tr><td>Generate a Desert Storm mail draft</td><td><code>/draftds</code></td></tr><tr><td>Generate a Canyon Storm mail draft</td><td><code>/draftcs</code></td></tr><tr><td>Log Desert Storm participation</td><td><code>/logds</code></td></tr><tr><td>Log Canyon Storm participation</td><td><code>/logcs</code></td></tr><tr><td>Look up a past log entry</td><td><code>/viewlog [DS or CS] [date]</code></td></tr><tr><td>Run a growth snapshot manually</td><td><code>/rungrowth</code></td></tr><tr><td>See all commands</td><td><code>/help</code></td></tr></tbody></table>
+<hr>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>Commands aren&#x27;t showing up in Discord</strong> Slash commands can take up to an hour to appear after the bot first joins your server. If they still aren&#x27;t showing after that, try removing and re-inviting the bot.</p>
+<p><strong>&quot;You don&#x27;t have permission to use this command&quot;</strong> Make sure you&#x27;re using the command in the leadership channel and that you have the leadership role configured during <code>/setup</code>. Both are required.</p>
+<p><strong>&quot;This bot hasn&#x27;t been set up yet&quot;</strong> Run <code>/setup</code> first. The bot won&#x27;t respond to feature commands until core setup is complete.</p>
+<p><strong>&quot;Permission error&quot; when the bot tries to access your sheet</strong> The bot&#x27;s service account doesn&#x27;t have access to your sheet. Go to your sheet&#x27;s sharing settings and make sure the service account email has been added as an <strong>Editor</strong>. You can find the email address by running <code>/setup</code> and checking Step 6.</p>
+<p><strong>A button stopped working after a bot restart</strong> Discord buttons lose their connection to the bot when it restarts. Use the corresponding command to start a fresh flow:</p>
+<table><thead><tr><th>Button</th><th>Use instead</th></tr></thead><tbody><tr><td>Event editor or approval</td><td><code>/events</code></td></tr><tr><td>Train reminder prompt button</td><td><code>/trainprompt</code></td></tr><tr><td>Desert Storm approval</td><td><code>/draftds</code></td></tr><tr><td>Canyon Storm approval</td><td><code>/draftcs</code></td></tr><tr><td>DS/CS log steps</td><td><code>/logds</code> or <code>/logcs</code></td></tr><tr><td>Survey button</td><td><code>/postsurvey</code></td></tr></tbody></table>
+<p><strong>Something else isn&#x27;t working</strong> Use <code>/help</code> to see all available commands and make sure the relevant feature has been configured with its <code>/setup_*</code> command.</p>
+</article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div><div style="margin-top:2em;">LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer></body></html>
