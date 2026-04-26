@@ -1,0 +1,12 @@
+title: Alliance Helper
+description: A Discord bot for Last War alliance leadership
+theme: minima
+url: "https://lw-alliance-helper.github.io"
+
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
