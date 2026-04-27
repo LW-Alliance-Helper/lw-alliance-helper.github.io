@@ -1,0 +1,39 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Commands — LW Alliance Helper</title><link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><div class="nav-links"><a class="" href="index.html">Home</a><a class="active" href="commands.html">Commands</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="commands">Commands</h1>
+<p>Every slash command provided by LW Alliance Helper, grouped by feature. All commands require the configured leadership role and must be run in the leadership channel — start with <code>/setup</code> if the bot hasn&#x27;t been configured yet.</p>
+<hr>
+<h2 id="core-setup">⚙️ Core Setup</h2>
+<p>Configure the bot for your server. Run these first before using any other features.</p>
+<ul><li><code>/setup</code> — Configure roles, leadership channel, timezone, and Google Sheet.</li><li><code>/view_configuration</code> — Show every configured setting across all setup wizards in a single embed.</li><li><code>/setup_reset</code> — Clear server configuration and start over.</li></ul>
+<hr>
+<h2 id="event-announcements">📣 Event Announcements</h2>
+<p>Schedule recurring events (Plague Marauder, Zombie Siege, or anything else) and post drafts to leadership for approval before announcing.</p>
+<ul><li><code>/setup_events</code> — Configure events, announcement channels, draft posting time, and the 5-minute warning.</li><li><code>/events [date]</code> — Open the event editor for today or a specific date (e.g. <code>April 5</code> or <code>4/5</code>).</li><li><code>/events_log</code> — Show approved event posts from the past 7 days.</li></ul>
+<hr>
+<h2 id="train-schedule">🚂 Train Schedule</h2>
+<p>Track who is assigned the alliance train each day and optionally generate a personalised ChatGPT prompt for that member&#x27;s announcement blurb.</p>
+<ul><li><code>/setup_train</code> — Configure the train tab, blurb generation, and reminders.</li><li><code>/train</code> — View the schedule. Inline buttons let you <strong>Add</strong>, <strong>Update</strong>, <strong>Generate Prompt</strong>, or <strong>Clear</strong> entries. Add and Update will offer to run the blurb wizard if blurb generation is enabled.</li><li><code>/train_log [date]</code> — Show recent prompt log entries (defaults to the past 14 days; pass a date to look up a specific entry).</li><li><code>/train_addbirthdays</code> — Manually run the birthday check now and add upcoming birthdays to the schedule.</li></ul>
+<hr>
+<h2 id="birthdays">🎂 Birthdays</h2>
+<p>Read birthday data from your Google Sheet. The bot can post announcements in Discord and auto-add members to the train schedule on their birthday.</p>
+<ul><li><code>/setup_birthdays</code> — Configure birthday tracking, train integration, and Discord announcements.</li><li><code>/birthdays</code> — Show upcoming birthdays in the next 14 days.</li></ul>
+<hr>
+<h2 id="desert-storm">⚔️ Desert Storm</h2>
+<p>Generate ready-to-copy team mail drafts and log participation each week.</p>
+<ul><li><code>/setup_desertstorm</code> — Configure teams, sheet tab, log channel, and mail template.</li><li><code>/desertstorm</code> — Show current rosters and the active mail template.</li><li><code>/desertstorm_draft</code> — Generate a Desert Storm mail draft for Team A or Team B.</li><li><code>/desertstorm_participation</code> — Log Desert Storm participation data after an event.</li><li><code>/desertstorm_log [date]</code> — View a Desert Storm log entry (defaults to today).</li></ul>
+<hr>
+<h2 id="canyon-storm">🏜️ Canyon Storm</h2>
+<p>Same workflow as Desert Storm — mail generation, team tracking, and participation logging.</p>
+<ul><li><code>/setup_canyonstorm</code> — Configure teams, sheet tab, log channel, and mail template.</li><li><code>/canyonstorm</code> — Show current rosters and the active mail template.</li><li><code>/canyonstorm_draft</code> — Generate a Canyon Storm mail draft for Team A or Team B.</li><li><code>/canyonstorm_participation</code> — Log Canyon Storm participation data after an event.</li><li><code>/canyonstorm_log [date]</code> — View a Canyon Storm log entry (defaults to today).</li></ul>
+<hr>
+<h2 id="survey">📋 Survey</h2>
+<p>Collect member statistics through a private Discord thread survey. Responses are saved directly to your Google Sheet and leadership is notified for each submission.</p>
+<ul><li><code>/setup_survey</code> — Configure survey questions, channels, and sheet tabs.</li><li><code>/survey</code> — Show the configured survey questions.</li><li><code>/survey_post</code> — Post (or repost) the survey button in the survey channel.</li></ul>
+<hr>
+<h2 id="growth-tracking">📈 Growth Tracking</h2>
+<p>Take periodic snapshots of your members&#x27; stats to track alliance growth over time.</p>
+<ul><li><code>/setup_growth</code> — Configure source tab, metrics to track, and snapshot schedule.</li><li><code>/growth</code> — Show growth status with options to run a snapshot now or edit config.</li></ul>
+<hr>
+<h2 id="utilities">🔧 Utilities</h2>
+<ul><li><code>/cancel</code> — Cancel any active wizard or log session.</li><li><code>/help</code> — Show all available bot commands inside Discord.</li></ul>
+<hr>
+<p><a href="./">← Back to Home</a></p></article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="commands.html">Commands</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div><div>LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer></body></html>
