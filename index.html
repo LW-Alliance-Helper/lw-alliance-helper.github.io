@@ -1,4 +1,63 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LW Alliance Helper</title><link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><div class="nav-links"><a class="active" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><section class="hero"><div class="hero-card"><div class="eyebrow">Discord bot for alliance leadership</div><h1>LW Alliance Helper</h1><p>A friendly command center for Last War alliance leadership teams. Built to make announcements, event prep, manage train schedules and birthdays, create squad power surveys, and make growth tracking easier.</p><div class="cta-row"><a href="https://discord.com/oauth2/authorize?client_id=1488378654709780510&permissions=395405519952&integration_type=0&scope=applications.commands+bot" class="button invite">Invite to Server</a><a href="setup.html" class="button outline">Setup guide</a><a href="https://discord.com/application-directory/1488378654709780510/store/1498488606690377770" class="button premium">💎 Upgrade to Premium</a></div></div><div class="hero-art"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper friendly robot mascot logo"></div></section><main class="container"><article class="content-card">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LW Alliance Helper — Discord bot for Last War alliance leadership</title>
+<meta name="description" content="A Discord bot for Last War alliance leadership: event announcements, train schedules, birthday tracking, Desert/Canyon Storm mail drafts, surveys, and growth snapshots. Free to use; Premium adds DMs, scheduled reminders, multi-survey, and unlimited templates.">
+<link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png">
+<link rel="canonical" href="https://lw-alliance-helper.github.io/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LW Alliance Helper">
+<meta property="og:title" content="LW Alliance Helper — Discord bot for Last War alliance leadership">
+<meta property="og:description" content="Event announcements, train schedules, storm mail drafts, surveys, growth tracking — automated for your Last War alliance leadership team.">
+<meta property="og:image" content="https://lw-alliance-helper.github.io/assets/lw-alliance-helper-logo.png">
+<meta property="og:url" content="https://lw-alliance-helper.github.io/">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LW Alliance Helper">
+<meta name="twitter:description" content="A Discord bot for Last War alliance leadership: announcements, train schedules, storm mail drafts, surveys, and growth tracking.">
+<meta name="twitter:image" content="https://lw-alliance-helper.github.io/assets/lw-alliance-helper-logo.png">
+<link rel="stylesheet" href="styles.css">
+<!-- Structured data: SoftwareApplication for rich search results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LW Alliance Helper",
+  "operatingSystem": "Discord",
+  "applicationCategory": "BusinessApplication",
+  "description": "A Discord bot for Last War alliance leadership: event announcements, train schedules, birthday tracking, Desert/Canyon Storm mail drafts, surveys, and growth snapshots.",
+  "url": "https://lw-alliance-helper.github.io/",
+  "image": "https://lw-alliance-helper.github.io/assets/lw-alliance-helper-logo.png",
+  "offers": [
+    {
+      "@type": "Offer",
+      "name": "Free",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Every feature with sensible caps for a typical alliance."
+    },
+    {
+      "@type": "Offer",
+      "name": "Premium (monthly)",
+      "price": "4.99",
+      "priceCurrency": "USD",
+      "description": "Member-aware automation: DMs, scheduled reminders, multi-survey, unlimited templates."
+    },
+    {
+      "@type": "Offer",
+      "name": "Premium (annual)",
+      "price": "49",
+      "priceCurrency": "USD",
+      "description": "Annual Premium subscription billed via Discord App Subscriptions."
+    }
+  ]
+}
+</script>
+</head>
+<body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><div class="nav-links"><a class="active" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><section class="hero"><div class="hero-card"><div class="eyebrow">Discord bot for alliance leadership</div><h1>LW Alliance Helper</h1><p>A friendly command center for Last War alliance leadership teams. Built to make announcements, event prep, manage train schedules and birthdays, create squad power surveys, and make growth tracking easier.</p><div class="cta-row"><a href="https://discord.com/oauth2/authorize?client_id=1488378654709780510&permissions=395405519952&integration_type=0&scope=applications.commands+bot" class="button invite">Invite to Server</a><a href="setup.html" class="button outline">Setup guide</a><a href="https://discord.com/application-directory/1488378654709780510/store/1498488606690377770" class="button premium">💎 Upgrade to Premium</a></div></div><div class="hero-art"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper friendly robot mascot logo"></div></section><main class="container"><article class="content-card">
 <h2 id="what-it-does" style="margin-top:0;">What It Does</h2>
 <p><strong>📣 Event Announcements</strong> — Schedule Plague Marauder, Zombie Siege, and any other recurring events. The bot posts a draft to leadership for review at your chosen time each event day, then sends the final announcement to your public channel once approved. A 5-minute warning fires automatically before the event starts.</p>
 <p><strong>🚂 Train Schedule</strong> — Track who gets the alliance train each day and generate a personalised ChatGPT prompt to help write a blurb for that member. Birthdays can be automatically added to the schedule in advance.</p>
@@ -21,4 +80,4 @@
 <p><strong>A button stopped working after a bot restart</strong> — Discord buttons lose their connection to the bot when it restarts. Use the corresponding command to start a fresh flow:</p>
 <table><thead><tr><th>Button</th><th>Use instead</th></tr></thead><tbody><tr><td>Event editor or approval</td><td><code>/events</code></td></tr><tr><td>Train reminder prompt button</td><td><code>/train</code></td></tr><tr><td>Desert Storm approval</td><td><code>/desertstorm_draft</code></td></tr><tr><td>Canyon Storm approval</td><td><code>/canyonstorm_draft</code></td></tr><tr><td>DS/CS log steps</td><td><code>/desertstorm_participation</code> or <code>/canyonstorm_participation</code></td></tr><tr><td>Survey button</td><td><code>/survey_post</code></td></tr></tbody></table>
 <p><strong>Something else isn&#x27;t working</strong> — Use <code>/help</code> to see all available commands and make sure the relevant feature has been configured with its <code>/setup_*</code> command.</p>
-</article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="setup.html">Setup</a><a href="commands.html">Commands</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div><div style="margin-top:2em;">LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer></body></html>
+</article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="setup.html">Setup</a><a href="commands.html">Commands</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div><div style="margin-top:2em;">LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer><script src="assets/nav.js"></script></body></html>
