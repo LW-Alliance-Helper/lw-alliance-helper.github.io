@@ -1,0 +1,4 @@
+{
+  "_comment": "Example shape for the alliance-count badge on the home page. Copy this to assets/stats.json (without the _comment field) once you have a real number from len(bot.guilds). The badge in index.html stays hidden until this file is present and `alliances` is >= 1.",
+  "alliances": 0
+}
