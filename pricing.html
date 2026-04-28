@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pricing — LW Alliance Helper</title><link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="commands.html">Commands</a><a class="active" href="pricing.html">Pricing</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="pricing">Pricing</h1>
+<p>LW Alliance Helper is <strong>free to use at the base level</strong> for every alliance — every feature listed on the <a href="commands.html">Commands</a> page works on the free tier with sensible limits that fit a typical alliance. <strong>Premium</strong> lifts the limits and unlocks a handful of features built around member identity (DMs, mentions, roster sync).</p>
+<h2 id="plans">Plans</h2>
+<table>
+<thead><tr><th>Plan</th><th>Price</th><th>Best for</th></tr></thead>
+<tbody>
+<tr><td><strong>Free</strong></td><td>$0 forever</td><td>Most alliances. Every feature works — just with sensible caps.</td></tr>
+<tr><td><strong>💎 Premium</strong></td><td><strong>$4.99 / month</strong><br>or <strong>$49 / year</strong></td><td>Alliances that want member-aware automation: DMs, scheduled reminders, roster sync, multi-template, multi-survey.</td></tr>
+</tbody>
+</table>
+<p>Premium is billed by Discord through their App Subscriptions system — Discord handles all payments, taxes, refunds, and renewals. Run <code>/upgrade</code> in your leadership channel to open the subscription dialog. Premium activates automatically the moment a subscription becomes active. Cancellations through Discord deactivate Premium features at the end of the billing cycle; your saved data — including extra templates and surveys — is <strong>kept</strong> so you can resume any time.</p>
+<p>If you'd like to support the bot without subscribing, run <code>/donate</code> for tip-jar links. 100% optional.</p>
+<hr>
+<h2 id="feature-comparison">Free vs Premium</h2>
+<h3 id="caps-and-limits">Caps and limits</h3>
+<table>
+<thead><tr><th>Feature</th><th>Free</th><th>💎 Premium</th></tr></thead>
+<tbody>
+<tr><td>Configured events</td><td><strong>5 total</strong></td><td>Unlimited</td></tr>
+<tr><td>Train prompt templates</td><td><strong>1</strong> <em>(named "Default")</em></td><td>Up to <strong>10</strong> named templates</td></tr>
+<tr><td>Storm mail templates per team</td><td><strong>1</strong> <em>(named "Default")</em></td><td>Up to <strong>10</strong> named templates</td></tr>
+<tr><td>Survey questions</td><td><strong>5 per survey</strong></td><td>Unlimited</td></tr>
+<tr><td>Survey question types</td><td>Text, Dropdown</td><td>+ Numeric (with min/max), Multi-select, Date</td></tr>
+<tr><td>Surveys per server</td><td><strong>1</strong></td><td>Multiple named surveys</td></tr>
+<tr><td>Participation log questions per event type</td><td><strong>3</strong></td><td>Unlimited</td></tr>
+<tr><td>Participation log question types</td><td>Text, Yes/No, Numeric, Roster names</td><td>+ Single-select, Multi-select, Date</td></tr>
+<tr><td>Survey reminder destination</td><td>Channel post</td><td>Channel post <strong>and</strong> DM-via-roster</td></tr>
+<tr><td>Scheduled survey reminders</td><td>✅ Daily / Weekly via channel post</td><td>✅ Daily / Weekly via channel post <strong>or</strong> DM-via-roster</td></tr>
+<tr><td>Train themes / tones</td><td><strong>3 each</strong></td><td>Unlimited</td></tr>
+<tr><td>Tracked growth metrics</td><td><strong>5</strong></td><td>Unlimited</td></tr>
+<tr><td>Growth snapshot frequency</td><td>Monthly</td><td>Monthly <strong>or</strong> custom interval (every N days)</td></tr>
+<tr><td><code>/events_log</code> window</td><td><strong>7 days</strong></td><td><strong>30 days</strong></td></tr>
+<tr><td><code>/train_log</code> window</td><td><strong>7 days</strong></td><td><strong>30 days</strong></td></tr>
+<tr><td>Storm participation log lookback</td><td><strong>4 most-recent entries</strong></td><td>Unlimited</td></tr>
+<tr><td>Channel destinations</td><td>Text channels</td><td>Text channels <strong>and</strong> threads</td></tr>
+</tbody>
+</table>
+<h3 id="premium-only">Premium-only features</h3>
+<p>These have no free-tier equivalent — they need member identity to work, which Premium unlocks via Member Roster Sync.</p>
+<table>
+<thead><tr><th>Feature</th><th>What it does</th></tr></thead>
+<tbody>
+<tr><td><strong>Member Roster Sync</strong></td><td>Writes every member's Discord ID + name to a sheet tab so other Premium features can find members by name. <code>/setup_members</code>, <code>/sync_members</code></td></tr>
+<tr><td><strong>Birthday DMs</strong></td><td>DM each member a personal happy-birthday note when their day fires.</td></tr>
+<tr><td><strong>Train assignment DMs</strong></td><td>DM the assigned member when their train day starts.</td></tr>
+<tr><td><strong>Auto-mention in train reminders</strong></td><td>Replace plain names with <code>&lt;@id&gt;</code> Discord mentions in the daily train reminder.</td></tr>
+<tr><td><strong>DM-via-roster for <code>/survey_remind</code></strong></td><td>Send the survey reminder as a DM to every roster member (free tier posts to a channel instead).</td></tr>
+<tr><td><strong><code>/desertstorm_remind</code> / <code>/canyonstorm_remind</code></strong></td><td>DM every roster member a participation reminder before each storm.</td></tr>
+</tbody>
+</table>
+<hr>
+<h2 id="how-to-subscribe">How to subscribe</h2>
+<ol>
+<li>Make sure you have the <strong>leadership role</strong> configured during <code>/setup</code>.</li>
+<li>Run <code>/upgrade</code> in your leadership channel.</li>
+<li>Discord opens the subscription dialog. Confirm and pay.</li>
+<li>Premium activates immediately for the whole server. Run <code>/setup_members</code> next so the DM-based features can find your members.</li>
+</ol>
+<h2 id="cancelling">Cancelling or pausing</h2>
+<p>Cancel at any time from <strong>User Settings → Authorized Apps</strong> or <strong>Settings → Subscriptions</strong> in Discord. Premium remains active until the end of the current billing cycle, then features lock. Your data — extra templates, multi-survey configs, scheduled reminders — is <strong>preserved</strong> so resubscribing later restores everything exactly as you left it.</p>
+<p>If you cancel and resubscribe later, no data migration is needed.</p>
+<hr>
+<h2 id="faq">Pricing FAQ</h2>
+<h3>Do I need Premium to use the bot?</h3>
+<p>No. The free tier covers every feature with caps that fit a normal-sized alliance. Premium is for alliances that want member-aware automation (DMs, mentions, multi-survey, scheduled reminders).</p>
+<h3>Is there a per-member fee?</h3>
+<p>No. The price is per server, not per member. Add as many members to your alliance as you like.</p>
+<h3>Are there refunds?</h3>
+<p>Refunds are handled by Discord under their <a href="https://support.discord.com/hc/en-us/articles/360001207171" target="_blank" rel="noopener">refund policy</a>. The bot operator does not handle billing.</p>
+<h3>Can I try Premium before paying?</h3>
+<p>Discord doesn't expose a built-in trial system, but you can subscribe for one month, evaluate, and cancel — Discord prorates appropriately.</p>
+<hr>
+<p><a href="./">← Back to Home</a> · <a href="commands.html">Browse commands</a></p></article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="commands.html">Commands</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div><div>LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer></body></html>
