@@ -63,28 +63,30 @@
 <hr>
 <h3 id="desert-storm-setup-desertstorm">⚔️ Desert Storm — <code>/setup_desertstorm</code></h3>
 <p><strong>What to create in your sheet:</strong> A tab for Desert Storm assignments (e.g. <code>DS Assignments</code>).</p>
-<p>Run <code>/setup_desertstorm</code> to configure Desert Storm:</p>
-<ol><li><strong>Sheet tab</strong> — the bot manages the data structure here automatically, no formatting needed</li><li><strong>Teams</strong> — whether you run Team A &amp; B, Team A only, or Team B only</li><li><strong>Log channel</strong> — where participation logs are posted after each event</li><li><strong>Mail template</strong> — if you run both teams, choose one template for both or separate templates per team. A default template is provided — use it as-is or paste your own</li></ol>
+<p>Run <code>/setup_desertstorm</code> to configure Desert Storm. The wizard walks through:</p>
+<ol><li><strong>Sheet tab</strong> — the bot manages the data structure here automatically, no formatting needed</li><li><strong>Teams</strong> — whether you run Team A &amp; B, Team A only, or Team B only</li><li><strong>Log channel</strong> — where participation logs are posted after each event</li><li><strong>Post channel</strong> — where the finished mail is posted when leadership clicks <strong>Post &amp; Copy</strong> at the end of <code>/desertstorm_draft</code></li><li><strong>Mail template</strong> — if you run both teams, choose one template for both or separate templates per team. A default template is provided — use it as-is or paste your own</li></ol>
 <p><strong>Available placeholders in your template:</strong></p>
 <ul><li><code>{alliance_name}</code> — your alliance name</li><li><code>{zones}</code> — zone assignments block</li><li><code>{subs}</code> — substitute members</li><li><code>{time}</code> — event time (auto-filled when drafting)</li></ul>
 <p><strong>Day-to-day use:</strong></p>
-<ul><li>Use <code>/desertstorm_draft</code> to generate a mail draft. You&#x27;ll select the team and time slot (Desert Storm runs at 18:00 and 23:00 Server Time, displayed in your timezone)</li><li>Review the pre-filled draft, edit as needed, then approve to save and get a copyable mail block</li><li>After the event, use <code>/desertstorm_participation</code> to record participation data</li><li>Use <code>/desertstorm_log [date]</code> to look up past log entries</li></ul>
+<ul><li>Use <code>/desertstorm_draft</code> to generate a mail draft. The flow is <strong>Pick Team → Pick Time → Mail Template (Use as-is or Edit) → Preview</strong>. Editing pastes the assignment block back to the bot; the parsed assignments are saved as next week&#x27;s default but the mail itself is <strong>not</strong> posted yet.</li><li>At the preview step, click <strong>✅ Looks Good — Post &amp; Copy</strong> to post the mail to your configured post channel and get a copyable code block back in leadership.</li><li>After the event, use <code>/desertstorm_participation</code> to record participation data</li><li>Use <code>/desertstorm_log [date]</code> to look up past log entries</li></ul>
 <hr>
 <h3 id="canyon-storm-setup-canyonstorm">🏜️ Canyon Storm — <code>/setup_canyonstorm</code></h3>
 <p><strong>What to create in your sheet:</strong> A tab for Canyon Storm assignments (e.g. <code>CS Assignments</code>).</p>
-<p>Run <code>/setup_canyonstorm</code> — the setup is identical to Desert Storm above.</p>
+<p>Run <code>/setup_canyonstorm</code> — the setup is identical to Desert Storm above (5 steps including a Post Channel).</p>
 <p>Canyon Storm runs at 12:00 and 23:00 Server Time (displayed in your timezone).</p>
 <p><strong>Day-to-day use:</strong></p>
-<ul><li><code>/canyonstorm_draft</code> — generate a Canyon Storm mail draft</li><li><code>/canyonstorm_participation</code> — log participation after the event</li><li><code>/canyonstorm_log [date]</code> — look up past log entries</li></ul>
+<ul><li><code>/canyonstorm_draft</code> — generate a Canyon Storm mail draft (Team → Time → Template → Preview, then Post &amp; Copy)</li><li><code>/canyonstorm_participation</code> — log participation after the event</li><li><code>/canyonstorm_log [date]</code> — look up past log entries</li></ul>
 <hr>
 <h3 id="survey-setup-survey">📋 Survey — <code>/setup_survey</code></h3>
 <p><strong>What to create in your sheet:</strong> Two tabs — one for current member stats (e.g. <code>Squad Powers</code>) and one for submission history (e.g. <code>Survey History</code>).</p>
-<p>Run <code>/setup_survey</code> to configure the survey:</p>
+<p>Run <code>/setup_survey</code> to configure the <strong>default</strong> survey:</p>
 <ol><li><strong>Survey channel</strong> — where the survey button is posted for members to access</li><li><strong>Notification channel</strong> — where leadership is notified when a member submits</li><li><strong>Stats tab</strong> — updated with each submission (one row per member)</li><li><strong>History tab</strong> — a timestamped record of every submission</li><li><strong>Intro message</strong> — the message members see before starting the survey</li><li><strong>Questions</strong> — choose from the default Last War question set, edit individual questions, or build your own from scratch</li></ol>
-<p>The question builder supports two question types:</p>
+<p>The question builder supports two question types on the free tier:</p>
 <ul><li><strong>Text</strong> — the member types a value, with an optional help text hint</li><li><strong>Dropdown</strong> — the member picks from a list of options you define (up to 25)</li></ul>
+<p>💎 <strong>Premium adds three more question types:</strong> Numeric (with min/max validation and re-prompt-on-bad-input), Multi-select (pick multiple options), and Date (formatted entry with strptime validation).</p>
+<p>💎 <strong>Multi-survey (Premium):</strong> alliances can configure more than one survey with <code>/setup_survey_extra</code> — each named survey has its own questions, channel, intro, notification target, and reminder message. <code>/remove_survey</code> removes an extra survey. <code>/surveys</code> lists everything configured.</p>
 <p><strong>Day-to-day use:</strong></p>
-<ul><li>Run <code>/survey_post</code> to post the survey button in your survey channel</li><li>Members click <strong>Answer</strong>, complete the survey in a private thread, and their data is saved automatically</li><li>Leadership sees a notification embed in the notification channel for each submission</li></ul>
+<ul><li>Run <code>/survey_post</code> to post the answer button. Premium guilds with multiple surveys are prompted to pick which one</li><li>Members click <strong>📋 Answer</strong>, complete the survey in a private thread, and their data is saved automatically</li><li>Leadership sees a notification embed in the notification channel for each submission</li><li>💎 <code>/survey_remind</code> DMs every roster member a reminder — Premium picks per survey and uses each survey&#x27;s configured reminder body</li></ul>
 <hr>
 <h3 id="growth-tracking-setup-growth">📈 Growth Tracking — <code>/setup_growth</code></h3>
 <p><strong>What to create in your sheet:</strong> A tab for your member roster (can be the same tab used by the survey, or any other tab). The bot will create the growth output tab automatically if it doesn't exist.</p>
@@ -100,7 +102,7 @@
 <hr>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p><strong>Commands aren&#x27;t showing up in Discord</strong> Slash commands can take up to an hour to appear after the bot first joins your server. If they still aren&#x27;t showing after that, try removing and re-inviting the bot.</p>
-<p><strong>&quot;You don&#x27;t have permission to use this command&quot;</strong> Make sure you&#x27;re using the command in the leadership channel and that you have the leadership role configured during <code>/setup</code>. Both are required.</p>
+<p><strong>&quot;You don&#x27;t have permission to use this command&quot;</strong> Most feature commands need to be run in the leadership channel by someone with the leadership role configured during <code>/setup</code>. The various <code>/setup_*</code> commands also accept anyone with server <strong>Administrator</strong> permission, so a server owner can configure a feature even without holding the leadership role.</p>
 <p><strong>&quot;This bot hasn&#x27;t been set up yet&quot;</strong> Run <code>/setup</code> first. The bot won&#x27;t respond to feature commands until core setup is complete.</p>
 <p><strong>&quot;Permission error&quot; when the bot tries to access your sheet</strong> The bot&#x27;s service account doesn&#x27;t have access to your sheet. Go to your sheet&#x27;s sharing settings and make sure the service account email has been added as an <strong>Editor</strong>. You can find the email address by running <code>/setup</code> and checking Step 6.</p>
 <p><strong>A button stopped working after a bot restart</strong> Discord buttons lose their connection to the bot when it restarts. Use the corresponding command to start a fresh flow:</p>
