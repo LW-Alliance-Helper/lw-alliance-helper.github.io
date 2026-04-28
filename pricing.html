@@ -1,24 +1,83 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pricing — LW Alliance Helper</title><link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="commands.html">Commands</a><a class="active" href="pricing.html">Pricing</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="pricing">Pricing</h1>
-<p>LW Alliance Helper is <strong>free to use at the base level</strong> for every alliance — every feature listed on the <a href="commands.html">Commands</a> page works on the free tier with sensible limits that fit a typical alliance. <strong>Premium</strong> lifts the limits and unlocks a handful of features built around member identity (DMs, mentions, roster sync).</p>
-<h2 id="plans">Plans</h2>
-<table>
-<thead><tr><th>Plan</th><th>Price</th><th>Best for</th></tr></thead>
-<tbody>
-<tr><td><strong>Free</strong></td><td>$0 forever</td><td>Most alliances. Every feature works — just with sensible caps.</td></tr>
-<tr><td><strong>💎 Premium</strong></td><td><strong>$4.99 / month</strong><br>or <strong>$49 / year</strong></td><td>Alliances that want member-aware automation: DMs, scheduled reminders, roster sync, multi-template, multi-survey.</td></tr>
-</tbody>
-</table>
-<p>Premium is billed by Discord through their App Subscriptions system — Discord handles all payments, taxes, refunds, and renewals. Run <code>/upgrade</code> in your leadership channel to open the subscription dialog. Premium activates automatically the moment a subscription becomes active. Cancellations through Discord deactivate Premium features at the end of the billing cycle; your saved data — including extra templates and surveys — is <strong>kept</strong> so you can resume any time.</p>
-<p>If you'd like to support the bot without subscribing, run <code>/donate</code> for tip-jar links. 100% optional.</p>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pricing — LW Alliance Helper</title><link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png"><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="active" href="pricing.html">Pricing</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="pricing">Plans &amp; Pricing</h1>
+<p>Every alliance gets the full feature set on the free tier — sensible caps, no nags. Upgrade to Premium when you want member-aware automation: DMs, scheduled reminders, multi-survey, and unlimited templates.</p>
+
+<div class="plans">
+
+  <!-- ── Free plan ─────────────────────────────────────────────── -->
+  <div class="plan">
+    <img class="plan-icon" src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper logo">
+    <div>
+      <h2 class="plan-name">Free</h2>
+      <p class="plan-tagline">For most alliances. Every feature works with sensible caps that fit a typical roster.</p>
+    </div>
+    <div class="plan-price">
+      <span class="amount">$0</span>
+      <span class="per">forever</span>
+    </div>
+    <p class="plan-price-alt">No credit card. Caps lift the moment you upgrade.</p>
+    <ul class="plan-features">
+      <li>Up to <strong>5</strong> configured events</li>
+      <li><strong>1</strong> train prompt template &amp; <strong>1</strong> storm mail template per team</li>
+      <li><strong>5</strong> survey questions; <strong>3</strong> participation log questions</li>
+      <li>Survey types: text + dropdown</li>
+      <li><strong>1</strong> survey per server</li>
+      <li>Scheduled survey reminders via channel post</li>
+      <li>Up to <strong>3</strong> train themes &amp; <strong>3</strong> tones</li>
+      <li>Monthly growth snapshots, <strong>5</strong> tracked metrics</li>
+      <li><code>/events_log</code> &amp; <code>/train_log</code> — 7-day window</li>
+      <li>Storm log lookback — last <strong>4</strong> entries</li>
+    </ul>
+    <div class="plan-cta">
+      <a href="https://discord.com/oauth2/authorize?client_id=1488378654709780510&permissions=395405519952&integration_type=0&scope=applications.commands+bot" class="button outline" style="width:100%;justify-content:center">Invite to Server</a>
+    </div>
+  </div>
+
+  <!-- ── Premium plan (featured) ──────────────────────────────── -->
+  <div class="plan featured">
+    <img class="plan-icon" src="assets/lw-alliance-helper-premium-icon.png" alt="LW Alliance Helper Premium icon">
+    <div>
+      <h2 class="plan-name">💎 Premium</h2>
+      <p class="plan-tagline">For alliances that want member-aware automation: DMs, multi-survey, scheduled reminders, and unlimited templates.</p>
+    </div>
+    <div class="plan-price">
+      <span class="amount">$4.99</span>
+      <span class="per">/ month</span>
+    </div>
+    <p class="plan-price-alt">or <strong>$49 / year</strong> (save 18%) — billed via Discord</p>
+    <ul class="plan-features">
+      <li><strong>Unlimited</strong> events, themes, tones, and growth metrics</li>
+      <li>Up to <strong>10</strong> named train and storm mail templates per team</li>
+      <li><strong>Unlimited</strong> survey + participation log questions</li>
+      <li>Premium survey types: numeric, multi-select, date</li>
+      <li><strong>Multiple named surveys</strong> per server</li>
+      <li>Scheduled reminders via channel post <strong>or</strong> DM-via-roster</li>
+      <li><strong>Member Roster Sync</strong>, birthday DMs, train DMs, storm reminders, auto-mention</li>
+      <li>Custom growth snapshot intervals</li>
+      <li><code>/events_log</code> &amp; <code>/train_log</code> — 30-day window</li>
+      <li>Unlimited storm log lookback</li>
+      <li>Threads as channel destinations</li>
+    </ul>
+    <div class="plan-cta">
+      <a href="https://discord.com/application-directory/1488378654709780510/store/1498488606690377770" class="button premium">💎 Upgrade to Premium</a>
+    </div>
+  </div>
+
+</div>
+
+<p style="text-align:center;color:var(--muted);font-size:.95rem;margin:0 0 32px">
+  Premium is billed by Discord through their App Subscriptions system. Cancel any time from <strong>User Settings → Subscriptions</strong>; your saved data — extra templates, multi-survey configs, scheduled reminders — is preserved if you resubscribe later.
+</p>
+
 <hr>
-<h2 id="feature-comparison">Free vs Premium</h2>
+
+<h2 id="comparison" class="comparison-intro">Full feature comparison</h2>
 <h3 id="caps-and-limits">Caps and limits</h3>
 <table>
 <thead><tr><th>Feature</th><th>Free</th><th>💎 Premium</th></tr></thead>
 <tbody>
 <tr><td>Configured events</td><td><strong>5 total</strong></td><td>Unlimited</td></tr>
-<tr><td>Train prompt templates</td><td><strong>1</strong> <em>(named "Default")</em></td><td>Up to <strong>10</strong> named templates</td></tr>
-<tr><td>Storm mail templates per team</td><td><strong>1</strong> <em>(named "Default")</em></td><td>Up to <strong>10</strong> named templates</td></tr>
+<tr><td>Train prompt templates</td><td><strong>1</strong> <em>(named &quot;Default&quot;)</em></td><td>Up to <strong>10</strong> named templates</td></tr>
+<tr><td>Storm mail templates per team</td><td><strong>1</strong> <em>(named &quot;Default&quot;)</em></td><td>Up to <strong>10</strong> named templates</td></tr>
 <tr><td>Survey questions</td><td><strong>5 per survey</strong></td><td>Unlimited</td></tr>
 <tr><td>Survey question types</td><td>Text, Dropdown</td><td>+ Numeric (with min/max), Multi-select, Date</td></tr>
 <tr><td>Surveys per server</td><td><strong>1</strong></td><td>Multiple named surveys</td></tr>
@@ -35,6 +94,7 @@
 <tr><td>Channel destinations</td><td>Text channels</td><td>Text channels <strong>and</strong> threads</td></tr>
 </tbody>
 </table>
+
 <h3 id="premium-only">Premium-only features</h3>
 <p>These have no free-tier equivalent — they need member identity to work, which Premium unlocks via Member Roster Sync.</p>
 <table>
@@ -48,18 +108,22 @@
 <tr><td><strong><code>/desertstorm_remind</code> / <code>/canyonstorm_remind</code></strong></td><td>DM every roster member a participation reminder before each storm.</td></tr>
 </tbody>
 </table>
+
 <hr>
+
 <h2 id="how-to-subscribe">How to subscribe</h2>
 <ol>
 <li>Make sure you have the <strong>leadership role</strong> configured during <code>/setup</code>.</li>
-<li>Run <code>/upgrade</code> in your leadership channel.</li>
+<li>Click <strong>Upgrade to Premium</strong> above (or run <code>/upgrade</code> in your leadership channel).</li>
 <li>Discord opens the subscription dialog. Confirm and pay.</li>
 <li>Premium activates immediately for the whole server. Run <code>/setup_members</code> next so the DM-based features can find your members.</li>
 </ol>
+
 <h2 id="cancelling">Cancelling or pausing</h2>
-<p>Cancel at any time from <strong>User Settings → Authorized Apps</strong> or <strong>Settings → Subscriptions</strong> in Discord. Premium remains active until the end of the current billing cycle, then features lock. Your data — extra templates, multi-survey configs, scheduled reminders — is <strong>preserved</strong> so resubscribing later restores everything exactly as you left it.</p>
-<p>If you cancel and resubscribe later, no data migration is needed.</p>
+<p>Cancel any time from <strong>User Settings → Authorized Apps</strong> or <strong>Settings → Subscriptions</strong> in Discord. Premium remains active until the end of the current billing cycle, then features lock. Your data — extra templates, multi-survey configs, scheduled reminders — is <strong>preserved</strong> so resubscribing later restores everything exactly as you left it.</p>
+
 <hr>
+
 <h2 id="faq">Pricing FAQ</h2>
 <h3>Do I need Premium to use the bot?</h3>
 <p>No. The free tier covers every feature with caps that fit a normal-sized alliance. Premium is for alliances that want member-aware automation (DMs, mentions, multi-survey, scheduled reminders).</p>
@@ -69,5 +133,8 @@
 <p>Refunds are handled by Discord under their <a href="https://support.discord.com/hc/en-us/articles/360001207171" target="_blank" rel="noopener">refund policy</a>. The bot operator does not handle billing.</p>
 <h3>Can I try Premium before paying?</h3>
 <p>Discord doesn't expose a built-in trial system, but you can subscribe for one month, evaluate, and cancel — Discord prorates appropriately.</p>
+
 <hr>
-<p><a href="./">← Back to Home</a> · <a href="commands.html">Browse commands</a></p></article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="commands.html">Commands</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div><div>LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer></body></html>
+
+<p style="text-align:center"><a href="index.html">← Back to Home</a> · <a href="commands.html">Browse commands</a></p>
+</article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="setup.html">Setup</a><a href="commands.html">Commands</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div><div style="margin-top:2em;">LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer></body></html>
