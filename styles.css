@@ -65,9 +65,9 @@ main .button.invite{width:auto;display:inline-flex;font-size:1em;}
 .button.outline{color:var(--ink);background:#fff;border-color:var(--line)}
 .button:hover{transform:translateY(-1px);text-decoration:none;filter:brightness(.96)}
 
-/* ── Alliance count badge (currently commented out in index.html — see
-       the HTML comment there for activation instructions). The CSS
-       lives here so uncommenting the markup needs no other change. */
+/* ── Alliance count badge — populated by assets/stats.json, which the
+       bot publishes daily via stats_publisher.py. The badge stays hidden
+       until alliances >= 1, so the styling here is harmless before then. */
 .alliance-count{max-width:1180px;margin:0 auto;padding:0 22px 8px;color:#fff;text-align:center;font-size:.95rem;letter-spacing:.02em;opacity:.92}
 .alliance-count strong{color:#fff;font-weight:900;font-size:1.05rem}
 
