@@ -74,7 +74,7 @@ main .button.invite{width:auto;display:inline-flex;font-size:1em;}
 /* ── Alliance count badge — populated by assets/stats.json, which the
        bot publishes daily via stats_publisher.py. Lives inside .hero-art
        directly under the image; stays hidden until alliances >= 1. */
-.hero-art .alliance-count{margin:18px 0;color:#fff;text-align:center;font-size:.98rem;letter-spacing:.02em;opacity:.94}
+.hero-art .alliance-count{margin:18px 0;color:#003A70;text-align:center;font-size:.98rem;letter-spacing:.02em;opacity:.94}
 .hero-art .alliance-count strong{color:#003A70;font-weight:900;font-size:1.08rem}
 
 /* ── Layout / content cards ─────────────────────────────────────────────── */
