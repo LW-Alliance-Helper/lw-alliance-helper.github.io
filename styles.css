@@ -75,7 +75,7 @@ main .button.invite{width:auto;display:inline-flex;font-size:1em;}
        bot publishes daily via stats_publisher.py. Lives inside .hero-art
        directly under the image; stays hidden until alliances >= 1. */
 .hero-art .alliance-count{margin:18px 0;color:#fff;text-align:center;font-size:.98rem;letter-spacing:.02em;opacity:.94}
-.hero-art .alliance-count strong{color:#fff;font-weight:900;font-size:1.08rem}
+.hero-art .alliance-count strong{color:#003A70;font-weight:900;font-size:1.08rem}
 
 /* ── Layout / content cards ─────────────────────────────────────────────── */
 .container{max-width:1180px;margin:0 auto;padding:26px 22px 68px}
