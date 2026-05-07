@@ -18,6 +18,11 @@ bot itself) — has its own `CLAUDE.md` with bot-side conventions.
   trailer.
 - **Never amend** — always make a new commit.
 - GitHub Pages auto-rebuilds on push to `main`. No build step.
+- **No time estimates, no S/M/L sizing.** Frame any proposal or
+  audit-style fix list by *what changes for users* and *why it
+  matters*, not by hours or effort buckets. This is a side project
+  — work takes however long it takes; don't pad write-ups with
+  scope-of-work framing.
 
 ---
 
