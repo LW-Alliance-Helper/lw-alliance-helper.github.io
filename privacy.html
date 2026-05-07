@@ -19,11 +19,28 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="active" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="privacy-policy">Privacy Policy</h1>
-<p><em>Last updated: April 28, 2026</em></p>
+<p><em>Last updated: May 7, 2026</em></p>
 <p>This Privacy Policy explains what information LW Alliance Helper (the &quot;Bot&quot;) collects, how it is used, and how it is stored. By adding LW Alliance Helper to your Discord server and using its features, you agree to this policy.</p>
 <hr>
 <h2 id="who-we-are">Who We Are</h2>
 <p>LW Alliance Helper is operated as a Discord bot for Last War alliance leadership teams. If you have questions about this policy, the best way to reach us is by opening an issue on our <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper.github.io/issues" target="_blank" rel="noopener">issue tracker</a>. Note that issues are public — please don&#x27;t include personal information (such as data you&#x27;d like deleted) in the issue itself; we&#x27;ll follow up with you privately to handle any sensitive details.</p>
+<hr>
+<h2 id="where-your-data-lives">🗂️ Where Your Data Lives</h2>
+<p>Alliance Helper is built around a clean separation: your <strong>alliance&#x27;s data</strong> lives in <em>your</em> Google Sheet, on a Google account <em>you</em> own and control. The bot&#x27;s database stores only the orchestration layer — the configuration that tells the bot what to do, and just enough operational state to do it.</p>
+<table>
+<thead><tr><th>What</th><th>Where it lives</th><th>Who owns it</th></tr></thead>
+<tbody>
+<tr><td>Power scores, growth snapshots, train history, participation logs, member roster (when synced), survey responses, birthdays</td><td><strong>Your Google Sheet</strong></td><td><strong>You.</strong> The bot writes; the Sheet is canonical.</td></tr>
+<tr><td>Wizard answers, channel/role IDs, schedule settings, draft state, premium assignment, persistent view registry</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is operational config, not alliance data.</td></tr>
+</tbody>
+</table>
+<p><strong>What this means for you:</strong></p>
+<ul>
+<li><strong>You own the system of record.</strong> Every piece of data that&#x27;s <em>about</em> your alliance — its members, history, results, tracking over time — is stored in your Sheet, not ours. The bot reads and writes; we don&#x27;t keep duplicates of your alliance data.</li>
+<li><strong>Leaving doesn&#x27;t trap your data.</strong> If you stop using the bot, revoke the service-account share on your Sheet (<strong>Share → remove the bot&#x27;s service-account email</strong>). You keep everything that matters — there&#x27;s no export step or migration request, because we never had a separate copy.</li>
+<li><strong>Premium adds features, never lock-in.</strong> Subscribing to Premium unlocks features that build on the same data architecture (DMs, scheduled reminders, Member Roster Sync). Nothing about your alliance data moves to a different system; the storage model is identical to the free tier.</li>
+</ul>
+<p>This is a deliberate design choice and a real difference from web-SaaS competitors that host alliance data on their own infrastructure. If you ever want to migrate to another tool — or build your own — your data is already in a portable, vendor-neutral format on a Google account you control.</p>
 <hr>
 <h2 id="what-information-we-collect">What Information We Collect</h2>
 <p>LW Alliance Helper collects only the information necessary to provide its features. This includes:</p>
