@@ -150,13 +150,22 @@
 <h2 id="how-to-subscribe">How to subscribe</h2>
 <ol>
 <li>Make sure you have the <strong>leadership role</strong> configured during <code>/setup</code>.</li>
-<li>Click <strong>Upgrade to Premium</strong> above (or run <code>/upgrade</code> in your leadership channel).</li>
+<li>Run <code>/upgrade</code> in the leadership channel of the alliance you want Premium in. <em>(The "Upgrade to Premium" button above also works, but running <code>/upgrade</code> in-server lets the bot auto-pin your subscription to that alliance once checkout completes.)</em></li>
 <li>Discord opens the subscription dialog. Confirm and pay.</li>
-<li>Premium activates immediately for the whole server. Run <code>/setup_members</code> next so the DM-based features can find your members.</li>
+<li>Premium activates immediately and the bot pins it to the server you ran <code>/upgrade</code> in. Run <code>/setup_members</code> next so the DM-based features can find your members.</li>
 </ol>
 
+<h2 id="licensing-model">Licensing model — one subscription, one server at a time</h2>
+<p>Your subscription is bound to <strong>your Discord account</strong>, not to a specific alliance Discord. Each subscription unlocks Premium in <strong>one server at a time</strong> — the alliance you choose to apply it to. If you're in multiple alliance Discords, your $4.99/mo applies to whichever one you've assigned it to, and you can move it whenever you want.</p>
+<ul>
+<li><code>/premium_assign</code> — Pin (or move) your Premium to the server you run it in.</li>
+<li><code>/premium_status</code> — Show your subscription state and where it's currently assigned.</li>
+<li><code>/premium_unassign</code> — Release the pin without canceling the subscription, e.g. to "park" it.</li>
+</ul>
+<p>If a server already has Premium from another subscriber, the bot will tell you and prompt you to pick a different alliance — two subscriptions can't both apply to the same server.</p>
+
 <h2 id="cancelling">Cancelling or pausing</h2>
-<p>Cancel any time from <strong>User Settings → Authorized Apps</strong> or <strong>Settings → Subscriptions</strong> in Discord. Premium remains active until the end of the current billing cycle, then features lock. Your data — extra templates, multi-survey configs, scheduled reminders — is <strong>preserved</strong> so resubscribing later restores everything exactly as you left it.</p>
+<p>Cancel any time from <strong>User Settings → Authorized Apps</strong> or <strong>Settings → Subscriptions</strong> in Discord. Premium remains active until the end of the current billing cycle, then features lock. Your data — extra templates, multi-survey configs, scheduled reminders — is <strong>preserved</strong>, and so is your server assignment, so resubscribing later restores everything exactly as you left it (including which alliance Premium auto-resumes in).</p>
 
 <hr>
 
@@ -164,7 +173,9 @@
 <h3>Do I need Premium to use the bot?</h3>
 <p>No. The free tier covers every feature with caps that fit a normal-sized alliance. Premium is for alliances that want member-aware automation (DMs, mentions, multi-survey, scheduled reminders).</p>
 <h3>Is there a per-member fee?</h3>
-<p>No. The price is per server, not per member. Add as many members to your alliance as you like.</p>
+<p>No. One $4.99/mo subscription covers Premium in a single alliance, regardless of member count. Add as many members to that alliance as you like.</p>
+<h3>Can one subscription cover multiple alliances?</h3>
+<p>No — one subscription unlocks Premium in <strong>one alliance at a time</strong>. If you're a leader in multiple alliances, you can move the assignment between them whenever you want with <code>/premium_assign</code>, but only one is Premium-active at any moment. Two leaders in the same alliance who both subscribe is also not supported — only the first assignment counts.</p>
 <h3>Are there refunds?</h3>
 <p>Refunds are handled by Discord under their <a href="https://support.discord.com/hc/en-us/articles/360001207171" target="_blank" rel="noopener">refund policy</a>. The bot operator does not handle billing.</p>
 <h3>Can I try Premium before paying?</h3>
