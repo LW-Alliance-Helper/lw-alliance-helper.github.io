@@ -26,21 +26,21 @@
 <p>LW Alliance Helper is operated as a Discord bot for Last War alliance leadership teams. If you have questions about this policy, the best way to reach us is by opening an issue on our <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper.github.io/issues" target="_blank" rel="noopener">issue tracker</a>. Note that issues are public — please don&#x27;t include personal information (such as data you&#x27;d like deleted) in the issue itself; we&#x27;ll follow up with you privately to handle any sensitive details.</p>
 <hr>
 <h2 id="where-your-data-lives">🗂️ Where Your Data Lives</h2>
-<p>Alliance Helper is built around a clean separation: your <strong>alliance&#x27;s data</strong> lives in <em>your</em> Google Sheet, on a Google account <em>you</em> own and control. The bot&#x27;s database stores only the orchestration layer — the configuration that tells the bot what to do, and just enough operational state to do it.</p>
+<p>Alliance Helper keeps a clean separation: your <strong>alliance&#x27;s data</strong> lives in <em>your</em> Google Sheet, on a Google account <em>you</em> own and control. The bot&#x27;s own database stores only the configuration that tells the bot what to do, plus a little operational bookkeeping.</p>
 <table>
 <thead><tr><th>What</th><th>Where it lives</th><th>Who owns it</th></tr></thead>
 <tbody>
-<tr><td>Power scores, growth snapshots, train history, participation logs, member roster (when synced), survey responses, birthdays</td><td><strong>Your Google Sheet</strong></td><td><strong>You.</strong> The bot writes; the Sheet is canonical.</td></tr>
-<tr><td>Wizard answers, channel/role IDs, schedule settings, draft state, premium assignment, persistent view registry</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is operational config, not alliance data.</td></tr>
+<tr><td>Power scores, growth snapshots, train history, participation logs, member roster (when synced), survey responses, birthdays</td><td><strong>Your Google Sheet</strong></td><td><strong>You.</strong> The bot writes; your Sheet is where it lives.</td></tr>
+<tr><td>Wizard answers, channel/role IDs, schedule settings, draft state, premium assignment, persistent view registry</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is config and bookkeeping, not alliance data.</td></tr>
 </tbody>
 </table>
 <p><strong>What this means for you:</strong></p>
 <ul>
-<li><strong>You own the system of record.</strong> Every piece of data that&#x27;s <em>about</em> your alliance — its members, history, results, tracking over time — is stored in your Sheet, not ours. The bot reads and writes; we don&#x27;t keep duplicates of your alliance data.</li>
+<li><strong>You own the data.</strong> Every piece of data that&#x27;s <em>about</em> your alliance — its members, history, results, tracking over time — is stored in your Sheet, not ours. The bot reads and writes; we don&#x27;t keep duplicates of your alliance data.</li>
 <li><strong>Leaving doesn&#x27;t trap your data.</strong> If you stop using the bot, revoke the service-account share on your Sheet (<strong>Share → remove the bot&#x27;s service-account email</strong>). You keep everything that matters — there&#x27;s no export step or migration request, because we never had a separate copy.</li>
-<li><strong>Premium adds features, never lock-in.</strong> Subscribing to Premium unlocks features that build on the same data architecture (DMs, scheduled reminders, Member Roster Sync). Nothing about your alliance data moves to a different system; the storage model is identical to the free tier.</li>
+<li><strong>Premium adds features, it does not take away any data or lock you in to a plan.</strong> Subscribing unlocks features that build on the same setup (DMs, scheduled reminders, Member Roster Sync). Nothing about your alliance data moves to a different system; storage works the same as on the free tier.</li>
 </ul>
-<p>This is a deliberate design choice and a real difference from web-SaaS competitors that host alliance data on their own infrastructure. If you ever want to migrate to another tool — or build your own — your data is already in a portable, vendor-neutral format on a Google account you control.</p>
+<p>This is a deliberate choice. If you ever want to move to another tool — or build your own — your data is already in your own Google Sheet, on a Google account you control.</p>
 <hr>
 <h2 id="what-information-we-collect">What Information We Collect</h2>
 <p>LW Alliance Helper collects only the information necessary to provide its features. This includes:</p>
