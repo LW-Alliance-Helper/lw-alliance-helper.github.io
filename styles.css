@@ -150,6 +150,15 @@ ul,ol{padding-left:1.35rem}
 .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:12px;}
 .footer-links a{color:#fff!important;}
 
+/* ── What's New strip ────────────────────────────────────────────────────
+   Small dated callout that signals the bot is actively shipping. Lives
+   between the hero and the main content card on index.html. Update the
+   text inline with each release; format intentionally compact. */
+.whats-new{max-width:1180px;margin:8px auto 0;padding:0 22px;color:#fff;font-size:.94rem;text-align:center;letter-spacing:.01em;opacity:.96}
+.whats-new strong{color:#fff;font-weight:900}
+.whats-new a{color:#8bd5ff;font-weight:800}
+.whats-new a:hover{color:#fff;text-decoration:underline}
+
 /* ── Mobile ─────────────────────────────────────────────────────────────── */
 @media(max-width:820px){
   .hero{grid-template-columns:1fr;padding-top:28px}
