@@ -196,9 +196,10 @@ Run `/setup_survey` to configure the survey:
 5. **Intro message** — the message members see before starting the survey
 6. **Questions** — choose from the default Last War question set, edit individual questions, or build your own from scratch
 
-The question builder supports two question types:
+The question builder supports three question types:
 - **Text** — the member types a value, with an optional help text hint
 - **Dropdown** — the member picks from a list of options you define (up to 25)
+- **Numeric** — a number, with a configurable scale so members can type natural shorthand (`301` for 301M) or paste the full in-game value (both work either way)
 
 **Day-to-day use:**
 - Run `/postsurvey` to post the survey button in your survey channel
