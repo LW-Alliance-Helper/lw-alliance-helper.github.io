@@ -44,14 +44,18 @@ a:hover{text-decoration:underline}
 
 /* ── Hero ───────────────────────────────────────────────────────────────── */
 .hero{max-width:1180px;margin:0 auto;padding:54px 22px 28px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:42px;align-items:center}
-.hero-card{background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(248,252,255,.88));border:1px solid rgba(32,41,54,.08);border-radius:28px;box-shadow:var(--shadow-soft);padding:clamp(26px,4vw,48px);position:relative;overflow:hidden}
+.hero-card{background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(248,252,255,.88));border:1px solid rgba(32,41,54,.08);border-radius:28px;box-shadow:var(--shadow-soft);padding:clamp(26px,4vw,48px);position:relative;overflow:hidden;align-self:stretch}
 .hero-card:after{content:"";position:absolute;right:-80px;top:-90px;width:250px;height:250px;border-radius:50%;background:radial-gradient(circle,rgba(13,110,253,.16),transparent 68%)}
 .eyebrow{display:inline-flex;align-items:center;background:rgba(13,110,253,.11);color:var(--blue-dark);border:1px solid rgba(13,110,253,.18);border-radius:999px;padding:8px 13px;font-weight:900;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
 h1{font-size:clamp(2.35rem,7vw,5.4rem);line-height:.94;margin:18px 0;letter-spacing:-.06em}
 .hero-card p{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--text);line-height:1.65}
-.hero-art{position:relative}
+/* Right grid column wrapper — holds the image (with its white-frame
+   backing) plus any sibling text + CTAs that should stack beneath it.
+   align-self:stretch makes the column fill the grid row height; the
+   gap evenly spaces the children below the image. */
+.hero-column{display:flex;flex-direction:column;align-items:center;width:100%;align-self:stretch;gap:22px}
+.hero-art{width:100%}
 .hero-art img{width:100%;border-radius:24px;box-shadow:var(--shadow-soft);display:block}
-.hero-art:before{content:"";position:absolute;inset:14px 0px -10px 0px;border-radius:24px;background:#fff;z-index:-1;opacity:1}
 
 /* ── Buttons ────────────────────────────────────────────────────────────── */
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
@@ -74,8 +78,17 @@ main .button.invite{width:auto;display:inline-flex;font-size:1em;}
 /* ── Alliance count badge — populated by assets/stats.json, which the
        bot publishes daily via stats_publisher.py. Lives inside .hero-art
        directly under the image; stays hidden until alliances >= 1. */
-.hero-art .alliance-count{margin:18px 0;color:#003A70;text-align:center;font-size:.98rem;letter-spacing:.02em;opacity:.94}
-.hero-art .alliance-count strong{color:#003A70;font-weight:900;font-size:1.08rem}
+/* Alliance-count badge. Now lives directly in .hero-column on the dark
+   page background (no longer over the image's white frame), so it uses
+   white text instead of brand blue. */
+.hero-column .alliance-count{color:#fff;text-align:center;font-size:.98rem;letter-spacing:.02em;opacity:.94}
+.hero-column .alliance-count strong{color:#fff;font-weight:900;font-size:1.08rem}
+
+/* Thin community-server CTA. Sibling of .hero-art inside .hero-column,
+   sits on the dark page background. White-on-blue styling so it reads
+   cleanly; spacing handled by the parent .hero-column's gap. */
+.hero-column .community-cta{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:8px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.32);color:#fff;font-weight:800;font-size:.94rem;letter-spacing:.01em;text-decoration:none;transition:background .12s ease,transform .12s ease,border-color .12s ease}
+.hero-column .community-cta:hover{background:rgba(255,255,255,.20);border-color:rgba(255,255,255,.5);text-decoration:none;transform:translateY(-1px);color:#fff}
 
 /* ── Layout / content cards ─────────────────────────────────────────────── */
 .container{max-width:1180px;margin:0 auto;padding:26px 22px 68px}
@@ -150,14 +163,15 @@ ul,ol{padding-left:1.35rem}
 .footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-bottom:12px;}
 .footer-links a{color:#fff!important;}
 
-/* ── What's New strip ────────────────────────────────────────────────────
-   Small dated callout that signals the bot is actively shipping. Lives
-   between the hero and the main content card on index.html. Update the
-   text inline with each release; format intentionally compact. */
-.whats-new{max-width:1180px;margin:8px auto 0;padding:0 22px;color:#fff;font-size:.94rem;text-align:center;letter-spacing:.01em;opacity:.96}
-.whats-new strong{color:#fff;font-weight:900}
-.whats-new a{color:#8bd5ff;font-weight:800}
-.whats-new a:hover{color:#fff;text-decoration:underline}
+/* ── Release info block ──────────────────────────────────────────────────
+   Compact "Latest Release" + changelog/roadmap links. Lives inside
+   .hero-column under the Community CTA — signals the bot is actively
+   shipping without needing a full-width strip. Update the version line
+   inline with each release. Spacing handled by parent .hero-column gap. */
+.hero-column .release-info{color:#fff;font-size:.9rem;text-align:center;letter-spacing:.01em;opacity:.95;line-height:1.6}
+.hero-column .release-info strong{color:#fff;font-weight:900}
+.hero-column .release-info a{color:#8bd5ff;font-weight:800}
+.hero-column .release-info a:hover{color:#fff;text-decoration:underline}
 
 /* ── Screenshots ────────────────────────────────────────────────────────── */
 /* Pinterest-style column flow for the "What It Does" feature shots on
