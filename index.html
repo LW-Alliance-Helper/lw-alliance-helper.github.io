@@ -67,7 +67,7 @@
   </div>
   <a class="community-cta" href="https://discord.gg/J3PMVJ4y4d" target="_blank" rel="noopener">💬 Join the Community Server</a>
   <div class="release-info">
-    <div><strong>Latest Release:</strong> v1.1.2 (May 8, 2026)</div>
+    <div><strong>Latest Release:</strong> <span id="latest-release-tag">—</span> <span id="latest-release-date"></span></div>
     <div>
       <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Full changelog</a>
       &nbsp;·&nbsp;
@@ -160,5 +160,27 @@
       }
     })
     .catch(function () { /* silent — leave the badge hidden */ });
+
+  // Reads the latest GitHub Release for the bot repo. The release-on-main
+  // workflow on the bot repo creates one for every push to main that bumps
+  // __version__, so this stays in sync without manual edits here. Falls
+  // back to "—" on any failure, which is a visible reminder something's up.
+  fetch('https://api.github.com/repos/LW-Alliance-Helper/lw-alliance-helper-bot/releases/latest', {
+    headers: { Accept: 'application/vnd.github+json' }
+  })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.tag_name) return;
+      var tag  = document.getElementById('latest-release-tag');
+      var date = document.getElementById('latest-release-date');
+      if (tag) tag.textContent = d.tag_name;
+      if (date && d.published_at) {
+        var dt = new Date(d.published_at);
+        date.textContent = '(' + dt.toLocaleDateString('en-US', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        }) + ')';
+      }
+    })
+    .catch(function () { /* silent — leave the placeholder visible */ });
 </script>
 </body></html>
