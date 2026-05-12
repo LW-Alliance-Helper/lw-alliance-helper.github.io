@@ -63,7 +63,7 @@
 <hr>
 <h2 id="direct-messages-from-the-bot">Direct Messages from the Bot</h2>
 <p>The bot may send Discord direct messages in two cases:</p>
-<ul><li><strong>Welcome DM</strong> — when the bot is added to a new server, it DMs the user who invited it (or the server owner if the inviter cannot be determined) with setup instructions and links to the documentation.</li><li><strong>Premium DM features</strong> — when leadership has enabled DM-based features (birthday wishes, train assignment notifications, storm participation reminders, or scheduled survey reminders), the bot sends those DMs to members on the configured roster. Members can disable DMs from the bot in their Discord privacy settings (&quot;Allow direct messages from server members&quot;).</li></ul>
+<ul><li><strong>Welcome DM</strong> — when the bot is added to a new server, it DMs the user who invited it (or the server owner if the inviter cannot be determined) with setup instructions and links to the documentation.</li><li><strong>Premium DM features</strong> — when leadership has enabled DM-based features (birthday wishes, train assignment notifications, storm participation reminders, or scheduled survey reminders), the bot sends those DMs to members on the configured roster. Members can disable DMs from the bot in their Discord privacy settings (&quot;Allow direct messages from server members&quot;).</li><li><strong>Config export delivery</strong> — when a leadership user runs <code>/export_config</code>, the bot DMs them the resulting JSON file as a one-off delivery. The bot does not retain a copy of the exported file.</li></ul>
 <p>The bot does not initiate DMs outside of these features.</p>
 <hr>
 <h2 id="how-information-is-stored">How Information Is Stored</h2>
@@ -77,7 +77,6 @@
 <hr>
 <h2 id="third-party-data-sources">Third-Party Data Sources</h2>
 <p>Some features in the bot are powered by publicly available Last War reference information sourced from third-party community sites. These sources provide <strong>server and task information</strong> only — no alliance data, no member data, and nothing about your server is sent to them. The bot reads from these sources on a periodic schedule and caches the results.</p>
-<p>If this list ever changes, it will be reflected here.</p>
 <hr>
 <h2 id="payments-and-subscriptions">Payments and Subscriptions</h2>
 <p><strong>Premium subscriptions</strong> are processed through Discord&#x27;s App Subscriptions system. We do not receive, collect, or store your payment information — Discord handles all billing. Refunds and billing questions are handled through Discord per their <a href="https://support.discord.com/hc/en-us/articles/360001207171" target="_blank" rel="noopener">refund policy</a>.</p>
