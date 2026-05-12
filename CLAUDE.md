@@ -81,12 +81,13 @@ After a feature lands in the bot:
 
 | Commit | What |
 |---|---|
+| _next_ | Bot 1.2.0: added Growth Breakdown (Free button + 💎 `/setup_growth_breakdown` customisation), Shiny Tasks daily announcement, Data Portability (`/export_config` + `/import_config`). Setup, commands, index, pricing all updated. |
 | `799f00e` | Wizard step for alliance-customisable DM bodies (Train, Birthdays, DS reminder) |
 | `b5b569a` | Catch up: added Member Roster Sync section, `/cancel` to troubleshooting, Reference IDs note |
 | `b85be98` | Typography polish + alliance count badge relocation |
 | `7241af8` | Privacy + Terms cover roster sync, DMs, Premium |
 
-Total content: ~600 lines across the 4 main pages.
+Total content: ~700 lines across the 4 main pages.
 
 ---
 
