@@ -44,7 +44,7 @@
   Array.prototype.forEach.call(links, function (link) {
     link.addEventListener('click', function (e) {
       // Allow modifier-clicks (Ctrl/Cmd/middle) to use the default
-      // behavior — open the image in a new tab.
+      // behavior: open the image in a new tab.
       if (e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
       e.preventDefault();
       img.src = link.href;
@@ -69,7 +69,7 @@
   });
 
   // Click the image inside the lightbox to toggle native-resolution
-  // zoom — useful for wide shots like the growth + Sheet composite that
+  // zoom (useful for wide shots like the growth + Sheet composite that
   // shrink to fit the viewport otherwise. Dialog's overflow:auto handles
   // panning when the image is larger than the dialog.
   img.addEventListener('click', function (e) {

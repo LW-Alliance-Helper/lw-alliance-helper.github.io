@@ -47,7 +47,7 @@ a:hover{text-decoration:underline}
 .eyebrow{display:inline-flex;align-items:center;background:rgba(13,110,253,.11);color:var(--blue-dark);border:1px solid rgba(13,110,253,.18);border-radius:999px;padding:8px 13px;font-weight:900;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
 h1{font-size:clamp(2.35rem,7vw,5.4rem);line-height:.94;margin:18px 0;letter-spacing:-.06em}
 .hero-card p{font-size:clamp(1.05rem,2vw,1.28rem);color:var(--text);line-height:1.65}
-/* Right grid column wrapper — holds the image (with its white-frame
+/* Right grid column wrapper. Holds the image (with its white-frame
    backing) plus any sibling text + CTAs that should stack beneath it.
    align-self:stretch makes the column fill the grid row height; the
    gap evenly spaces the children below the image. */
@@ -73,7 +73,7 @@ main .button.invite{width:auto;display:inline-flex;font-size:1em;}
 .cta-pair{display:flex;gap:14px;width:100%}
 .cta-pair .button{flex:1;justify-content:center;text-align:center}
 
-/* ── Alliance count badge — populated by assets/stats.json, which the
+/* ── Alliance count badge. Populated by assets/stats.json, which the
        bot publishes daily via stats_publisher.py. Lives inside .hero-art
        directly under the image; stays hidden until alliances >= 1. */
 /* Alliance-count badge. Now lives directly in .hero-column on the dark
@@ -98,17 +98,30 @@ main .button.invite{width:auto;display:inline-flex;font-size:1em;}
 .content-card h3{margin-top:1.1em;font-size:1.18rem;color:var(--ink)}
 p,li{color:var(--text);line-height:1.72;font-size:1.02rem}
 /* When a paragraph leads directly into a list, drop the gap between
-   them so the list reads as a continuation. Modern :has() — fine for
+   them so the list reads as a continuation. Modern :has() is fine for
    our 2026 audience. */
 p:has(+ ul),p:has(+ ol){margin-bottom:0}
 hr{border:0;height:1px;background:rgba(7,59,142,.22);margin:28px 0}
 strong{color:var(--ink)}
 blockquote{margin:22px 0;padding:18px 20px;border-left:5px solid var(--blue-deep);background:rgba(13,110,253,.07);border-radius:14px}
 
-/* Inline command tokens — never wrap mid-command. */
+/* Inline command tokens. Never wrap mid-command. */
 code{background:rgba(7,59,142,.08);color:#073b8e;border:1px solid rgba(7,59,142,.14);padding:.18em .42em;border-radius:8px;font-weight:750;white-space:nowrap;word-break:keep-all}
 
-/* Tables — preserve nowrap for code in cells, but allow long descriptions
+/* Inline Discord-button mock. Visual approximation of Discord's secondary
+   (gray) buttons so command + button-click paths in the docs read like
+   the actual UI users will see on /setup, /desertstorm, etc. */
+.discord-button{display:inline-block;background:#4e5058;color:#ffffff;padding:3px 11px;border-radius:8px;font-weight:500;font-size:.92em;font-family:inherit;white-space:nowrap;vertical-align:baseline;line-height:1.5;letter-spacing:0;border:1px solid #3c3e44}
+.discord-button:hover{background:#5d5f66}
+
+/* "Path to feature" line that appears directly under feature h3 headings,
+   showing the command + the button(s) leadership clicks to reach the
+   wizard. Renders snug against the heading above with small breathing
+   room before the body copy that follows. */
+.command-path{margin-top:.2em;margin-bottom:1em;font-size:1rem;color:var(--muted)}
+.command-path code{font-size:.95em}
+
+/* Tables. Preserve nowrap for code in cells, but allow long descriptions
    to wrap normally. */
 table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:16px;border:1px solid var(--line);margin:24px 0;background:#fff}
 th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
@@ -117,7 +130,7 @@ tr:last-child td{border-bottom:0}
 ul,ol{padding-left:1.35rem}
 
 /* ── Pricing page ───────────────────────────────────────────────────────── */
-/* "Why Premium?" — a clean white card with a soft popout shadow, matching
+/* "Why Premium?": a clean white card with a soft popout shadow, matching
    the hero-art treatment on the home page rather than the gold/blue
    gradient that fought with the body copy. */
 .why-premium{margin:12px 0 56px;padding:24px 28px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-soft);display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
@@ -129,7 +142,7 @@ ul,ol{padding-left:1.35rem}
 .plan.featured{border-color:rgba(212,161,62,.55);box-shadow:var(--shadow-card)}
 .plan.featured:before{content:"Most Popular";position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:.78rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;padding:6px 14px;border-radius:999px;box-shadow:0 4px 12px rgba(212,161,62,.36)}
 /* Bigger plan icon. -18px bottom margin fully cancels the .plan flex
-   gap so the tier name sits flush with the icon — easier to scan. */
+   gap so the tier name sits flush with the icon (easier to scan). */
 .plan-icon{width:96px;height:96px;border-radius:16px;object-fit:cover;align-self:flex-start;margin-bottom:-18px}
 .plan-name{font-size:1.4rem;font-weight:900;color:var(--ink);margin:0;letter-spacing:-.01em}
 .plan-tagline{color:var(--muted);font-size:.98rem;margin:4px 0 0}
@@ -163,7 +176,7 @@ ul,ol{padding-left:1.35rem}
 
 /* ── Release info block ──────────────────────────────────────────────────
    Compact "Latest Release" + changelog/roadmap links. Lives inside
-   .hero-column under the Community CTA — signals the bot is actively
+   .hero-column under the Community CTA. Signals the bot is actively
    shipping without needing a full-width strip. Update the version line
    inline with each release. Spacing handled by parent .hero-column gap. */
 .hero-column .release-info{color:#fff;font-size:.9rem;text-align:center;letter-spacing:.01em;opacity:.95;line-height:1.6}
@@ -183,12 +196,12 @@ ul,ol{padding-left:1.35rem}
 
 /* Single inline screenshot, used for setup/commands/pricing pages. */
 figure.screenshot{margin:1.8em auto;text-align:center;max-width:600px}
-/* `.wide` is for the data-ownership centerpiece on index — fills the full
+/* `.wide` is for the data-ownership centerpiece on index, fills the full
    content-card width since the parent already constrains it. */
 figure.screenshot.wide{max-width:none}
 figure.screenshot figcaption{margin-top:10px;font-size:.95rem;color:var(--muted);font-style:italic;line-height:1.5}
 
-/* Click-to-enlarge — every screenshot img is wrapped in an anchor. The
+/* Click-to-enlarge. Every screenshot img is wrapped in an anchor. The
    anchor's href opens the full-resolution file as a fallback; nav.js
    intercepts left-clicks to open an in-page lightbox overlay instead so
    users keep their context. Cursor cue + subtle hover lift signal
@@ -201,7 +214,7 @@ a.screenshot-link:hover img{transform:translateY(-2px);box-shadow:var(--shadow-c
 
 /* In-page lightbox using the native <dialog> element. Pattern follows
    Imgur / PhotoSwipe / Twitter Media Viewer:
-   - Dialog fills the full viewport (no transform — that would break the
+   - Dialog fills the full viewport (no transform; that would break the
      close button's position:fixed)
    - Image centered with `margin:auto` inside a flex container, which
      handles both "fits screen" centering AND "overflows when zoomed"
@@ -209,7 +222,7 @@ a.screenshot-link:hover img{transform:translateY(-2px);box-shadow:var(--shadow-c
    - Close button anchored to viewport top-right
    - Click image to toggle native-resolution zoom; cursor signals state
    ALL layout rules scoped to [open] so the dialog stays display:none
-   when closed — otherwise display:flex would override the browser's
+   when closed; otherwise display:flex would override the browser's
    default and the invisible dialog would intercept page clicks. */
 dialog.lightbox:not([open]){display:none}
 dialog.lightbox[open]{position:fixed;inset:0;width:100vw;height:100vh;max-width:100vw;max-height:100vh;margin:0;border:none;padding:0;background:transparent;display:flex;overflow:auto}
