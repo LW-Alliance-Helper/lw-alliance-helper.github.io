@@ -79,15 +79,16 @@ After a feature lands in the bot:
 
 ## Recent shipped highlights
 
-| Commit | What |
+| Branch / commit | What |
 |---|---|
-| _next_ | Bot 1.2.0: added Growth Breakdown (Free button + 💎 `/setup_growth_breakdown` customisation), Shiny Tasks daily announcement, Data Portability (`/export_config` + `/import_config`). Setup, commands, index, pricing all updated. |
+| `release/1.4.0` (in flight) | Bot 1.4.0 sweep: every `/setup_*` collapsed into `/setup` hub; `/events`, `/train`, `/survey`, `/growth`, `/config`, `/premium`, `/members`, `/admin` all became command groups (e.g. `/survey post`, `/growth breakdown`); `/desertstorm` and `/canyonstorm` became event hubs with 11-button grids replacing every prior subcommand. Premium storm structured-flow feature set added (sign-up polls, roster builder with auto-fill, attendance tracking, roster history, image rendering, faction roles). README replaced with a stub; legal pages bumped + cover new Discord-role behaviour. |
+| _previous_ | Bot 1.2.0: added Growth Breakdown (Free button + 💎 `/setup_growth_breakdown` customisation), Shiny Tasks daily announcement, Data Portability (`/export_config` + `/import_config`). Setup, commands, index, pricing all updated. |
 | `799f00e` | Wizard step for alliance-customisable DM bodies (Train, Birthdays, DS reminder) |
 | `b5b569a` | Catch up: added Member Roster Sync section, `/cancel` to troubleshooting, Reference IDs note |
 | `b85be98` | Typography polish + alliance count badge relocation |
 | `7241af8` | Privacy + Terms cover roster sync, DMs, Premium |
 
-Total content: ~700 lines across the 4 main pages.
+Total content: ~700 lines across the 4 main pages (1.4.0 expands this).
 
 ---
 
@@ -126,5 +127,8 @@ coordination needed.
 
 ## Status snapshot
 
-Pre-launch. Pages are up and current as of `799f00e`. Bot is in
-pre-launch readiness too — see `../lw-alliance-helper-bot/CLAUDE.md`.
+Live. Currently on `release/1.4.0` branch in sync with the bot repo's
+`dev` branch (bot's in-flight 1.4.0 release). When the bot's `release/1.4.0`
+merges to bot `main`, this branch PRs to website `main` at the same
+time so the docs ship in lockstep with the deployed bot. See
+`../lw-alliance-helper-bot/CLAUDE.md` for the bot side.

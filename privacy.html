@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="active" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="privacy-policy">Privacy Policy</h1>
-<p><em>Last updated: May 11, 2026</em></p>
+<p><em>Last updated: May 20, 2026</em></p>
 <p>This Privacy Policy explains what information LW Alliance Helper (the &quot;Bot&quot;) collects, how it is used, and how it is stored. By adding LW Alliance Helper to your Discord server and using its features, you agree to this policy.</p>
 <hr>
 <h2 id="who-we-are">Who We Are</h2>
@@ -30,7 +30,7 @@
 <table>
 <thead><tr><th>What</th><th>Where it lives</th><th>Who owns it</th></tr></thead>
 <tbody>
-<tr><td>Power scores, growth snapshots, train history, participation logs, member roster (when synced), survey responses, birthdays</td><td><strong>Your Google Sheet</strong></td><td><strong>You.</strong> The bot writes; your Sheet is where it lives.</td></tr>
+<tr><td>Power scores, growth snapshots, train history, participation logs, member roster (when synced), survey responses, birthdays, storm sign-ups, weekly storm rosters, post-event attendance</td><td><strong>Your Google Sheet</strong></td><td><strong>You.</strong> The bot writes; your Sheet is where it lives.</td></tr>
 <tr><td>Wizard answers, channel/role IDs, schedule settings, draft state, premium assignment, persistent view registry</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is config and bookkeeping, not alliance data.</td></tr>
 </tbody>
 </table>
@@ -47,7 +47,7 @@
 <p><strong>From Discord:</strong></p>
 <ul><li>Discord server (guild) IDs — used to store per-server configuration settings</li><li>Discord user IDs — used to match members to their rows in your Google Sheet</li><li>Discord display names — used in survey notifications and birthday announcements</li><li>Discord channel and role IDs — stored as part of your server&#x27;s configuration</li></ul>
 <p><strong>Server install metadata (for support triage):</strong> when the bot is added to a server, it stores a small record so that errors logged against a guild ID can be matched to an alliance for support purposes. This record contains the guild ID, the current guild name, the server owner&#x27;s Discord ID, and the Discord ID of the user who invited the bot when this can be read from the audit log. Two timestamps are kept: the first time the bot saw the server and the most recent time it reconnected. The record is updated whenever the bot starts up so the guild name stays current, and it is deleted automatically when the bot is removed from a server.</p>
-<p>When <strong>Member Roster Sync</strong> is configured (a Premium feature), the bot also writes each member&#x27;s server-join date and assigned role names to a tab in your Google Sheet, alongside their Discord ID and display name. This is opt-in and only happens after leadership runs <code>/setup_members</code>.</p>
+<p>When <strong>Member Roster Sync</strong> is configured (a Premium feature), the bot also writes each member&#x27;s server-join date and assigned role names to a tab in your Google Sheet, alongside their Discord ID and display name. This is opt-in and only happens after leadership opens <code>/setup</code> and configures it via the 👥 Members button.</p>
 <p><strong>From your Google Sheet (submitted by your members):</strong></p>
 <ul><li>Any data your members submit through the survey feature (e.g. squad powers, profession, game statistics). The specific fields depend on the questions you configure.</li><li>Birthday data, if you configure birthday tracking and have that information in your sheet</li></ul>
 <p><strong>Configuration data:</strong></p>
@@ -58,12 +58,12 @@
 <hr>
 <h2 id="how-information-is-used">How Information Is Used</h2>
 <p>Information collected by LW Alliance Helper is used solely to provide the bot&#x27;s features:</p>
-<ul><li>Server configuration data is used to route commands, post announcements, and personalise the bot&#x27;s behaviour to your server</li><li>Discord user IDs and display names are used to match survey submissions to the correct row in your sheet and to @mention members in birthday announcements where a Discord ID is available</li><li>Google Sheet data is read and written only in response to commands run by your leadership team or automated tasks you have configured</li></ul>
+<ul><li>Server configuration data is used to route commands, post announcements, and personalise the bot&#x27;s behaviour to your server</li><li>Discord user IDs and display names are used to match survey submissions to the correct row in your sheet and to @mention members in birthday announcements where a Discord ID is available</li><li>Google Sheet data is read and written only in response to commands run by your leadership team or automated tasks you have configured</li><li>Discord role assignments may be changed on your server when you opt in to a feature that does so (for example, the Premium storm flow can assign a faction role to everyone on this week's active roster after leadership clicks Approve &amp; Post). The bot only adds or removes the specific roles you configure, only at the trigger points you configure, and never touches any other role.</li></ul>
 <p>We do not use your data for advertising, analytics, or any purpose beyond operating the bot.</p>
 <hr>
 <h2 id="direct-messages-from-the-bot">Direct Messages from the Bot</h2>
-<p>The bot may send Discord direct messages in two cases:</p>
-<ul><li><strong>Welcome DM</strong> — when the bot is added to a new server, it DMs the user who invited it (or the server owner if the inviter cannot be determined) with setup instructions and links to the documentation.</li><li><strong>Premium DM features</strong> — when leadership has enabled DM-based features (birthday wishes, train assignment notifications, storm participation reminders, or scheduled survey reminders), the bot sends those DMs to members on the configured roster. Members can disable DMs from the bot in their Discord privacy settings (&quot;Allow direct messages from server members&quot;).</li><li><strong>Config export delivery</strong> — when a leadership user runs <code>/export_config</code>, the bot DMs them the resulting JSON file as a one-off delivery. The bot does not retain a copy of the exported file.</li></ul>
+<p>The bot may send Discord direct messages in these cases:</p>
+<ul><li><strong>Welcome DM</strong> — when the bot is added to a new server, it DMs the user who invited it (or the server owner if the inviter cannot be determined) with setup instructions and links to the documentation.</li><li><strong>Premium DM features</strong> — when leadership has enabled DM-based features (birthday wishes, train assignment notifications, storm participation reminders, or scheduled survey reminders), the bot sends those DMs to members on the configured roster. Members can disable DMs from the bot in their Discord privacy settings (&quot;Allow direct messages from server members&quot;).</li><li><strong>Premium storm sign-up nudge</strong> — when a member signs up for a storm and their power score on file is more than a few days old, the bot may DM them a one-off &quot;remember to refresh your squad power before the event&quot; nudge. This is a Premium-only feature, only fires when the structured sign-up flow is enabled, and respects the same DM privacy settings as everything else.</li><li><strong>Config export delivery</strong> — when leadership runs <code>/config export</code>, the bot DMs them the resulting JSON file as a one-off delivery. The bot does not retain a copy of the exported file.</li></ul>
 <p>The bot does not initiate DMs outside of these features.</p>
 <hr>
 <h2 id="how-information-is-stored">How Information Is Stored</h2>
@@ -82,7 +82,7 @@
 <p><strong>Premium subscriptions</strong> are processed through Discord&#x27;s App Subscriptions system. We do not receive, collect, or store your payment information — Discord handles all billing. Refunds and billing questions are handled through Discord per their <a href="https://support.discord.com/hc/en-us/articles/360001207171" target="_blank" rel="noopener">refund policy</a>.</p>
 <hr>
 <h2 id="data-retention">Data Retention</h2>
-<p>Server configuration data is retained for as long as your server uses the bot. If you run <code>/setup_reset</code> or remove the bot from your server, your configuration data can be deleted upon request.</p>
+<p>Server configuration data is retained for as long as your server uses the bot. If you open <code>/setup</code> and click <strong>Reset</strong> (or remove the bot from your server), your configuration data can be deleted upon request.</p>
 <p>The install-metadata record described above is deleted automatically when the bot is removed from your server, and can also be deleted on request at any time.</p>
 <p>Member data in your Google Sheet is entirely under your control. We do not retain copies of it.</p>
 <hr>
