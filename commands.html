@@ -3,25 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Commands — LW Alliance Helper</title>
+<title>Commands | LW Alliance Helper</title>
 <meta name="description" content="Every slash command provided by LW Alliance Helper, grouped by feature: events, train, birthdays, Desert Storm, Canyon Storm, survey, growth, premium, utilities.">
 <link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png">
 <link rel="canonical" href="https://lw-alliance-helper.github.io/commands.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="LW Alliance Helper">
-<meta property="og:title" content="Commands — LW Alliance Helper">
+<meta property="og:title" content="Commands | LW Alliance Helper">
 <meta property="og:description" content="Every slash command grouped by feature.">
 <meta property="og:image" content="https://lw-alliance-helper.github.io/assets/lw-alliance-helper-logo.png">
 <meta property="og:url" content="https://lw-alliance-helper.github.io/commands.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Commands — LW Alliance Helper">
+<meta name="twitter:title" content="Commands | LW Alliance Helper">
 <meta name="twitter:description" content="Every slash command grouped by feature.">
 <meta name="twitter:image" content="https://lw-alliance-helper.github.io/assets/lw-alliance-helper-logo.png">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="active" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="commands">Commands</h1>
-<p>Every slash command provided by LW Alliance Helper, grouped by feature. Most commands require the configured leadership role and the leadership channel; the various <code>/setup_*</code> commands also accept anyone with server <strong>Administrator</strong> permission. Start with <code>/setup</code> if the bot hasn&#x27;t been configured yet. 💎 marks Premium-only features (unlock with <code>/upgrade</code>).</p>
-<p>🗂️ <strong>Your alliance's data lives in your own Google Sheet</strong> — see <a href="privacy.html#where-your-data-lives">Where Your Data Lives</a> for details.</p>
+<p>Every slash command provided by LW Alliance Helper, grouped by feature. Most commands require the configured leadership role and the leadership channel; <code>/setup</code> also accepts anyone with server <strong>Administrator</strong> permission. Start with <code>/setup</code> if the bot hasn't been configured yet. 💎 marks Premium-only features (unlock with <code>/upgrade</code>).</p>
+<p>🗂️ <strong>Your alliance's data lives in your own Google Sheet.</strong> See <a href="privacy.html#where-your-data-lives">Where Your Data Lives</a> for details.</p>
 <figure class="screenshot">
   <a class="screenshot-link" href="assets/screenshot-help.png" target="_blank" rel="noopener" aria-label="Open /help screenshot at full size">
     <img src="assets/screenshot-help.png" alt="The bot's /help command output showing the always-handy command list with a category dropdown for browsing more">
@@ -29,50 +29,108 @@
   <figcaption>The same reference is also available inside Discord with <code>/help</code>.</figcaption>
 </figure>
 <hr>
-<h2 id="core-setup">⚙️ Core Setup</h2>
-<p>Configure the bot for your server. Run these first before using any other features.</p>
-<ul><li><code>/setup</code> — Configure roles, leadership channel, timezone, and Google Sheet.</li><li><code>/view_configuration</code> — Show every configured setting across all setup wizards in a single embed.</li><li><code>/setup_reset</code> — Clear server configuration and start over.</li></ul>
+<h2 id="setup-hub">⚙️ Setup Hub</h2>
+<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Growth Breakdown, Shiny Tasks, and (💎 Premium) Members. Two more buttons handle housekeeping: <span class="discord-button">View Configuration</span> prints every wizard's saved answers in one place, and <span class="discord-button">Reset</span> clears your server's configuration so you can start over.</p>
+<ul><li><code>/setup</code>: Open the setup hub. First-time use walks Core Setup (member role, leadership role, leadership channel, timezone, Google Sheet). After that, the hub lets you pick any feature to add, edit, or disable.</li></ul>
 <hr>
 <h2 id="event-announcements">📣 Event Announcements</h2>
-<p>Schedule recurring events (Plague Marauder, Zombie Siege, or anything else) and post drafts to leadership for approval before announcing.</p>
-<ul><li><code>/setup_events</code> — Configure events, announcement channels, draft posting time, and the 5-minute warning.</li><li><code>/events [date]</code> — Open the event editor for today or a specific date (e.g. <code>April 5</code> or <code>4/5</code>).</li><li><code>/events_log</code> — Show approved event posts from the past 7 days.</li></ul>
+<p>Schedule recurring events (Plague Marauder, Zombie Siege, or anything else) and post drafts to leadership for approval before announcing. A 5-minute warning fires automatically before kick-off.</p>
+<ul>
+  <li><code>/setup</code> → <span class="discord-button">📣 Events</span>: Configure events, leadership and public channels, daily draft time, and the 5-minute warning.</li>
+  <li><code>/events overview</code>: See every configured event type plus the next firing date for each, at a glance.</li>
+  <li><code>/events show [date]</code>: Open the event editor for today or a specific date (e.g. <code>April 5</code> or <code>4/5</code>). Edit, approve, and post from there.</li>
+  <li><code>/events log</code>: Show approved event posts. Free tier sees the last 7 days; 💎 Premium has a 30-day window.</li>
+</ul>
 <hr>
 <h2 id="train-schedule">🚂 Train Schedule</h2>
-<p>Track who is assigned the alliance train each day and optionally generate a personalised ChatGPT prompt for that member&#x27;s announcement blurb.</p>
-<ul><li><code>/setup_train</code> — Configure the train tab, blurb generation, reminders, and the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder).</li><li><code>/train</code> — View the schedule. Inline buttons let you <strong>Add</strong>, <strong>Update</strong>, <strong>Generate Prompt</strong>, or <strong>Clear</strong> entries. Add and Update will offer to run the blurb wizard if blurb generation is enabled.</li><li><code>/train_log [date]</code> — Show recent prompt log entries (defaults to the past 14 days; pass a date to look up a specific entry).</li><li><code>/train_addbirthdays</code> — Manually run the birthday check now and add upcoming birthdays to the schedule.</li></ul>
+<p>Track who is assigned the alliance train each day and optionally generate a personalised ChatGPT prompt for that member's announcement blurb. Birthdays can be auto-added to the schedule.</p>
+<ul>
+  <li><code>/setup</code> → <span class="discord-button">🚂 Train</span>: Configure the train tab, blurb generation, reminders, and the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder).</li>
+  <li><code>/train overview</code>: View the schedule. Inline buttons let you <span class="discord-button">Add</span>, <span class="discord-button">Update</span>, <span class="discord-button">Generate Prompt</span>, or <span class="discord-button">Clear</span> entries. Add and Update will offer to run the blurb wizard if blurb generation is enabled.</li>
+  <li><code>/train log [date]</code>: Recent prompt log entries. Free tier sees the last 7 days; 💎 Premium has a 30-day window.</li>
+  <li><code>/train birthdays</code>: Manually run the birthday check now and add upcoming birthdays to the train schedule. Useful if you just added a birthday and don't want to wait for the next nightly auto-run.</li>
+</ul>
 <hr>
 <h2 id="birthdays">🎂 Birthdays</h2>
 <p>Read birthday data from your Google Sheet. The bot can post announcements in Discord and auto-add members to the train schedule on their birthday.</p>
-<ul><li><code>/setup_birthdays</code> — Configure birthday tracking, train integration, Discord announcements, and the 💎 Premium per-member DM body (with <code>{name}</code> placeholder).</li><li><code>/birthdays</code> — Show upcoming birthdays in the next 14 days.</li></ul>
+<ul>
+  <li><code>/setup</code> → <span class="discord-button">🎂 Birthdays</span>: Configure birthday tracking, train integration, Discord announcements, and the 💎 Premium per-member DM body (with <code>{name}</code> placeholder).</li>
+  <li><code>/birthdays</code>: Show upcoming birthdays inside your lookahead window (default 14 days).</li>
+</ul>
 <hr>
 <h2 id="desert-storm">⚔️ Desert Storm</h2>
-<p>Generate ready-to-copy team mail drafts and log participation each week. The draft flow walks through <strong>Pick Team → Pick Time → Mail Template (Use as-is or Edit) → Preview</strong>, with a final <strong>Post & Copy</strong> button that posts the mail to your configured post channel and prints a copyable code block in leadership. Setup Step 6 is an opt-in <strong>participation tracker</strong> where you define what you want to log each week (text, yes/no, numeric, roster names — plus 💎 single-select, multi-select, and date for Premium).</p>
-<ul><li><code>/setup_desertstorm</code> — Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions.</li><li><code>/desertstorm</code> — Show current rosters and the active mail template.</li><li><code>/desertstorm_draft</code> — Generate a Desert Storm mail draft for Team A or Team B.</li><li><code>/desertstorm_participation</code> — Walk through your configured participation questions for this week's storm.</li><li><code>/desertstorm_log [date]</code> — View a Desert Storm log entry (defaults to today). Free tier sees the 4 most recent entries; 💎 Premium has unlimited lookback.</li><li><code>/desertstorm_remind</code> — 💎 DM every roster member to participate in this week's storm. The DM body is alliance-customisable in <code>/setup_desertstorm</code> with <code>{name}</code> as a placeholder.</li></ul>
+<p>One command opens the whole Desert Storm workspace. <code>/desertstorm</code> shows your alliance's current storm configuration plus a button grid for every action your officers need each week. Setup includes an optional <strong>participation tracker</strong> where you define exactly what you want to log each week (text, yes/no, numeric, roster names, plus 💎 single-select, multi-select, and date for Premium).</p>
+<ul>
+  <li><code>/setup</code> → <span class="discord-button">⚔️ Desert Storm</span>: Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions. 💎 Premium also configures the sign-up channel, auto-schedule, and sign-up / roster / attendance sheet tabs.</li>
+  <li><code>/desertstorm</code>: <strong>Event hub.</strong> Opens an embed showing your alliance's current Desert Storm configuration plus a button grid for every action:
+    <ul>
+      <li><strong>Event-day row</strong>: <span class="discord-button">📣 Post sign-up poll</span> (💎), <span class="discord-button">👁️ View sign-ups + set up teams</span> (💎), <span class="discord-button">📋 Record attendance</span> (💎), <span class="discord-button">📊 Fill out participation questions</span>.</li>
+      <li><strong>Comms + config row</strong>: <span class="discord-button">🔔 Send DM reminder to roster</span> (💎), <span class="discord-button">🧮 Manage strategy presets</span>, <span class="discord-button">👤 Manage member rules</span>, <span class="discord-button">📄 Generate mail</span>.</li>
+      <li><strong>Reference row</strong>: <span class="discord-button">📜 View past participation logs</span>, <span class="discord-button">📜 View past rosters</span> (💎), <span class="discord-button">⚙️ Open setup</span>.</li>
+    </ul>
+    💎 buttons render disabled on the free tier so officers can see at a glance what <code>/upgrade</code> unlocks. Past log lookback is 4 most-recent entries on free, unlimited on 💎 Premium.
+  </li>
+</ul>
 <hr>
 <h2 id="canyon-storm">🏜️ Canyon Storm</h2>
-<p>Same workflow as Desert Storm — mail generation with Post & Copy, configurable participation logging, and reminders.</p>
-<ul><li><code>/setup_canyonstorm</code> — Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions.</li><li><code>/canyonstorm</code> — Show current rosters and the active mail template.</li><li><code>/canyonstorm_draft</code> — Generate a Canyon Storm mail draft for Team A or Team B.</li><li><code>/canyonstorm_participation</code> — Walk through your configured participation questions for this week's storm.</li><li><code>/canyonstorm_log [date]</code> — View a Canyon Storm log entry (defaults to today). Free tier sees the 4 most recent entries; 💎 Premium has unlimited lookback.</li><li><code>/canyonstorm_remind</code> — 💎 DM every roster member to participate in this week's storm. The DM body is alliance-customisable in <code>/setup_canyonstorm</code> with <code>{name}</code> as a placeholder.</li></ul>
+<p>Same shape as Desert Storm: every Canyon Storm action lives behind one hub command.</p>
+<ul>
+  <li><code>/setup</code> → <span class="discord-button">🏜️ Canyon Storm</span>: Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions. 💎 Premium also configures the sign-up channel, auto-schedule, sign-up / roster / attendance sheet tabs, and the optional faction-role assignment on Approve &amp; Post.</li>
+  <li><code>/canyonstorm</code>: <strong>Event hub.</strong> Opens an embed showing your alliance's current Canyon Storm configuration plus the same button grid as Desert Storm:
+    <ul>
+      <li><strong>Event-day row</strong>: <span class="discord-button">📣 Post sign-up poll</span> (💎), <span class="discord-button">👁️ View sign-ups + set up teams</span> (💎), <span class="discord-button">📋 Record attendance</span> (💎), <span class="discord-button">📊 Fill out participation questions</span>.</li>
+      <li><strong>Comms + config row</strong>: <span class="discord-button">🔔 Send DM reminder to roster</span> (💎), <span class="discord-button">🧮 Manage strategy presets</span>, <span class="discord-button">👤 Manage member rules</span>, <span class="discord-button">📄 Generate mail</span>.</li>
+      <li><strong>Reference row</strong>: <span class="discord-button">📜 View past participation logs</span>, <span class="discord-button">📜 View past rosters</span> (💎), <span class="discord-button">⚙️ Open setup</span>.</li>
+    </ul>
+  </li>
+</ul>
 <hr>
 <h2 id="survey">📋 Survey</h2>
 <p>Collect member statistics through a private Discord thread survey. Responses are saved directly to your Google Sheet and leadership is notified for each submission. <strong>Premium</strong> alliances can configure multiple named surveys (each with its own channel, intro, and reminder body) plus advanced question types (multi-select, date) and min/max bounds on numeric questions.</p>
-<ul><li><code>/setup_survey</code> — Configure the default survey: questions, channels, sheet tabs, and intro message.</li><li><code>/survey</code> — View configured survey(s). 💎 Premium tier renders a list of every survey plus <strong>Add / Edit / Remove</strong> buttons — the single surface for managing multiple surveys.</li><li><code>/survey_post</code> — Post (or repost) the answer button. Premium guilds with multiple surveys are prompted to pick which one.</li><li><code>/survey_remind</code> — Hub command. Send a reminder right now, or set up a recurring schedule (daily / weekly). Free tier delivers reminders via channel post; 💎 Premium adds DM-via-Member-Roster delivery.</li></ul>
+<ul>
+  <li><code>/setup</code> → <span class="discord-button">📋 Survey</span>: Configure the default survey: questions, channels, sheet tabs, and intro message.</li>
+  <li><code>/survey overview</code>: View your configured survey(s). 💎 Premium tier renders a list of every survey plus <span class="discord-button">Add</span>, <span class="discord-button">Edit</span>, and <span class="discord-button">Remove</span> buttons, the single surface for managing multiple surveys.</li>
+  <li><code>/survey post</code>: Post (or repost) the answer button. Premium guilds with multiple surveys are prompted to pick which one.</li>
+  <li><code>/survey remind</code>: Send a reminder right now, or set up a recurring schedule (daily / weekly). Free tier delivers reminders via channel post; 💎 Premium adds DM-via-Member-Roster delivery.</li>
+</ul>
 <hr>
 <h2 id="growth-tracking">📈 Growth Tracking</h2>
-<p>Take periodic snapshots of your members&#x27; stats to track alliance growth over time. Each snapshot also classifies every member's percent change into a bucket — <strong>Increased</strong>, <strong>Steady</strong>, <strong>Low</strong>, <strong>None</strong>, or <strong>Decline</strong> — written to a separate <code>Growth Breakdown</code> sheet tab so you can see who is climbing and who is stalled at a glance.</p>
-<ul><li><code>/setup_growth</code> — Configure source tab, metrics to track, and snapshot schedule.</li><li><code>/setup_growth_breakdown</code> — 💎 Configure the breakdown auto-post channel, bucket filter, custom thresholds, and custom bucket labels. The breakdown <em>computation</em> ships on every tier; this command unlocks the customisation layer.</li><li><code>/growth</code> — Show growth status with options to run a snapshot, view the most recent breakdown, or edit config. The <strong>📊 See most recent Breakdown</strong> button reads the breakdown tab and renders an ephemeral embed grouped by metric and bucket.</li></ul>
+<p>Take periodic snapshots of your members' stats to track alliance growth over time. Each snapshot also classifies every member's percent change into a bucket (<strong>Increased</strong>, <strong>Steady</strong>, <strong>Low</strong>, <strong>None</strong>, or <strong>Decline</strong>) written to a separate <code>Growth Breakdown</code> sheet tab so you can see who is climbing and who is stalled at a glance.</p>
+<ul>
+  <li><code>/setup</code> → <span class="discord-button">📈 Growth</span>: Configure source tab, metrics to track, and snapshot schedule.</li>
+  <li><code>/setup</code> → <span class="discord-button">📊 Growth Breakdown</span>: 💎 Configure the breakdown auto-post channel, bucket filter, custom thresholds, and custom bucket labels. The breakdown <em>computation</em> ships on every tier; this wizard unlocks the customisation layer.</li>
+  <li><code>/growth overview</code>: Show growth status with options to run a snapshot, view the most recent breakdown, or edit config.</li>
+  <li><code>/growth breakdown</code>: Jump straight to the most-recent bucket breakdown (Increased / Steady / Low / None / Decline), rendered as an ephemeral embed grouped by metric and bucket.</li>
+</ul>
 <hr>
 <h2 id="shiny-tasks">🌟 Shiny Tasks</h2>
-<p>Daily auto-post listing every Last War server in your alliance's transfer range that has shiny tasks today. Free for every alliance. No more checking the site by hand and copy-pasting the list into your in-game mail.</p>
-<ul><li><code>/setup_shiny_tasks</code> — Configure the announcement channel, server range (your transfer-eligible window), post time, and message template.</li></ul>
+<p>Daily auto-post listing every Last War server in your alliance's transfer range that has shiny tasks today. Free for every alliance. No more checking by hand and copy-pasting the list into your in-game mail.</p>
+<ul><li><code>/setup</code> → <span class="discord-button">🌟 Shiny Tasks</span>: Configure the announcement channel, server range (your transfer-eligible window), post time, and message template.</li></ul>
 <hr>
 <h2 id="member-roster-sync">💎 Member Roster Sync</h2>
-<p>Premium-only. Writes every member&#x27;s Discord ID and name to a sheet tab so DM-based features (birthday DMs, train DMs, storm reminders, scheduled survey reminders, auto-mention) can find members by name. Most alliances configure this once and let auto-sync keep it current.</p>
-<ul><li><code>/setup_members</code> — 💎 Configure the roster tab, optional role filter (member-role-only vs every non-bot), and whether to auto-resync when members join, leave, or change roles. Runs an initial sync at the end.</li><li><code>/sync_members</code> — 💎 Manually rebuild the roster sheet now. Useful after a bulk role change or if auto-sync is off.</li></ul>
+<p>Premium-only. Writes every member's Discord ID and name to a sheet tab so DM-based features (birthday DMs, train DMs, storm reminders, scheduled survey reminders, auto-mention) can find members by name. Most alliances configure this once and let auto-sync keep it current.</p>
+<ul>
+  <li><code>/setup</code> → <span class="discord-button">👥 Members</span>: 💎 Configure the roster tab, optional role filter (member-role-only vs every non-bot), and whether to auto-resync when members join, leave, or change roles. Runs an initial sync at the end.</li>
+  <li><code>/members overview</code>: 💎 See the roster source, last-sync time, and current state at a glance.</li>
+  <li><code>/members sync</code>: 💎 Manually rebuild the roster sheet now. Useful after a bulk role change or if auto-sync is off.</li>
+</ul>
 <hr>
 <h2 id="data-portability">📦 Data Portability</h2>
 <p>Move your alliance's bot config to a new Discord server, or snapshot it as a backup you can restore later. Your alliance's <em>data</em> always lives in your own Google Sheet; these commands carry the bot-side wizard answers (templates, channels, schedules, custom questions) alongside it. Free for every alliance.</p>
-<ul><li><code>/export_config</code> — Pick the categories you want to export (core setup, events, DS, CS, train, birthday, growth, surveys, shiny tasks, member roster) and the bot DMs you a JSON file with the saved config from those categories. Categories with no saved data don't appear in the picker.</li><li><code>/import_config</code> — Attach an export JSON to apply it to this server. The bot walks a guided remap wizard for every channel and role referenced in the export — pick the new equivalent, keep the current value, or skip — then applies per category with a final summary embed naming what landed and what was skipped.</li></ul>
+<ul>
+  <li><code>/config overview</code>: Show what this server has saved plus pointers into export and import.</li>
+  <li><code>/config export</code>: Pick the categories you want to export (core setup, events, DS, CS, train, birthday, growth, surveys, shiny tasks, member roster) and the bot DMs you a JSON file with the saved config from those categories. Categories with no saved data don't appear in the picker.</li>
+  <li><code>/config import &lt;file&gt;</code>: Attach an export JSON to apply it to this server. The bot walks a guided remap wizard for every channel and role referenced in the export (pick the new equivalent, keep the current value, or skip), then applies per category with a final summary embed naming what landed and what was skipped.</li>
+</ul>
 <hr>
 <h2 id="utilities">🔧 Utilities</h2>
-<ul><li><code>/cancel</code> — Cancel any active wizard or log session and reset wizard state.</li><li><code>/help</code> — Show this command list inside Discord (always available, ephemeral).</li><li><code>/donate</code> — 💖 Show optional tip-jar links to support the bot's hosting.</li><li><code>/upgrade</code> — 💎 Open Discord's subscription dialog and pin Premium to this server once checkout completes.</li><li><code>/premium_assign</code> — 💎 Move your Premium subscription to this server. A subscription unlocks Premium in one server at a time; this is how you switch.</li><li><code>/premium_status</code> — 💎 Show your subscription state and the server it's currently assigned to.</li><li><code>/premium_unassign</code> — 💎 Release the assignment without canceling the subscription. The server reverts to Free; the subscription is still yours to reassign elsewhere.</li></ul>
+<ul>
+  <li><code>/cancel</code>: Cancel any active wizard or log session and reset wizard state.</li>
+  <li><code>/help</code>: Show this command list inside Discord (always available, ephemeral). Category dropdown lets you browse details for each feature.</li>
+  <li><code>/donate</code>: 💖 Show optional tip-jar links to support the bot's hosting.</li>
+  <li><code>/upgrade</code>: 💎 Open Discord's subscription dialog and pin Premium to this server once checkout completes.</li>
+  <li><code>/premium overview</code>: 💎 Show your subscription state and the server it's currently assigned to. On the free tier this doubles as an upsell summary.</li>
+  <li><code>/premium assign</code>: 💎 Move your Premium subscription to this server. A subscription unlocks Premium in one server at a time; this is how you switch.</li>
+  <li><code>/premium unassign</code>: 💎 Release the assignment without canceling the subscription. The server reverts to Free; the subscription is still yours to reassign elsewhere.</li>
+</ul>
 </article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="setup.html">Setup</a><a href="commands.html">Commands</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="https://discord.gg/J3PMVJ4y4d" target="_blank" rel="noopener">Community Server</a><a href="https://github.com/orgs/LW-Alliance-Helper/projects/2" target="_blank" rel="noopener">Roadmap</a><a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/issues/new/choose" target="_blank" rel="noopener">Report an issue</a></div><div>LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer><script src="assets/nav.js"></script></body></html>

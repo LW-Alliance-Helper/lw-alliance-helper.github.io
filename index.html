@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LW Alliance Helper — Discord bot for Last War alliance leadership</title>
-<meta name="description" content="A Discord bot for Last War alliance leadership: event announcements, train schedules, birthday tracking, Desert/Canyon Storm mail drafts, surveys, growth snapshots with bucket classification, daily Shiny Tasks announcements, and config export/import. Your alliance's data lives in your own Google Sheet. Free to use; Premium adds DMs, scheduled reminders, multi-survey, and unlimited templates.">
+<title>LW Alliance Helper | Discord bot for Last War alliance leadership</title>
+<meta name="description" content="A Discord bot for Last War alliance leadership: event announcements, train schedules, birthday tracking, Desert/Canyon Storm mail drafts with a full Premium sign-up + roster + attendance workflow, surveys, growth snapshots with bucket classification, daily Shiny Tasks announcements, and config export/import. Your alliance's data lives in your own Google Sheet. Free to use; Premium adds DMs, scheduled reminders, multi-survey, the storm workflow, and unlimited templates.">
 <link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png">
 <link rel="canonical" href="https://lw-alliance-helper.github.io/">
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LW Alliance Helper">
-<meta property="og:title" content="LW Alliance Helper — Discord bot for Last War alliance leadership">
-<meta property="og:description" content="Event announcements, train schedules, storm mail drafts, surveys, growth tracking with bucket classification, daily Shiny Tasks announcements — automated for your Last War alliance leadership team.">
+<meta property="og:title" content="LW Alliance Helper | Discord bot for Last War alliance leadership">
+<meta property="og:description" content="Event announcements, train schedules, storm mail drafts with a full Premium sign-up + roster + attendance workflow, surveys, growth tracking, daily Shiny Tasks. Automated for your Last War alliance leadership team.">
 <meta property="og:image" content="https://lw-alliance-helper.github.io/assets/lw-alliance-helper-logo.png">
 <meta property="og:url" content="https://lw-alliance-helper.github.io/">
 <!-- Twitter -->
@@ -28,7 +28,7 @@
   "name": "LW Alliance Helper",
   "operatingSystem": "Discord",
   "applicationCategory": "BusinessApplication",
-  "description": "A Discord bot for Last War alliance leadership: event announcements, train schedules, birthday tracking, Desert/Canyon Storm mail drafts, surveys, growth snapshots with bucket classification, daily Shiny Tasks announcements, and config export/import.",
+  "description": "A Discord bot for Last War alliance leadership: event announcements, train schedules, birthday tracking, Desert/Canyon Storm mail drafts with Premium sign-up and roster builder, surveys, growth snapshots with bucket classification, daily Shiny Tasks announcements, and config export/import.",
   "url": "https://lw-alliance-helper.github.io/",
   "image": "https://lw-alliance-helper.github.io/assets/lw-alliance-helper-logo.png",
   "offers": [
@@ -44,30 +44,30 @@
       "name": "Premium",
       "price": "4.99",
       "priceCurrency": "USD",
-      "description": "Member-aware automation: DMs, scheduled reminders, multi-survey, unlimited templates. Billed monthly via Discord App Subscriptions."
+      "description": "Member-aware automation: DMs, scheduled reminders, multi-survey, full storm sign-up + roster + attendance workflow with image-rendered team rosters, unlimited templates. Billed monthly via Discord App Subscriptions."
     }
   ]
 }
 </script>
 </head>
-<body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><div class="nav-links"><a class="active" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><section class="hero"><div class="hero-card"><div class="eyebrow">Discord bot for alliance leadership</div><h1>LW Alliance Helper</h1><p>A friendly command center for Last War alliance leadership teams — for announcements, train schedules, birthdays, storm mail drafts, squad power surveys, and growth tracking. Your alliance data lives in your own Google Sheet, we help you organize and use it.</p><div class="cta-row"><a href="https://discord.com/oauth2/authorize?client_id=1488378654709780510&permissions=397284699328&integration_type=0&scope=applications.commands+bot" class="button invite">Invite to Server</a></div></div><div class="hero-column">
+<body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><div class="nav-links"><a class="active" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><section class="hero"><div class="hero-card"><div class="eyebrow">Discord bot for alliance leadership</div><h1>LW Alliance Helper</h1><p>A friendly command center for Last War alliance leadership teams to help with announcements, train schedules, birthdays, storm mail drafts, squad power surveys, and growth tracking. Your alliance data lives in your own Google Sheet, we help you organize and use it.</p><div class="cta-row"><a href="https://discord.com/oauth2/authorize?client_id=1488378654709780510&permissions=397284699328&integration_type=0&scope=applications.commands+bot" class="button invite">Invite to Server</a></div></div><div class="hero-column">
   <div class="hero-art">
     <img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper friendly robot mascot logo">
   </div>
   <!--
     Alliance-count badge. Reads assets/stats.json which the bot
     updates daily (and on every redeploy) via the GitHub Contents
-    API — see stats_publisher.py in the bot repo. Stays hidden
+    API. See stats_publisher.py in the bot repo. Stays hidden
     until alliances >= 1, so it's safe even before the bot's been
     given a token. Sits on the dark page background, sibling of the
     image (no longer inside the white-frame area).
   -->
   <div class="alliance-count" hidden>
-    <strong>Helping <span id="alliance-count-num">—</span> Last War Alliances</strong>
+    <strong>Helping <span id="alliance-count-num">…</span> Last War Alliances</strong>
   </div>
   <a class="community-cta" href="https://discord.gg/J3PMVJ4y4d" target="_blank" rel="noopener">💬 Join the Community Server</a>
   <div class="release-info">
-    <div><strong>Latest Release:</strong> <span id="latest-release-tag">—</span> <span id="latest-release-date"></span></div>
+    <div><strong>Latest Release:</strong> <span id="latest-release-tag">…</span> <span id="latest-release-date"></span></div>
     <div>
       <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/blob/main/CHANGELOG.md" target="_blank" rel="noopener">Full changelog</a>
       &nbsp;·&nbsp;
@@ -78,15 +78,15 @@
 
 <main class="container"><article class="content-card">
 <h2 id="what-it-does" style="margin-top:0;">What It Does</h2>
-<p><strong>📣 Event Announcements</strong> — Schedule Plague Marauder, Zombie Siege, and any other recurring events. The bot posts a draft to leadership for review at your chosen time each event day, then sends the final announcement to your public channel once approved. A 5-minute warning fires automatically before the event starts.</p>
-<p><strong>🚂 Train Schedule</strong> — Track who gets the alliance train each day and generate a personalised ChatGPT prompt to help write a blurb for that member. Birthdays can be automatically added to the schedule in advance.</p>
-<p><strong>🎂 Birthdays</strong> — Read birthday data from your Google Sheet and optionally add members to the train schedule on their birthday, post birthday announcements in Discord, or both.</p>
-<p><strong>⚔️ Desert Storm</strong> — Generate ready-to-copy team mail drafts for Team A and Team B each week. Configure participation tracking with custom questions and log sit-outs after each event.</p>
-<p><strong>🏜️ Canyon Storm</strong> — Same as Desert Storm — mail generation, team tracking, and participation logging with the questions you define.</p>
-<p><strong>📋 Survey</strong> — Let members submit their stats through a private Discord thread. Responses are saved directly to your Google Sheet and leadership gets a notification for each submission. 💎 Premium guilds can configure multiple named surveys.</p>
-<p><strong>📈 Growth Tracking</strong> — Track your alliance's growth over time by taking periodic snapshots of any stats you choose — squad powers, THP, total kills, or anything else in your sheet. You define the metrics, the source, and the schedule. Each snapshot also classifies every member's percent change into a bucket (Increased / Steady / Low / None / Decline) so you can see who is climbing and who is stalled at a glance.</p>
-<p><strong>🌟 Shiny Tasks</strong> — Daily auto-post listing every Last War server in your alliance's transfer-eligible window that has shiny tasks today. No more checking by hand and copy-pasting the list into your in-game mail.</p>
-<p><strong>📦 Data Portability</strong> — Migrating to a new Discord? Backing up before a leadership handover? <code>/export_config</code> dumps your saved bot config to a JSON file, and <code>/import_config</code> walks a guided channel and role remap wizard to apply it to another server. Your alliance's data already lives in your own Google Sheet; this carries the bot-side wizard answers alongside it.</p>
+<p><strong>📣 Event Announcements.</strong> Schedule Plague Marauder, Zombie Siege, and any other recurring events. The bot posts a draft to leadership for review at your chosen time each event day, then sends the final announcement to your public channel once approved. A 5-minute warning fires automatically before the event starts.</p>
+<p><strong>🚂 Train Schedule.</strong> Track who gets the alliance train each day and generate a personalised ChatGPT prompt to help write a blurb for that member. Birthdays can be automatically added to the schedule in advance.</p>
+<p><strong>🎂 Birthdays.</strong> Read birthday data from your Google Sheet and optionally add members to the train schedule on their birthday, post birthday announcements in Discord, or both.</p>
+<p><strong>⚔️ Desert Storm.</strong> Generate ready-to-copy team mail drafts for Team A and Team B each week. Configure participation tracking with the custom questions you choose, such as loggin who has to sit out. 💎 Premium unlocks the full storm workflow: a weekly sign-up poll for members, an officer view for setting up teams, a roster builder with auto-fill that splits sign-ups into starters and subs by closest power match, an image-rendered team roster for your in-game communication, and post-event attendance tracking with history.</p>
+<p><strong>🏜️ Canyon Storm.</strong> Built the same way as Desert Storm with mail generation, team tracking, participation logging with the questions you define, plus the same 💎 Premium sign-up + roster builder + attendance workflow.</p>
+<p><strong>📋 Survey.</strong> Let members submit their stats through a private Discord thread. Responses are saved directly to your Google Sheet and leadership gets a notification for each submission. 💎 Premium guilds can configure multiple named surveys.</p>
+<p><strong>📈 Growth Tracking.</strong> Track your alliance's growth over time by taking periodic snapshots of any stats you choose (squad powers, THP, total kills, or anything else in your sheet). You define the metrics, the source, and the schedule. Each snapshot also classifies every member's percent change into a bucket (Increased / Steady / Low / None / Decline) so you can see who is climbing and who is stalled at a glance.</p>
+<p><strong>🌟 Shiny Tasks.</strong> Daily auto-post listing every Last War server in your alliance's transfer-eligible window that has shiny tasks today. No more checking by hand and copy-pasting the list into your in-game mail.</p>
+<p><strong>📦 Data Portability.</strong> Migrating to a new Discord? Backing up before a leadership handover? <code>/config export</code> dumps your saved bot config to a JSON file, and <code>/config import</code> walks a guided channel and role remap wizard to apply it to another server. Your alliance's data already lives in your own Google Sheet; this carries the bot-side wizard answers alongside it.</p>
 <div class="feature-screenshots" aria-label="Feature screenshots">
   <figure>
     <a class="screenshot-link" href="assets/screenshot-event-announcement.png" target="_blank" rel="noopener" aria-label="Open daily event announcement screenshot at full size">
@@ -116,7 +116,7 @@
 <div class="cta-row"><a class="button primary" href="setup.html">Begin setup</a><a class="button outline" href="commands.html">Browse all commands</a></div>
 <hr>
 <h2 id="your-data-stays-with-you">Your Data Stays With You</h2>
-<p>Alliance Helper is built around a simple principle: <strong>your alliance's data lives in your own Google Sheet</strong>, on the Google account <em>you</em> control. Power scores, growth snapshots, train history, participation logs, member rosters — all of it is written to <em>your</em> sheet. The bot helps to organize; you own the data.</p>
+<p>Alliance Helper is built around a simple principle: <strong>your alliance's data lives in your own Google Sheet</strong>, on the Google account <em>you</em> control. Power scores, growth snapshots, train history, participation logs, member rosters: all of it is written to <em>your</em> sheet. The bot helps to organize; you own the data.</p>
 <figure class="screenshot wide">
   <a class="screenshot-link" href="assets/screenshot-growth-with-sheet.png" target="_blank" rel="noopener" aria-label="Open growth + Sheet screenshot at full size">
     <img src="assets/screenshot-growth-with-sheet.png" alt="Discord embed showing Growth Tracking config on the left, the same data displayed in a Google Sheet on the right">
@@ -125,31 +125,31 @@
 </figure>
 <ul>
 <li><strong>You own the data.</strong> The bot reads and writes; it doesn't keep its own copy of your alliance's data.</li>
-<li><strong>Use other tools alongside it.</strong> Your Sheet is just a Google Sheet. Edit it directly, point another tool at it, or export it — the bot doesn't care.</li>
+<li><strong>Use other tools alongside it.</strong> Your Sheet is just a Google Sheet. Edit it directly, point another tool at it, or export it. The bot doesn't care.</li>
 <li><strong>Switch leadership without losing anything.</strong> Hand the Sheet off when leadership changes. Every record from every storm, train, and survey comes with it.</li>
-<li><strong>Premium adds features, your alliance data lives in your own Google Sheet.</strong> Subscribing unlocks DMs, scheduled reminders, and roster sync — nothing about where your data lives changes.</li>
+<li><strong>Premium adds features, your alliance data lives in your own Google Sheet.</strong> Subscribing unlocks DMs, scheduled reminders, and roster sync. Nothing about where your data lives changes.</li>
 </ul>
 <p>For details of what data is housed where, see <a href="privacy.html#where-your-data-lives">Where Your Data Lives</a> on the Privacy page.</p>
 <hr>
 <h2 id="day-to-day-quick-reference">Day-to-Day Quick Reference</h2>
 <p>Already set up? These are the commands leadership reaches for most. For the full list of every slash command and what it does, see the <a href="commands.html">Commands reference</a>.</p>
-<table><thead><tr><th>Situation</th><th>Command</th></tr></thead><tbody><tr><td>Post or repost the survey button</td><td><code>/survey_post</code></td></tr><tr><td>Manage the train schedule (add, update, generate prompt, clear)</td><td><code>/train</code></td></tr><tr><td>Add upcoming birthdays to the train schedule</td><td><code>/train_addbirthdays</code></td></tr><tr><td>See upcoming birthdays</td><td><code>/birthdays</code></td></tr><tr><td>Open the event editor</td><td><code>/events</code></td></tr><tr><td>Generate a Desert Storm mail draft</td><td><code>/desertstorm_draft</code></td></tr><tr><td>Generate a Canyon Storm mail draft</td><td><code>/canyonstorm_draft</code></td></tr><tr><td>Log Desert Storm participation</td><td><code>/desertstorm_participation</code></td></tr><tr><td>Log Canyon Storm participation</td><td><code>/canyonstorm_participation</code></td></tr><tr><td>Look up a past Desert Storm log</td><td><code>/desertstorm_log [date]</code></td></tr><tr><td>Look up a past Canyon Storm log</td><td><code>/canyonstorm_log [date]</code></td></tr><tr><td>Send or schedule a survey reminder</td><td><code>/survey_remind</code></td></tr><tr><td>💎 DM a participation reminder before each storm</td><td><code>/desertstorm_remind</code> / <code>/canyonstorm_remind</code></td></tr><tr><td>Run a growth snapshot manually</td><td><code>/growth</code></td></tr><tr><td>View all configured settings</td><td><code>/view_configuration</code></td></tr><tr><td>See all commands</td><td><code>/help</code></td></tr></tbody></table>
+<table><thead><tr><th>Situation</th><th>Command</th></tr></thead><tbody><tr><td>Post or repost the survey button</td><td><code>/survey post</code></td></tr><tr><td>Manage the train schedule (add, update, generate prompt, clear)</td><td><code>/train overview</code></td></tr><tr><td>Add upcoming birthdays to the train schedule</td><td><code>/train birthdays</code></td></tr><tr><td>See upcoming birthdays</td><td><code>/birthdays</code></td></tr><tr><td>Open the event editor</td><td><code>/events show</code></td></tr><tr><td>Everything Desert Storm (sign-ups, roster, mail, participation, attendance, logs)</td><td><code>/desertstorm</code></td></tr><tr><td>Everything Canyon Storm (sign-ups, roster, mail, participation, attendance, logs)</td><td><code>/canyonstorm</code></td></tr><tr><td>Send or schedule a survey reminder</td><td><code>/survey remind</code></td></tr><tr><td>Run a growth snapshot manually</td><td><code>/growth overview</code> → Run Snapshot Now</td></tr><tr><td>See the most recent growth bucket breakdown</td><td><code>/growth breakdown</code></td></tr><tr><td>Move or check your Premium subscription</td><td><code>/premium assign</code> · <code>/premium overview</code></td></tr><tr><td>💎 Re-sync the member roster</td><td><code>/members sync</code></td></tr><tr><td>Export or import your bot config</td><td><code>/config export</code> · <code>/config import</code></td></tr><tr><td>Open the setup hub (every wizard, view config, reset)</td><td><code>/setup</code></td></tr><tr><td>See all commands</td><td><code>/help</code></td></tr></tbody></table>
 <hr>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<p><strong>Commands aren&#x27;t showing up in Discord</strong> — Slash commands can take up to an hour to appear after the bot first joins your server. If they still aren&#x27;t showing after that, try removing and re-inviting the bot.</p>
-<p><strong>A specific user runs a command and absolutely nothing happens — no response, no error, nothing in the channel</strong> — This is almost always Discord&#x27;s <strong>Use Application Commands</strong> permission being denied for one of the user&#x27;s roles. Discord blocks the interaction before it ever reaches the bot, so the bot has no record of it and the user sees nothing back. Edit the channel (or its parent category) → <strong>Permissions</strong>, then check <em>every role</em> the user has — not just the leadership role. If any role has &quot;Use Application Commands&quot; set to red X (deny), Discord blocks the interaction entirely; deny always wins over allow when a user has multiple roles. The fix is to either remove the deny on whatever role is causing it, or explicitly allow &quot;Use Application Commands&quot; on the leadership role at the channel/category level so it overrides <code>@everyone</code>.</p>
-<p><strong>&quot;You don&#x27;t have permission to use this command&quot;</strong> — Most feature commands need to be run in the leadership channel by someone with the leadership role configured during <code>/setup</code>. The various <code>/setup_*</code> commands also accept anyone with server <strong>Administrator</strong> permission, so a server owner can configure a feature even without holding the leadership role.</p>
-<p><strong>&quot;This bot hasn&#x27;t been set up yet&quot;</strong> — Run <code>/setup</code> first. The bot won&#x27;t respond to feature commands until core setup is complete.</p>
-<p><strong>&quot;Permission error&quot; when the bot tries to access your sheet</strong> — The bot&#x27;s service account doesn&#x27;t have access to your sheet. Go to your sheet&#x27;s sharing settings and make sure the service account email has been added as an <strong>Editor</strong>. You can find the email address by running <code>/setup</code> and checking Step 6.</p>
-<p><strong>A button stopped working after a bot restart</strong> — Discord buttons lose their connection to the bot when it restarts. The bot also automatically strips its buttons after they've gone idle for too long and appends a notice (<em>&quot;⏰ The actions for this have timed out. Use /events (or /train, etc.) to re-initiate.&quot;</em>) so you'll see when a draft has gone stale rather than guessing. In either case, use the corresponding command to start a fresh flow:</p>
-<table><thead><tr><th>Button</th><th>Use instead</th></tr></thead><tbody><tr><td>Event editor or approval</td><td><code>/events</code></td></tr><tr><td>Train reminder prompt button</td><td><code>/train</code></td></tr><tr><td>Desert Storm approval</td><td><code>/desertstorm_draft</code></td></tr><tr><td>Canyon Storm approval</td><td><code>/canyonstorm_draft</code></td></tr><tr><td>DS/CS log steps</td><td><code>/desertstorm_participation</code> or <code>/canyonstorm_participation</code></td></tr><tr><td>Survey button</td><td><code>/survey_post</code></td></tr></tbody></table>
-<p><strong>A setup wizard is stuck or you want to start over</strong> — Run <code>/cancel</code> to abort any active setup wizard, then re-run the relevant <code>/setup_*</code> command.</p>
-<p><strong>Something else isn&#x27;t working</strong> — Use <code>/help</code> to see all available commands and make sure the relevant feature has been configured with its <code>/setup_*</code> command. If the bot returns an error message with a <code>Reference: ...</code> code, include that ID when you report the issue — it lets us correlate to the exact failure on our side.</p>
-<p><strong>Still stuck or want to report a bug?</strong> Open an issue at <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/issues/new/choose" target="_blank" rel="noopener">our issue tracker</a>. That&#x27;s the best way to get in touch — we read every issue and reply there.</p>
+<p><strong>Commands aren&#x27;t showing up in Discord.</strong> Slash commands can take up to an hour to appear after the bot first joins your server. If they still aren&#x27;t showing after that, try removing and re-inviting the bot.</p>
+<p><strong>A specific user runs a command and absolutely nothing happens (no response, no error, nothing in the channel).</strong> This is almost always Discord&#x27;s <strong>Use Application Commands</strong> permission being denied for one of the user&#x27;s roles. Discord blocks the interaction before it ever reaches the bot, so the bot has no record of it and the user sees nothing back. Edit the channel (or its parent category) → <strong>Permissions</strong>, then check <em>every role</em> the user has, not just the leadership role. If any role has &quot;Use Application Commands&quot; set to red X (deny), Discord blocks the interaction entirely; deny always wins over allow when a user has multiple roles. The fix is to either remove the deny on whatever role is causing it, or explicitly allow &quot;Use Application Commands&quot; on the leadership role at the channel/category level so it overrides <code>@everyone</code>.</p>
+<p><strong>&quot;You don&#x27;t have permission to use this command&quot;.</strong> Most feature commands need to be run in the leadership channel by someone with the leadership role configured during <code>/setup</code>. The <code>/setup</code> hub also accepts anyone with server <strong>Administrator</strong> permission, so a server owner can configure a feature even without holding the leadership role.</p>
+<p><strong>&quot;This bot hasn&#x27;t been set up yet&quot;.</strong> Run <code>/setup</code> first. The bot won&#x27;t respond to feature commands until core setup is complete.</p>
+<p><strong>&quot;Permission error&quot; when the bot tries to access your sheet.</strong> The bot&#x27;s service account doesn&#x27;t have access to your sheet. Go to your sheet&#x27;s sharing settings and make sure the service account email has been added as an <strong>Editor</strong>. You can find the email address by opening <code>/setup</code>, clicking <strong>Core Setup</strong>, and checking the Share Your Google Sheet step.</p>
+<p><strong>A button stopped working after a bot restart.</strong> Discord buttons lose their connection to the bot when it restarts. The bot also automatically strips its buttons after they've gone idle for too long and appends a notice (<em>&quot;⏰ The actions for this have timed out. Use /events (or /train, etc.) to re-initiate.&quot;</em>) so you'll see when a draft has gone stale rather than guessing. In either case, use the corresponding command to start a fresh flow:</p>
+<table><thead><tr><th>Button</th><th>Use instead</th></tr></thead><tbody><tr><td>Event editor or approval</td><td><code>/events show</code></td></tr><tr><td>Train reminder prompt button</td><td><code>/train overview</code></td></tr><tr><td>Anything on the Desert Storm event hub (mail, sign-ups, roster, attendance, log)</td><td><code>/desertstorm</code></td></tr><tr><td>Anything on the Canyon Storm event hub</td><td><code>/canyonstorm</code></td></tr><tr><td>Survey button</td><td><code>/survey post</code></td></tr></tbody></table>
+<p><strong>A setup wizard is stuck or you want to start over.</strong> Run <code>/cancel</code> to abort any active wizard, then re-open <code>/setup</code> and pick the feature again.</p>
+<p><strong>Something else isn&#x27;t working.</strong> Use <code>/help</code> to see every command grouped by feature, or open <code>/setup</code> to confirm each feature you need has been configured. If the bot returns an error message with a <code>Reference: ...</code> code, include that ID when you report the issue. It lets us correlate to the exact failure on our side.</p>
+<p><strong>Still stuck or want to report a bug?</strong> Open an issue at <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/issues/new/choose" target="_blank" rel="noopener">our issue tracker</a>. That&#x27;s the best way to get in touch. We read every issue and reply there.</p>
 </article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="setup.html">Setup</a><a href="commands.html">Commands</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="https://discord.gg/J3PMVJ4y4d" target="_blank" rel="noopener">Community Server</a><a href="https://github.com/orgs/LW-Alliance-Helper/projects/2" target="_blank" rel="noopener">Roadmap</a><a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/issues/new/choose" target="_blank" rel="noopener">Report an issue</a></div><div style="margin-top:2em;">LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer><script src="assets/nav.js"></script>
 <script>
   // Reads the alliance count written by the bot's stats_publisher.py.
-  // Stays silent on any failure — the badge is decorative, not load-bearing.
+  // Stays silent on any failure: the badge is decorative, not load-bearing.
   fetch('assets/stats.json', { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (d) {
@@ -161,12 +161,12 @@
         box.removeAttribute('hidden');
       }
     })
-    .catch(function () { /* silent — leave the badge hidden */ });
+    .catch(function () { /* silent: leave the badge hidden */ });
 
   // Reads the latest GitHub Release for the bot repo. The release-on-main
   // workflow on the bot repo creates one for every push to main that bumps
   // __version__, so this stays in sync without manual edits here. Falls
-  // back to "—" on any failure, which is a visible reminder something's up.
+  // back to "…" on any failure, which is a visible reminder something's up.
   fetch('https://api.github.com/repos/LW-Alliance-Helper/lw-alliance-helper-bot/releases/latest', {
     headers: { Accept: 'application/vnd.github+json' }
   })
@@ -183,6 +183,6 @@
         }) + ')';
       }
     })
-    .catch(function () { /* silent — leave the placeholder visible */ });
+    .catch(function () { /* silent: leave the placeholder visible */ });
 </script>
 </body></html>

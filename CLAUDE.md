@@ -1,11 +1,11 @@
-# LW Alliance Helper website — project context
+# LW Alliance Helper website project context
 
 Public-facing GitHub Pages site for **LW Alliance Helper** (the
 Discord bot). Hosted at <https://lw-alliance-helper.github.io>.
 
 **This file carries context across chat sessions.** New chats in this
 repo auto-load this. Companion repo: `../lw-alliance-helper-bot` (the
-bot itself) — has its own `CLAUDE.md` with bot-side conventions.
+bot itself) has its own `CLAUDE.md` with bot-side conventions.
 
 ---
 
@@ -16,12 +16,12 @@ bot itself) — has its own `CLAUDE.md` with bot-side conventions.
 - **Commit messages:** use HEREDOC, end with the
   `Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>`
   trailer.
-- **Never amend** — always make a new commit.
+- **Never amend**, always make a new commit.
 - GitHub Pages auto-rebuilds on push to `main`. No build step.
 - **No time estimates, no S/M/L sizing.** Frame any proposal or
   audit-style fix list by *what changes for users* and *why it
   matters*, not by hours or effort buckets. This is a side project
-  — work takes however long it takes; don't pad write-ups with
+  work takes however long it takes; don't pad write-ups with
   scope-of-work framing.
 
 ---
@@ -55,7 +55,7 @@ via the GitHub Contents API.
   (the customers), not developers.
 - **Every public mention of a feature or command should be
   consistent.** If `setup.html` says a wizard has 8 steps, the
-  bot's wizard prompts must say "Step X of 8" — not 7.
+  bot's wizard prompts must say "Step X of 8", not 7.
 - **Feature gating is shown explicitly.** Premium-only features
   carry the 💎 prefix. Free-tier capabilities are unmarked.
 
@@ -64,13 +64,13 @@ via the GitHub Contents API.
 The bot's `CHANGELOG.md` is the source of truth for *what shipped*.
 After a feature lands in the bot:
 
-1. Check `commands.html` — does any command name, description, or
+1. Check `commands.html`: does any command name, description, or
    gating line need updating?
-2. Check `setup.html` — does any wizard step description need
+2. Check `setup.html`: does any wizard step description need
    updating? (Step counts especially.)
-3. Check `index.html` — does the feature appear in the day-to-day
+3. Check `index.html`: does the feature appear in the day-to-day
    quick-reference table?
-4. Check `pricing.html` — does the free/premium split need
+4. Check `pricing.html`: does the free/premium split need
    adjusting?
 5. Skip cosmetic-only bot changes. Only update for behaviour or
    surface changes the user can see.
@@ -79,15 +79,16 @@ After a feature lands in the bot:
 
 ## Recent shipped highlights
 
-| Commit | What |
+| Branch / commit | What |
 |---|---|
-| _next_ | Bot 1.2.0: added Growth Breakdown (Free button + 💎 `/setup_growth_breakdown` customisation), Shiny Tasks daily announcement, Data Portability (`/export_config` + `/import_config`). Setup, commands, index, pricing all updated. |
+| `release/1.4.0` (in flight) | Bot 1.4.0 sweep: every `/setup_*` collapsed into `/setup` hub; `/events`, `/train`, `/survey`, `/growth`, `/config`, `/premium`, `/members`, `/admin` all became command groups (e.g. `/survey post`, `/growth breakdown`); `/desertstorm` and `/canyonstorm` became event hubs with 11-button grids replacing every prior subcommand. Premium storm structured-flow feature set added (sign-up polls, roster builder with auto-fill, attendance tracking, roster history, image rendering, faction roles). README replaced with a stub; legal pages bumped + cover new Discord-role behaviour. |
+| _previous_ | Bot 1.2.0: added Growth Breakdown (Free button + 💎 `/setup_growth_breakdown` customisation), Shiny Tasks daily announcement, Data Portability (`/export_config` + `/import_config`). Setup, commands, index, pricing all updated. |
 | `799f00e` | Wizard step for alliance-customisable DM bodies (Train, Birthdays, DS reminder) |
 | `b5b569a` | Catch up: added Member Roster Sync section, `/cancel` to troubleshooting, Reference IDs note |
 | `b85be98` | Typography polish + alliance count badge relocation |
 | `7241af8` | Privacy + Terms cover roster sync, DMs, Premium |
 
-Total content: ~700 lines across the 4 main pages.
+Total content: ~700 lines across the 4 main pages (1.4.0 expands this).
 
 ---
 
@@ -115,7 +116,7 @@ When a change requires both repos:
 2. Update the website to match.
 3. Two separate commits, two separate fast-forward merges, two
    separate `push` calls.
-4. The website always lags slightly — that's fine because GitHub
+4. The website always lags slightly. That's fine because GitHub
    Pages is rebuilt on push but the bot deploy on Railway happens
    on its own cycle.
 
@@ -126,5 +127,8 @@ coordination needed.
 
 ## Status snapshot
 
-Pre-launch. Pages are up and current as of `799f00e`. Bot is in
-pre-launch readiness too — see `../lw-alliance-helper-bot/CLAUDE.md`.
+Live. Currently on `release/1.4.0` branch in sync with the bot repo's
+`dev` branch (bot's in-flight 1.4.0 release). When the bot's `release/1.4.0`
+merges to bot `main`, this branch PRs to website `main` at the same
+time so the docs ship in lockstep with the deployed bot. See
+`../lw-alliance-helper-bot/CLAUDE.md` for the bot side.
