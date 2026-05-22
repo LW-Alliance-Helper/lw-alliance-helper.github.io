@@ -81,7 +81,7 @@ After a feature lands in the bot:
 
 | Branch / commit | What |
 |---|---|
-| `release/1.4.0` (in flight) | Bot 1.4.0 sweep: every `/setup_*` collapsed into `/setup` hub; `/events`, `/train`, `/survey`, `/growth`, `/config`, `/premium`, `/members`, `/admin` all became command groups (e.g. `/survey post`, `/growth breakdown`); `/desertstorm` and `/canyonstorm` became event hubs with 11-button grids replacing every prior subcommand. Premium storm structured-flow feature set added (sign-up polls, roster builder with auto-fill, attendance tracking, roster history, image rendering, faction roles). README replaced with a stub; legal pages bumped + cover new Discord-role behaviour. |
+| `release/1.4.0` (in flight) | Bot 1.4.0 sweep: every `/setup_*` collapsed into `/setup` hub; `/events`, `/train`, `/survey`, `/growth`, `/config`, `/premium`, `/members`, `/admin` all became command groups (e.g. `/survey post`, `/growth breakdown`); `/desertstorm` and `/canyonstorm` became event hubs with 11-button grids replacing every prior subcommand. Premium storm structured-flow feature set added (sign-up polls, roster builder with auto-fill, attendance tracking, roster history, image rendering). README replaced with a stub; legal pages bumped. |
 | _previous_ | Bot 1.2.0: added Growth Breakdown (Free button + 💎 `/setup_growth_breakdown` customisation), Shiny Tasks daily announcement, Data Portability (`/export_config` + `/import_config`). Setup, commands, index, pricing all updated. |
 | `799f00e` | Wizard step for alliance-customisable DM bodies (Train, Birthdays, DS reminder) |
 | `b5b569a` | Catch up: added Member Roster Sync section, `/cancel` to troubleshooting, Reference IDs note |
