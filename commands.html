@@ -30,13 +30,13 @@
 </figure>
 <hr>
 <h2 id="setup-hub">⚙️ Setup Hub</h2>
-<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Growth Breakdown, Shiny Tasks, and (💎 Premium) Members. Two more buttons handle housekeeping: <span class="discord-button">View Configuration</span> prints every wizard's saved answers in one place, and <span class="discord-button">Reset</span> clears your server's configuration so you can start over.</p>
+<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Growth Breakdown, Shiny Tasks, and (💎 Premium) Members. Two more buttons handle housekeeping: <strong>"View Configuration"</strong> prints every wizard's saved answers in one place, and <strong>"Reset"</strong> clears your server's configuration so you can start over.</p>
 <ul><li><code>/setup</code>: Open the setup hub. First-time use walks Core Setup (member role, leadership role, leadership channel, timezone, Google Sheet). After that, the hub lets you pick any feature to add, edit, or disable.</li></ul>
 <hr>
 <h2 id="event-announcements">📣 Event Announcements</h2>
 <p>Schedule recurring events (Plague Marauder, Zombie Siege, or anything else) and post drafts to leadership for approval before announcing. A 5-minute warning fires automatically before kick-off.</p>
 <ul>
-  <li><code>/setup</code> → <span class="discord-button">📣 Events</span>: Configure events, leadership and public channels, daily draft time, and the 5-minute warning.</li>
+  <li><code>/setup</code> → <strong>"📣 Events"</strong>: Configure events, leadership and public channels, daily draft time, and the 5-minute warning.</li>
   <li><code>/events overview</code>: See every configured event type plus the next firing date for each, at a glance.</li>
   <li><code>/events show [date]</code>: Open the event editor for today or a specific date (e.g. <code>April 5</code> or <code>4/5</code>). Edit, approve, and post from there.</li>
   <li><code>/events log</code>: Show approved event posts. Free tier sees the last 7 days; 💎 Premium has a 30-day window.</li>
@@ -45,8 +45,8 @@
 <h2 id="train-schedule">🚂 Train Schedule</h2>
 <p>Track who is assigned the alliance train each day and optionally generate a personalised ChatGPT prompt for that member's announcement blurb. Birthdays can be auto-added to the schedule.</p>
 <ul>
-  <li><code>/setup</code> → <span class="discord-button">🚂 Train</span>: Configure the train tab, blurb generation, reminders, and the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder).</li>
-  <li><code>/train overview</code>: View the schedule. Inline buttons let you <span class="discord-button">Add</span>, <span class="discord-button">Update</span>, <span class="discord-button">Generate Prompt</span>, or <span class="discord-button">Clear</span> entries. Add and Update will offer to run the blurb wizard if blurb generation is enabled.</li>
+  <li><code>/setup</code> → <strong>"🚂 Train"</strong>: Configure the train tab, blurb generation, reminders, and the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder).</li>
+  <li><code>/train overview</code>: View the schedule. Inline buttons let you <strong>"Add"</strong>, <strong>"Update"</strong>, <strong>"Generate Prompt"</strong>, or <strong>"Clear"</strong> entries. Add and Update will offer to run the blurb wizard if blurb generation is enabled.</li>
   <li><code>/train log [date]</code>: Recent prompt log entries. Free tier sees the last 7 days; 💎 Premium has a 30-day window.</li>
   <li><code>/train birthdays</code>: Manually run the birthday check now and add upcoming birthdays to the train schedule. Useful if you just added a birthday and don't want to wait for the next nightly auto-run.</li>
 </ul>
@@ -54,42 +54,44 @@
 <h2 id="birthdays">🎂 Birthdays</h2>
 <p>Read birthday data from your Google Sheet. The bot can post announcements in Discord and auto-add members to the train schedule on their birthday.</p>
 <ul>
-  <li><code>/setup</code> → <span class="discord-button">🎂 Birthdays</span>: Configure birthday tracking, train integration, Discord announcements, and the 💎 Premium per-member DM body (with <code>{name}</code> placeholder).</li>
+  <li><code>/setup</code> → <strong>"🎂 Birthdays"</strong>: Configure birthday tracking, train integration, Discord announcements, and the 💎 Premium per-member DM body (with <code>{name}</code> placeholder).</li>
   <li><code>/birthdays</code>: Show upcoming birthdays inside your lookahead window (default 14 days).</li>
 </ul>
 <hr>
 <h2 id="desert-storm">⚔️ Desert Storm</h2>
 <p>One command opens the whole Desert Storm workspace. <code>/desertstorm</code> shows your alliance's current storm configuration plus a button grid for every action your officers need each week. Setup includes an optional <strong>participation tracker</strong> where you define exactly what you want to log each week (text, yes/no, numeric, roster names, plus 💎 single-select, multi-select, and date for Premium).</p>
 <ul>
-  <li><code>/setup</code> → <span class="discord-button">⚔️ Desert Storm</span>: Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions. 💎 Premium also configures the sign-up channel, auto-schedule, and sign-up / roster / attendance sheet tabs.</li>
-  <li><code>/desertstorm</code>: <strong>Event hub.</strong> Opens an embed showing your alliance's current Desert Storm configuration plus a button grid for every action:
+  <li><code>/setup</code> → <strong>"⚔️ Desert Storm"</strong>: Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions. 💎 Premium also configures the sign-up channel, auto-schedule, and sign-up / roster / attendance sheet tabs.</li>
+  <li><code>/desertstorm</code>: <strong>Event hub.</strong> Opens an embed with your alliance's current Desert Storm configuration plus a button for every action your officers take during the week:
     <ul>
-      <li><strong>Event-day row</strong>: <span class="discord-button">📣 Post sign-up poll</span> (💎), <span class="discord-button">👁️ View sign-ups + set up teams</span> (💎), <span class="discord-button">📋 Record attendance</span> (💎), <span class="discord-button">📊 Fill out participation questions</span>.</li>
-      <li><strong>Comms + config row</strong>: <span class="discord-button">🔔 Send DM reminder to roster</span> (💎), <span class="discord-button">🧮 Manage strategy presets</span>, <span class="discord-button">👤 Manage member rules</span>, <span class="discord-button">📄 Generate mail</span>.</li>
-      <li><strong>Reference row</strong>: <span class="discord-button">📜 View past participation logs</span>, <span class="discord-button">📜 View past rosters</span> (💎), <span class="discord-button">⚙️ Open setup</span>.</li>
+      <li><strong>"📣 Post sign-up poll"</strong> (💎): Posts the weekly sign-up embed in your configured sign-up channel. Members click <strong>"I'm in"</strong> to confirm they're showing up for this week's storm. You can also post it on a recurring auto-schedule (set during setup), and officers can vote on a member's behalf from the next button.</li>
+      <li><strong>"👁️ View sign-ups + set up teams"</strong> (💎): Opens an officer-only view showing every sign-up so far. From here you can vote on a member's behalf (useful when someone's promised to be there but hasn't clicked yet), then launch the roster builder to place sign-ups into starter and sub slots for each team, either by hand or with one-click Auto-fill that balances by closest power match.</li>
+      <li><strong>"📋 Record attendance"</strong> (💎): After the event, walk through this week's active roster and mark who actually showed up. Tracks no-shows over time so you can see patterns (e.g. a member who's missed three storms in a row).</li>
+      <li><strong>"📊 Fill out participation questions"</strong>: After the event, answer the participation questions you defined in setup. The flow asks for the date first, then steps through each question (text, yes/no, numeric, or roster names; Premium adds single-select, multi-select, and date). The summary auto-posts to your log channel.</li>
+      <li><strong>"🔔 Send DM reminder to roster"</strong> (💎): DMs every member on your alliance roster a participation reminder before the storm. The DM wording is customisable per storm during setup.</li>
+      <li><strong>"🧮 Manage strategy presets"</strong>: Build and edit the strategy templates your roster builder will use, with zone assignments, slot counts per zone, and (Premium) per-team power floors. Supports 1, 2, or 3 fight phases as your alliance plays the event.</li>
+      <li><strong>"👤 Manage member rules"</strong>: Add per-member overrides to your strategy presets. Assign specific members to specific zones, set power bands that exempt members from defaults, or pin people as starters or subs regardless of sign-up order.</li>
+      <li><strong>"📄 Generate mail"</strong>: Walk the mail draft flow: Pick Team → Pick Time → Mail Template → Preview, then Post &amp; Copy. The finished in-game mail posts to your configured post channel and you also get a copyable code block in leadership.</li>
+      <li><strong>"📜 View past participation logs"</strong>: Look up a previous week's participation answers. Free tier shows the 4 most-recent entries; 💎 Premium has unlimited lookback.</li>
+      <li><strong>"📜 View past rosters"</strong> (💎): Browse historical weekly rosters: who was on Team A vs Team B vs subs in any past week, with attendance data alongside each name.</li>
+      <li><strong>"⚙️ Open setup"</strong>: Shortcut into the Desert Storm setup wizard so you can edit the configuration without leaving the hub.</li>
     </ul>
-    💎 buttons render disabled on the free tier so officers can see at a glance what <code>/upgrade</code> unlocks. Past log lookback is 4 most-recent entries on free, unlimited on 💎 Premium.
+    💎 buttons render disabled on the free tier so officers can see at a glance what <code>/upgrade</code> unlocks.
   </li>
 </ul>
 <hr>
 <h2 id="canyon-storm">🏜️ Canyon Storm</h2>
-<p>Same shape as Desert Storm: every Canyon Storm action lives behind one hub command.</p>
+<p>Same shape as Desert Storm: every Canyon Storm action lives behind one hub command, with the same 11 buttons described above.</p>
 <ul>
-  <li><code>/setup</code> → <span class="discord-button">🏜️ Canyon Storm</span>: Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions. 💎 Premium also configures the sign-up channel, auto-schedule, sign-up / roster / attendance sheet tabs, and the optional faction-role assignment on Approve &amp; Post.</li>
-  <li><code>/canyonstorm</code>: <strong>Event hub.</strong> Opens an embed showing your alliance's current Canyon Storm configuration plus the same button grid as Desert Storm:
-    <ul>
-      <li><strong>Event-day row</strong>: <span class="discord-button">📣 Post sign-up poll</span> (💎), <span class="discord-button">👁️ View sign-ups + set up teams</span> (💎), <span class="discord-button">📋 Record attendance</span> (💎), <span class="discord-button">📊 Fill out participation questions</span>.</li>
-      <li><strong>Comms + config row</strong>: <span class="discord-button">🔔 Send DM reminder to roster</span> (💎), <span class="discord-button">🧮 Manage strategy presets</span>, <span class="discord-button">👤 Manage member rules</span>, <span class="discord-button">📄 Generate mail</span>.</li>
-      <li><strong>Reference row</strong>: <span class="discord-button">📜 View past participation logs</span>, <span class="discord-button">📜 View past rosters</span> (💎), <span class="discord-button">⚙️ Open setup</span>.</li>
-    </ul>
-  </li>
+  <li><code>/setup</code> → <strong>"🏜️ Canyon Storm"</strong>: Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions. 💎 Premium also configures the sign-up channel, auto-schedule, sign-up / roster / attendance sheet tabs, and an optional <strong>faction-role auto-assignment</strong> that fires when leadership clicks <strong>"Approve &amp; Post"</strong>: every member on the active roster gets the configured Discord role automatically (useful for tagging Judicator-eligible members each week).</li>
+  <li><code>/canyonstorm</code>: <strong>Event hub.</strong> Same 11-button layout as Desert Storm above. Buttons behave identically except <strong>"📄 Generate mail"</strong>, which also triggers the faction-role assignment on Approve &amp; Post if you opted in during setup.</li>
 </ul>
 <hr>
 <h2 id="survey">📋 Survey</h2>
 <p>Collect member statistics through a private Discord thread survey. Responses are saved directly to your Google Sheet and leadership is notified for each submission. <strong>Premium</strong> alliances can configure multiple named surveys (each with its own channel, intro, and reminder body) plus advanced question types (multi-select, date) and min/max bounds on numeric questions.</p>
 <ul>
-  <li><code>/setup</code> → <span class="discord-button">📋 Survey</span>: Configure the default survey: questions, channels, sheet tabs, and intro message.</li>
-  <li><code>/survey overview</code>: View your configured survey(s). 💎 Premium tier renders a list of every survey plus <span class="discord-button">Add</span>, <span class="discord-button">Edit</span>, and <span class="discord-button">Remove</span> buttons, the single surface for managing multiple surveys.</li>
+  <li><code>/setup</code> → <strong>"📋 Survey"</strong>: Configure the default survey: questions, channels, sheet tabs, and intro message.</li>
+  <li><code>/survey overview</code>: View your configured survey(s). 💎 Premium tier renders a list of every survey plus <strong>"Add"</strong>, <strong>"Edit"</strong>, and <strong>"Remove"</strong> buttons, the single surface for managing multiple surveys.</li>
   <li><code>/survey post</code>: Post (or repost) the answer button. Premium guilds with multiple surveys are prompted to pick which one.</li>
   <li><code>/survey remind</code>: Send a reminder right now, or set up a recurring schedule (daily / weekly). Free tier delivers reminders via channel post; 💎 Premium adds DM-via-Member-Roster delivery.</li>
 </ul>
@@ -97,20 +99,20 @@
 <h2 id="growth-tracking">📈 Growth Tracking</h2>
 <p>Take periodic snapshots of your members' stats to track alliance growth over time. Each snapshot also classifies every member's percent change into a bucket (<strong>Increased</strong>, <strong>Steady</strong>, <strong>Low</strong>, <strong>None</strong>, or <strong>Decline</strong>) written to a separate <code>Growth Breakdown</code> sheet tab so you can see who is climbing and who is stalled at a glance.</p>
 <ul>
-  <li><code>/setup</code> → <span class="discord-button">📈 Growth</span>: Configure source tab, metrics to track, and snapshot schedule.</li>
-  <li><code>/setup</code> → <span class="discord-button">📊 Growth Breakdown</span>: 💎 Configure the breakdown auto-post channel, bucket filter, custom thresholds, and custom bucket labels. The breakdown <em>computation</em> ships on every tier; this wizard unlocks the customisation layer.</li>
+  <li><code>/setup</code> → <strong>"📈 Growth"</strong>: Configure source tab, metrics to track, and snapshot schedule.</li>
+  <li><code>/setup</code> → <strong>"📊 Growth Breakdown"</strong>: 💎 Configure the breakdown auto-post channel, bucket filter, custom thresholds, and custom bucket labels. The breakdown <em>computation</em> ships on every tier; this wizard unlocks the customisation layer.</li>
   <li><code>/growth overview</code>: Show growth status with options to run a snapshot, view the most recent breakdown, or edit config.</li>
   <li><code>/growth breakdown</code>: Jump straight to the most-recent bucket breakdown (Increased / Steady / Low / None / Decline), rendered as an ephemeral embed grouped by metric and bucket.</li>
 </ul>
 <hr>
 <h2 id="shiny-tasks">🌟 Shiny Tasks</h2>
 <p>Daily auto-post listing every Last War server in your alliance's transfer range that has shiny tasks today. Free for every alliance. No more checking by hand and copy-pasting the list into your in-game mail.</p>
-<ul><li><code>/setup</code> → <span class="discord-button">🌟 Shiny Tasks</span>: Configure the announcement channel, server range (your transfer-eligible window), post time, and message template.</li></ul>
+<ul><li><code>/setup</code> → <strong>"🌟 Shiny Tasks"</strong>: Configure the announcement channel, server range (your transfer-eligible window), post time, and message template.</li></ul>
 <hr>
 <h2 id="member-roster-sync">💎 Member Roster Sync</h2>
 <p>Premium-only. Writes every member's Discord ID and name to a sheet tab so DM-based features (birthday DMs, train DMs, storm reminders, scheduled survey reminders, auto-mention) can find members by name. Most alliances configure this once and let auto-sync keep it current.</p>
 <ul>
-  <li><code>/setup</code> → <span class="discord-button">👥 Members</span>: 💎 Configure the roster tab, optional role filter (member-role-only vs every non-bot), and whether to auto-resync when members join, leave, or change roles. Runs an initial sync at the end.</li>
+  <li><code>/setup</code> → <strong>"👥 Members"</strong>: 💎 Configure the roster tab, optional role filter (member-role-only vs every non-bot), and whether to auto-resync when members join, leave, or change roles. Runs an initial sync at the end.</li>
   <li><code>/members overview</code>: 💎 See the roster source, last-sync time, and current state at a glance.</li>
   <li><code>/members sync</code>: 💎 Manually rebuild the roster sheet now. Useful after a bulk role change or if auto-sync is off.</li>
 </ul>

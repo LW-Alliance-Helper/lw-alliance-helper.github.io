@@ -136,15 +136,61 @@
 <table><thead><tr><th>Situation</th><th>Command</th></tr></thead><tbody><tr><td>Post or repost the survey button</td><td><code>/survey post</code></td></tr><tr><td>Manage the train schedule (add, update, generate prompt, clear)</td><td><code>/train overview</code></td></tr><tr><td>Add upcoming birthdays to the train schedule</td><td><code>/train birthdays</code></td></tr><tr><td>See upcoming birthdays</td><td><code>/birthdays</code></td></tr><tr><td>Open the event editor</td><td><code>/events show</code></td></tr><tr><td>Everything Desert Storm (sign-ups, roster, mail, participation, attendance, logs)</td><td><code>/desertstorm</code></td></tr><tr><td>Everything Canyon Storm (sign-ups, roster, mail, participation, attendance, logs)</td><td><code>/canyonstorm</code></td></tr><tr><td>Send or schedule a survey reminder</td><td><code>/survey remind</code></td></tr><tr><td>Run a growth snapshot manually</td><td><code>/growth overview</code> → Run Snapshot Now</td></tr><tr><td>See the most recent growth bucket breakdown</td><td><code>/growth breakdown</code></td></tr><tr><td>Move or check your Premium subscription</td><td><code>/premium assign</code> · <code>/premium overview</code></td></tr><tr><td>💎 Re-sync the member roster</td><td><code>/members sync</code></td></tr><tr><td>Export or import your bot config</td><td><code>/config export</code> · <code>/config import</code></td></tr><tr><td>Open the setup hub (every wizard, view config, reset)</td><td><code>/setup</code></td></tr><tr><td>See all commands</td><td><code>/help</code></td></tr></tbody></table>
 <hr>
 <h2 id="troubleshooting">Troubleshooting</h2>
-<p><strong>Commands aren&#x27;t showing up in Discord.</strong> Slash commands can take up to an hour to appear after the bot first joins your server. If they still aren&#x27;t showing after that, try removing and re-inviting the bot.</p>
-<p><strong>A specific user runs a command and absolutely nothing happens (no response, no error, nothing in the channel).</strong> This is almost always Discord&#x27;s <strong>Use Application Commands</strong> permission being denied for one of the user&#x27;s roles. Discord blocks the interaction before it ever reaches the bot, so the bot has no record of it and the user sees nothing back. Edit the channel (or its parent category) → <strong>Permissions</strong>, then check <em>every role</em> the user has, not just the leadership role. If any role has &quot;Use Application Commands&quot; set to red X (deny), Discord blocks the interaction entirely; deny always wins over allow when a user has multiple roles. The fix is to either remove the deny on whatever role is causing it, or explicitly allow &quot;Use Application Commands&quot; on the leadership role at the channel/category level so it overrides <code>@everyone</code>.</p>
-<p><strong>&quot;You don&#x27;t have permission to use this command&quot;.</strong> Most feature commands need to be run in the leadership channel by someone with the leadership role configured during <code>/setup</code>. The <code>/setup</code> hub also accepts anyone with server <strong>Administrator</strong> permission, so a server owner can configure a feature even without holding the leadership role.</p>
-<p><strong>&quot;This bot hasn&#x27;t been set up yet&quot;.</strong> Run <code>/setup</code> first. The bot won&#x27;t respond to feature commands until core setup is complete.</p>
-<p><strong>&quot;Permission error&quot; when the bot tries to access your sheet.</strong> The bot&#x27;s service account doesn&#x27;t have access to your sheet. Go to your sheet&#x27;s sharing settings and make sure the service account email has been added as an <strong>Editor</strong>. You can find the email address by opening <code>/setup</code>, clicking <strong>Core Setup</strong>, and checking the Share Your Google Sheet step.</p>
-<p><strong>A button stopped working after a bot restart.</strong> Discord buttons lose their connection to the bot when it restarts. The bot also automatically strips its buttons after they've gone idle for too long and appends a notice (<em>&quot;⏰ The actions for this have timed out. Use /events (or /train, etc.) to re-initiate.&quot;</em>) so you'll see when a draft has gone stale rather than guessing. In either case, use the corresponding command to start a fresh flow:</p>
-<table><thead><tr><th>Button</th><th>Use instead</th></tr></thead><tbody><tr><td>Event editor or approval</td><td><code>/events show</code></td></tr><tr><td>Train reminder prompt button</td><td><code>/train overview</code></td></tr><tr><td>Anything on the Desert Storm event hub (mail, sign-ups, roster, attendance, log)</td><td><code>/desertstorm</code></td></tr><tr><td>Anything on the Canyon Storm event hub</td><td><code>/canyonstorm</code></td></tr><tr><td>Survey button</td><td><code>/survey post</code></td></tr></tbody></table>
-<p><strong>A setup wizard is stuck or you want to start over.</strong> Run <code>/cancel</code> to abort any active wizard, then re-open <code>/setup</code> and pick the feature again.</p>
-<p><strong>Something else isn&#x27;t working.</strong> Use <code>/help</code> to see every command grouped by feature, or open <code>/setup</code> to confirm each feature you need has been configured. If the bot returns an error message with a <code>Reference: ...</code> code, include that ID when you report the issue. It lets us correlate to the exact failure on our side.</p>
+<p>Click any issue below to expand the fix.</p>
+<div class="troubleshooting">
+  <details>
+    <summary>Commands aren&#x27;t showing up in Discord</summary>
+    <div class="troubleshooting-body">
+      <p>Slash commands can take up to an hour to appear after the bot first joins your server. If they still aren&#x27;t showing after that, try removing and re-inviting the bot.</p>
+    </div>
+  </details>
+  <details>
+    <summary>A specific user runs a command and nothing happens (no response, no error, nothing in the channel)</summary>
+    <div class="troubleshooting-body">
+      <p>This is almost always Discord&#x27;s <strong>Use Application Commands</strong> permission being denied for one of the user&#x27;s roles. Discord blocks the interaction before it ever reaches the bot, so the bot has no record of it and the user sees nothing back.</p>
+      <p>Edit the channel (or its parent category) → <strong>Permissions</strong>, then check <em>every role</em> the user has, not just the leadership role. If any role has &quot;Use Application Commands&quot; set to red X (deny), Discord blocks the interaction entirely; deny always wins over allow when a user has multiple roles.</p>
+      <p>The fix is to either remove the deny on whatever role is causing it, or explicitly allow &quot;Use Application Commands&quot; on the leadership role at the channel/category level so it overrides <code>@everyone</code>.</p>
+    </div>
+  </details>
+  <details>
+    <summary>&quot;You don&#x27;t have permission to use this command&quot;</summary>
+    <div class="troubleshooting-body">
+      <p>Most feature commands need to be run in the leadership channel by someone with the leadership role configured during <code>/setup</code>. The <code>/setup</code> hub also accepts anyone with server <strong>Administrator</strong> permission, so a server owner can configure a feature even without holding the leadership role.</p>
+    </div>
+  </details>
+  <details>
+    <summary>&quot;This bot hasn&#x27;t been set up yet&quot;</summary>
+    <div class="troubleshooting-body">
+      <p>Run <code>/setup</code> first. The bot won&#x27;t respond to feature commands until core setup is complete.</p>
+    </div>
+  </details>
+  <details>
+    <summary>&quot;Permission error&quot; when the bot tries to access your sheet</summary>
+    <div class="troubleshooting-body">
+      <p>The bot&#x27;s service account doesn&#x27;t have access to your sheet. Go to your sheet&#x27;s sharing settings and make sure the service account email has been added as an <strong>Editor</strong>. You can find the email address by opening <code>/setup</code>, clicking <strong>Core Setup</strong>, and checking the Share Your Google Sheet step.</p>
+    </div>
+  </details>
+  <details>
+    <summary>A button stopped working after a bot restart</summary>
+    <div class="troubleshooting-body">
+      <p>Discord buttons lose their connection to the bot when it restarts. The bot also automatically strips its buttons after they&#x27;ve gone idle for too long and appends a notice (<em>&quot;⏰ The actions for this have timed out. Use /events (or /train, etc.) to re-initiate.&quot;</em>) so you&#x27;ll see when a draft has gone stale rather than guessing.</p>
+      <p>In either case, use the corresponding command to start a fresh flow:</p>
+      <table><thead><tr><th>Button</th><th>Use instead</th></tr></thead><tbody><tr><td>Event editor or approval</td><td><code>/events show</code></td></tr><tr><td>Train reminder prompt button</td><td><code>/train overview</code></td></tr><tr><td>Anything on the Desert Storm event hub (mail, sign-ups, roster, attendance, log)</td><td><code>/desertstorm</code></td></tr><tr><td>Anything on the Canyon Storm event hub</td><td><code>/canyonstorm</code></td></tr><tr><td>Survey button</td><td><code>/survey post</code></td></tr></tbody></table>
+    </div>
+  </details>
+  <details>
+    <summary>A setup wizard is stuck or you want to start over</summary>
+    <div class="troubleshooting-body">
+      <p>Run <code>/cancel</code> to abort any active wizard, then re-open <code>/setup</code> and pick the feature again.</p>
+    </div>
+  </details>
+  <details>
+    <summary>Something else isn&#x27;t working</summary>
+    <div class="troubleshooting-body">
+      <p>Use <code>/help</code> to see every command grouped by feature, or open <code>/setup</code> to confirm each feature you need has been configured. If the bot returns an error message with a <code>Reference: ...</code> code, include that ID when you report the issue. It lets us correlate to the exact failure on our side.</p>
+    </div>
+  </details>
+</div>
 <p><strong>Still stuck or want to report a bug?</strong> Open an issue at <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/issues/new/choose" target="_blank" rel="noopener">our issue tracker</a>. That&#x27;s the best way to get in touch. We read every issue and reply there.</p>
 </article></main><footer class="footer"><div class="footer-links"><a href="index.html">Home</a><a href="setup.html">Setup</a><a href="commands.html">Commands</a><a href="pricing.html">Pricing</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="https://discord.gg/J3PMVJ4y4d" target="_blank" rel="noopener">Community Server</a><a href="https://github.com/orgs/LW-Alliance-Helper/projects/2" target="_blank" rel="noopener">Roadmap</a><a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/issues/new/choose" target="_blank" rel="noopener">Report an issue</a></div><div style="margin-top:2em;">LW Alliance Helper is an independent tool for Last War players and is not affiliated with Last War or its developers.</div></footer><script src="assets/nav.js"></script>
 <script>

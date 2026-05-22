@@ -108,18 +108,29 @@ blockquote{margin:22px 0;padding:18px 20px;border-left:5px solid var(--blue-deep
 /* Inline command tokens. Never wrap mid-command. */
 code{background:rgba(7,59,142,.08);color:#073b8e;border:1px solid rgba(7,59,142,.14);padding:.18em .42em;border-radius:8px;font-weight:750;white-space:nowrap;word-break:keep-all}
 
-/* Inline Discord-button mock. Visual approximation of Discord's secondary
-   (gray) buttons so command + button-click paths in the docs read like
-   the actual UI users will see on /setup, /desertstorm, etc. */
-.discord-button{display:inline-block;background:#4e5058;color:#ffffff;padding:3px 11px;border-radius:8px;font-weight:500;font-size:.92em;font-family:inherit;white-space:nowrap;vertical-align:baseline;line-height:1.5;letter-spacing:0;border:1px solid #3c3e44}
-.discord-button:hover{background:#5d5f66}
-
 /* "Path to feature" line that appears directly under feature h3 headings,
    showing the command + the button(s) leadership clicks to reach the
    wizard. Renders snug against the heading above with small breathing
    room before the body copy that follows. */
 .command-path{margin-top:.2em;margin-bottom:1em;font-size:1rem;color:var(--muted)}
 .command-path code{font-size:.95em}
+
+/* Troubleshooting accordion. Uses native <details>/<summary> so it
+   works with no JS. Each issue is a card; the symptom is the
+   <summary> (always visible), and the fix lives inside the body
+   (revealed on click). Custom rotating chevron replaces the default
+   triangle marker. */
+.troubleshooting details{background:#fff;border:1px solid var(--line);border-radius:12px;margin:10px 0;overflow:hidden;box-shadow:0 1px 3px rgba(7,59,142,.05)}
+.troubleshooting details summary{cursor:pointer;padding:14px 46px 14px 18px;font-weight:800;color:var(--ink);list-style:none;position:relative;user-select:none;line-height:1.4}
+.troubleshooting details summary::-webkit-details-marker{display:none}
+.troubleshooting details summary::after{content:'';position:absolute;right:20px;top:50%;width:9px;height:9px;border-right:2px solid var(--blue-deep);border-bottom:2px solid var(--blue-deep);transform:translateY(-70%) rotate(45deg);transition:transform .18s ease}
+.troubleshooting details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.troubleshooting details summary:hover{background:rgba(13,110,253,.05)}
+.troubleshooting details[open] summary{border-bottom:1px solid var(--line);background:rgba(13,110,253,.05)}
+.troubleshooting-body{padding:14px 18px}
+.troubleshooting-body > *:first-child{margin-top:0}
+.troubleshooting-body > *:last-child{margin-bottom:0}
+.troubleshooting-body table{margin:12px 0}
 
 /* Tables. Preserve nowrap for code in cells, but allow long descriptions
    to wrap normally. */
