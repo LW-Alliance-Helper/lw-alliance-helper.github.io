@@ -95,7 +95,7 @@
       <li>Min/max bounds on numeric questions</li>
       <li><strong>Multiple named surveys</strong> per server</li>
       <li>Scheduled reminders via channel post <strong>or</strong> DM-via-roster</li>
-      <li><strong>Member Roster Sync</strong>, birthday DMs, train DMs, storm reminders, auto-mention</li>
+      <li><strong>Member Sync</strong>, birthday DMs, train DMs, storm reminders, per-member assignment DMs after Approve &amp; Post, auto-mention</li>
       <li>Custom growth snapshot intervals</li>
       <li>Growth Breakdown auto-post on every snapshot, bucket filter, custom thresholds &amp; labels</li>
       <li><strong>Storm sign-up workflow</strong>: weekly sign-up polls (manual or auto-scheduled), officer view with on-behalf voting, roster builder with auto-fill, post-event attendance, and roster history</li>
@@ -140,7 +140,9 @@
 <tr><td>Survey question types</td><td>Text, Dropdown, Numeric</td><td>+ Multi-select, Date, plus min/max bounds on Numeric</td></tr>
 <tr><td>Surveys per server</td><td><strong>1</strong></td><td>Multiple named surveys</td></tr>
 <tr><td>Participation log questions per event type</td><td><strong>3</strong></td><td>Unlimited</td></tr>
-<tr><td>Participation log question types</td><td>Text, Yes/No, Numeric, Roster names</td><td>+ Single-select, Multi-select, Date</td></tr>
+<tr><td>Participation log question types</td><td>Text, Yes/No, Numeric, Roster names, Roster multi-select (manual)</td><td>+ Single-select, Multi-select, Date, Derived count, plus Discord-poll auto-prefill on Roster multi-select</td></tr>
+<tr><td>Participation question preset templates</td><td>3 templates</td><td>6 templates (3 free + 3 Premium)</td></tr>
+<tr><td>Per-Member Log tab + Trends Viewer (query past events by question, operator, threshold, lookback, team)</td><td>✗</td><td>✅ Full feature</td></tr>
 <tr><td>Survey reminder destination</td><td>Channel post</td><td>Channel post <strong>and</strong> DM-via-roster</td></tr>
 <tr><td>Scheduled survey reminders</td><td>✅ Daily / Weekly via channel post</td><td>✅ Daily / Weekly via channel post <strong>or</strong> DM-via-roster</td></tr>
 <tr><td>Train themes / tones</td><td><strong>3 each</strong></td><td>Unlimited</td></tr>
@@ -153,17 +155,19 @@
 <tr><td><code>/train log</code> window</td><td><strong>7 days</strong></td><td><strong>30 days</strong></td></tr>
 <tr><td>Storm participation log lookback</td><td><strong>4 most-recent entries</strong></td><td>Unlimited</td></tr>
 <tr><td>Storm sign-up workflow (weekly poll, roster builder, attendance, history)</td><td>✗</td><td>✅ Full feature</td></tr>
+<tr><td>Per-team time-slot mapping with one-week override</td><td>✗</td><td>✅ Pin each team to a game-defined slot, swap for a single week from the Post sign-up poll button</td></tr>
+<tr><td>Per-member assignment DMs after Approve &amp; Post</td><td>✗</td><td>✅ Configurable templates per role (Starter, Paired Sub, Pool Sub)</td></tr>
 <tr><td>Image-rendered team roster for in-game mail</td><td>Text-only mail draft</td><td>✅ Text <strong>or</strong> image mail draft</td></tr>
 <tr><td>Channel destinations</td><td>Text channels</td><td>Text channels <strong>and</strong> threads</td></tr>
 </tbody>
 </table>
 
 <h3 id="premium-only">Premium-only features</h3>
-<p>These have no free-tier equivalent. They need member identity to work, which Premium unlocks via Member Roster Sync.</p>
+<p>These have no free-tier equivalent. They need member identity to work, which Premium unlocks via Member Sync.</p>
 <table>
 <thead><tr><th>Feature</th><th>What it does</th></tr></thead>
 <tbody>
-<tr><td><strong>Member Roster Sync</strong></td><td>Writes every member's Discord ID + name to a sheet tab so other Premium features can find members by name. <code>/setup</code> → 👥 Members, then <code>/members sync</code> any time.</td></tr>
+<tr><td><strong>Member Sync</strong></td><td>Writes every member's Discord ID + name to a sheet tab so other Premium features can find members by name, without overwriting any other columns your alliance maintains alongside them. <code>/setup</code> → 👥 Member Sync, then <code>/members sync</code> any time.</td></tr>
 <tr><td><strong>Birthday DMs</strong></td><td>DM each member a personal happy-birthday note when their day fires.</td></tr>
 <tr><td><strong>Train assignment DMs</strong></td><td>DM the assigned member when their train day starts.</td></tr>
 <tr><td><strong>Auto-mention in train reminders</strong></td><td>Replace plain names with <code>&lt;@id&gt;</code> Discord mentions in the daily train reminder.</td></tr>
@@ -171,8 +175,10 @@
 <tr><td><strong>Send DM reminder to roster (storm)</strong></td><td>The Send DM reminder button on <code>/desertstorm</code> / <code>/canyonstorm</code> DMs every roster member a participation reminder before each storm.</td></tr>
 <tr><td><strong>Storm sign-up poll + officer view</strong></td><td>Post a weekly sign-up poll (manually or on an automatic weekday schedule) and review the responses in an officer-only view that lets you vote on behalf of members who didn't sign up themselves.</td></tr>
 <tr><td><strong>Storm roster builder</strong></td><td>Pick a strategy preset, see your sign-ups laid out by zone and slot, and either drag in members by hand or hit Auto-fill to let the bot split your sign-ups into starters and subs by closest power match.</td></tr>
+<tr><td><strong>Per-member assignment DMs</strong></td><td>After Approve &amp; Post, the bot DMs each rostered member their personal assignment. Three templates per (event, role): Starter (zone bullets), Paired Sub (sub-for-primary line), and Pool Sub (standby).</td></tr>
 <tr><td><strong>Image-rendered team roster</strong></td><td>Approve &amp; Post produces a PNG image of your team plus the in-game mail text, so leadership can paste either one straight into the game.</td></tr>
 <tr><td><strong>Post-event attendance + history</strong></td><td>Record who actually showed up after each storm and browse past rosters and attendance any time.</td></tr>
+<tr><td><strong>Trends Viewer</strong></td><td>Query your Per-Member Log across past events. Pick a question, an operator (in words), a threshold, a lookback, and a team filter to see who's been showing up, voting, or sitting out most often. Includes a Copy as text button for pasting into in-game mail.</td></tr>
 <tr><td><strong>Power-refresh sign-up nudge</strong></td><td>If a member signs up but their power on file is stale, the bot sends them a one-off DM asking them to refresh before the event.</td></tr>
 </tbody>
 </table>
@@ -184,7 +190,7 @@
 <li>Make sure you have the <strong>leadership role</strong> configured during <code>/setup</code>.</li>
 <li>Run <code>/upgrade</code> in the leadership channel of the alliance you want Premium in. <em>(The "Upgrade to Premium" button above also works, but running <code>/upgrade</code> in-server lets the bot auto-pin your subscription to that alliance once checkout completes.)</em></li>
 <li>Discord opens the subscription dialog. Confirm and pay.</li>
-<li>Premium activates immediately and the bot pins it to the server you ran <code>/upgrade</code> in. Open <code>/setup</code> and click <strong>👥 Members</strong> next so the DM-based features can find your members.</li>
+<li>Premium activates immediately and the bot pins it to the server you ran <code>/upgrade</code> in. Open <code>/setup</code> and click <strong>👥 Member Sync</strong> next so the DM-based features can find your members.</li>
 </ol>
 
 <h2 id="licensing-model">Licensing model: one subscription, one server at a time</h2>
