@@ -34,12 +34,15 @@
 <ul><li><code>/setup</code>: Open the setup hub. First-time use walks Core Setup (member role, leadership role, leadership channel, timezone, Google Sheet). After that, the hub lets you pick any feature to add, edit, or disable.</li></ul>
 <hr>
 <h2 id="event-announcements">📣 Event Announcements</h2>
-<p>Schedule recurring events (Plague Marauder, Zombie Siege, or anything else) and post drafts to leadership for approval before announcing. A 5-minute warning fires automatically before kick-off.</p>
+<p>Schedule recurring events (Plague Marauder, Zombie Siege, or anything else) and post drafts to leadership for approval before announcing. A 5-minute warning fires automatically before kick-off. Open <code>/events</code> to see every action in one place.</p>
 <ul>
-  <li><code>/setup</code> → <strong>"📣 Events"</strong>: Configure events, leadership and public channels, daily draft time, and the 5-minute warning.</li>
-  <li><code>/events overview</code>: See every configured event type plus the next firing date for each, at a glance.</li>
-  <li><code>/events show [date]</code>: Open the event editor for today or a specific date (e.g. <code>April 5</code> or <code>4/5</code>). Edit, approve, and post from there.</li>
-  <li><code>/events log</code>: Show approved event posts. Free tier sees the last 7 days; 💎 Premium has a 30-day window.</li>
+  <li><code>/setup</code> → <strong>"📣 Events"</strong>: Configure the four shared event settings: leadership draft channel, public announcement channel, daily draft time, and the 5-minute warning toggle.</li>
+  <li><code>/events</code>: <strong>Event hub.</strong> Opens an embed showing the alliance's current event config plus a button grid for every action.
+    <ul>
+      <li><strong>Read row:</strong> <strong>"📅 Today's events"</strong> opens the draft editor for the next event day. <strong>"📆 Upcoming events"</strong> shows configured event types plus their next firing dates. <strong>"📜 Event log"</strong> shows recent approved event posts (free tier: 7 days; 💎 Premium: 30 days).</li>
+      <li><strong>Write row:</strong> <strong>"➕ Create an event"</strong> opens a two-path wizard: pick from a curated preset list (Alliance Exercise variants, Zombie Siege, Glacieradon, Sky Predator) for a quick prefill, or define your own from scratch. <strong>"🗑️ Delete an event"</strong> removes an event from the schedule.</li>
+    </ul>
+  </li>
 </ul>
 <hr>
 <h2 id="train-schedule">🚂 Train Schedule</h2>

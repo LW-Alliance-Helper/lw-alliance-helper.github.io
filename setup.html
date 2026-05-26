@@ -70,12 +70,25 @@
 <h2 id="feature-setup">Feature Setup</h2>
 <p>Each feature is configured independently. Set up only what you need. Features you don't configure simply won't be active. Open <code>/setup</code> and click the button for whichever feature you want to add or change.</p>
 <h3 id="event-announcements-setup-events">📣 Event Announcements</h3>
-<p class="command-path"><code>/setup</code> → <strong>"📣 Events"</strong></p>
+<p class="command-path"><code>/setup</code> → <strong>"📣 Events"</strong> for shared settings · <code>/events</code> for the per-event hub</p>
 <p><strong>What to create in your sheet:</strong> Nothing required for this feature.</p>
-<p>Open <code>/setup</code> and click <strong>"📣 Events"</strong> to configure your events. The wizard first asks for settings that apply to all events:</p>
+<p>Open <code>/setup</code> and click <strong>"📣 Events"</strong> to configure the four settings that apply to every event:</p>
 <ul><li><strong>Draft channel</strong>: where leadership sees the draft before it goes public</li><li><strong>Announcement channel</strong>: where the final approved announcement posts</li><li><strong>Draft posting time</strong>: when the draft is posted each event day</li><li><strong>5-minute warning</strong>: whether the bot auto-posts a warning before events start</li></ul>
-<p>You'll then see your event list with options to add, edit, or remove events. For each event you add:</p>
-<ul><li><strong>Event name</strong> (e.g. <code>Plague Marauder (AE)</code>, <code>Zombie Siege</code>)</li><li><strong>Default time</strong>: when this event usually starts, in your timezone</li><li><strong>Schedule</strong>: repeating cycle (with anchor date and interval) or manual</li><li><strong>Announcement blurb</strong>: the message posted when this event fires, using <code>{time}</code> and <code>{server_time}</code> as placeholders</li></ul>
+<p>Once those four are saved, run <code>/events</code> to manage individual events. The hub shows your current event list plus a button grid:</p>
+<ul>
+  <li><strong>"📅 Today's events"</strong> opens the draft editor for the next event day, ready for approval.</li>
+  <li><strong>"📆 Upcoming events"</strong> shows configured event types plus their next firing dates at a glance.</li>
+  <li><strong>"📜 Event log"</strong> shows recent approved announcements (free tier: 7 days, 💎 Premium: 30 days).</li>
+  <li><strong>"➕ Create an event"</strong> opens a two-path wizard:
+    <ul>
+      <li><strong>🎯 Pick a preset</strong>: pick from a curated list (Alliance Exercise variants by game stage, Zombie Siege, Glacieradon, Sky Predator). The preset prefills the name plus a cycle suggestion; you still pick the schedule, anchor date, and time.</li>
+      <li><strong>✏️ Define my own</strong>: the full free-text wizard for alliance-internal events, regional themes, or anything outside the canonical list.</li>
+    </ul>
+  </li>
+  <li><strong>"🗑️ Delete an event"</strong> removes an event from the schedule.</li>
+</ul>
+<p>For each event you create, the wizard asks for:</p>
+<ul><li><strong>Event name</strong> (e.g. <code>Plague Marauder (AE)</code>, <code>Zombie Siege</code>)</li><li><strong>Default time</strong>: when this event usually starts, in your timezone</li><li><strong>Schedule</strong>: <strong>🔁 Repeating</strong> (with anchor date and interval) or <strong>📅 Manual</strong> (for events you run ad-hoc and add to the schedule by hand)</li><li><strong>Announcement blurb</strong>: the message posted when this event fires, using <code>{time}</code> and <code>{server_time}</code> as placeholders</li></ul>
 <blockquote><p><strong>Example blurb:</strong> <code>Plague Marauder (AE) at {time} ({server_time} Server Time). Make sure to have offline participation checked!</code></p></blockquote>
 <h3 id="train-schedule-setup-train">🚂 Train Schedule</h3>
 <p class="command-path"><code>/setup</code> → <strong>"🚂 Train"</strong></p>
