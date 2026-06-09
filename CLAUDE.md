@@ -81,7 +81,8 @@ After a feature lands in the bot:
 
 | Branch / commit | What |
 |---|---|
-| `release/1.4.0` (in flight) | Bot 1.4.0 sweep: every `/setup_*` collapsed into `/setup` hub; `/events`, `/train`, `/survey`, `/growth`, `/config`, `/premium`, `/members`, `/admin` all became command groups (e.g. `/survey post`, `/growth breakdown`); `/desertstorm` and `/canyonstorm` became event hubs with 11-button grids replacing every prior subcommand. Premium storm structured-flow feature set added (sign-up polls, roster builder with auto-fill, attendance tracking, roster history, image rendering). README replaced with a stub; legal pages bumped. |
+| `release/1.5.6` (catch-up) | Caught the site up to bot 1.4.3 → 1.5.6 after a long drift. `/train` documented as a single **hub** (was `/train overview`/`log`/`birthdays`, removed in bot 1.5.0); added **Conductor Rotation** (free, opt-in) to commands/setup/index/pricing. New **Profession Buddy System** section across all four pages (free lookup + manual; 💎 auto-assign / re-pair / self-service buttons / buddy DMs). New **Member Stats** (`/my_stats`, `/member_stats`, free). New **Outage catch-up** blurb (automatic, free). `/events` hub carried forward from the stranded `release/1.4.3` commit. Comparison table + plan cards + day-to-day table + troubleshooting all updated; three stale `/train log` refs fixed. |
+| `release/1.4.0` (shipped) | Bot 1.4.0 sweep: every `/setup_*` collapsed into `/setup` hub; `/events`, `/train`, `/survey`, `/growth`, `/config`, `/premium`, `/members`, `/admin` all became command groups (e.g. `/survey post`, `/growth breakdown`); `/desertstorm` and `/canyonstorm` became event hubs with 11-button grids replacing every prior subcommand. Premium storm structured-flow feature set added (sign-up polls, roster builder with auto-fill, attendance tracking, roster history, image rendering). README replaced with a stub; legal pages bumped. |
 | _previous_ | Bot 1.2.0: added Growth Breakdown (Free button + 💎 `/setup_growth_breakdown` customisation), Shiny Tasks daily announcement, Data Portability (`/export_config` + `/import_config`). Setup, commands, index, pricing all updated. |
 | `799f00e` | Wizard step for alliance-customisable DM bodies (Train, Birthdays, DS reminder) |
 | `b5b569a` | Catch up: added Member Roster Sync section, `/cancel` to troubleshooting, Reference IDs note |
@@ -127,8 +128,11 @@ coordination needed.
 
 ## Status snapshot
 
-Live. Currently on `release/1.4.0` branch in sync with the bot repo's
-`dev` branch (bot's in-flight 1.4.0 release). When the bot's `release/1.4.0`
-merges to bot `main`, this branch PRs to website `main` at the same
-time so the docs ship in lockstep with the deployed bot. See
+Live. Bot production is at **1.5.6**. The site had drifted to roughly
+bot 1.4.2 content (with a stranded `release/1.4.3` commit for the
+`/events` hub), so `release/1.5.6` is the catch-up branch that brings
+the docs current: `/train` hub + Conductor Rotation, Profession Buddy
+System, Member Stats, and Outage catch-up. Because the matching bot
+releases already shipped, this is a catch-up rather than a lockstep
+release; merge `release/1.5.6` to website `main` to publish. See
 `../lw-alliance-helper-bot/CLAUDE.md` for the bot side.

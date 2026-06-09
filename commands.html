@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Commands | LW Alliance Helper</title>
-<meta name="description" content="Every slash command provided by LW Alliance Helper, grouped by feature: events, train, birthdays, Desert Storm, Canyon Storm, survey, growth, premium, utilities.">
+<meta name="description" content="Every slash command provided by LW Alliance Helper, grouped by feature: events, train with conductor rotation, birthdays, profession buddy, Desert Storm, Canyon Storm, survey, growth, member stats, premium, utilities.">
 <link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png">
 <link rel="canonical" href="https://lw-alliance-helper.github.io/commands.html">
 <meta property="og:type" content="article">
@@ -46,19 +46,36 @@
 </ul>
 <hr>
 <h2 id="train-schedule">🚂 Train Schedule</h2>
-<p>Track who is assigned the alliance train each day and optionally generate a personalised ChatGPT prompt for that member's announcement blurb. Birthdays can be auto-added to the schedule.</p>
+<p>One command runs the whole train surface. <code>/train</code> opens a hub showing your alliance's train configuration plus a button grid. The hub adapts to whether you have turned on <strong>Conductor Rotation</strong> (a free, opt-in feature that drafts a fair conductor for each day automatically).</p>
 <ul>
-  <li><code>/setup</code> → <strong>"🚂 Train"</strong>: Configure the train tab, blurb generation, reminders, and the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder).</li>
-  <li><code>/train overview</code>: View the schedule. Inline buttons let you <strong>"Add"</strong>, <strong>"Update"</strong>, <strong>"Generate Prompt"</strong>, or <strong>"Clear"</strong> entries. Add and Update will offer to run the blurb wizard if blurb generation is enabled.</li>
-  <li><code>/train log [date]</code>: Recent prompt log entries. Free tier sees the last 7 days; 💎 Premium has a 30-day window.</li>
-  <li><code>/train birthdays</code>: Manually run the birthday check now and add upcoming birthdays to the train schedule. Useful if you just added a birthday and don't want to wait for the next nightly auto-run.</li>
+  <li><code>/setup</code> → <strong>"🚂 Train"</strong>: Configure the train tab, blurb prompts, reminders, the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder), and (optionally) Conductor Rotation.</li>
+  <li><code>/train</code>: <strong>Train hub.</strong> Opens an embed with your current train config plus a button grid that changes with whether Conductor Rotation is on.
+    <ul>
+      <li><strong>With Conductor Rotation on:</strong> <strong>"📋 This week's draft"</strong> opens the weekly draft (◀ / ▶ week navigation, per-day reassignment, skip, and regenerate), <strong>"📊 Assignment logs"</strong> shows fairness counts and recent drives, <strong>"📅 Schedule presets"</strong> manages your rotation patterns, <strong>"👤 Member rules"</strong> sets per-member skips and per-day role rules, and <strong>"⚙️ Open setup"</strong> jumps into the train wizard.</li>
+      <li><strong>In classic mode (rotation off):</strong> <strong>"📋 Schedule overview"</strong> opens the schedule with <strong>"Add"</strong>, <strong>"Update"</strong>, <strong>"Generate Prompt"</strong>, and <strong>"Clear"</strong> buttons, <strong>"📜 Prompt log"</strong> shows recent blurb prompts (free tier: 7 days; 💎 Premium: 30 days), <strong>"🎂 Run birthday check"</strong> adds upcoming birthdays to the schedule on demand, and <strong>"⚙️ Open setup"</strong> jumps into the wizard.</li>
+    </ul>
+  </li>
 </ul>
+<p><strong>🔁 Conductor Rotation (free, opt-in).</strong> Turn it on from train setup and the bot drafts each day's conductor fairly: members who have driven fewest come first, ties broken by who drove longest ago, then a stable daily random pick. Per-day rules scope a day to a specific role (Leadership, VS, Contest, or Event days), and per-member rules skip someone for a stretch. A weekly draft posts for leadership to review and adjust, and a daily confirmation posts before the conductor goes public. Fairness counts your whole Train History sheet, so back-filling past drives is just adding rows.</p>
 <hr>
 <h2 id="birthdays">🎂 Birthdays</h2>
 <p>Read birthday data from your Google Sheet. The bot can post announcements in Discord and auto-add members to the train schedule on their birthday.</p>
 <ul>
   <li><code>/setup</code> → <strong>"🎂 Birthdays"</strong>: Configure birthday tracking, train integration, Discord announcements, and the 💎 Premium per-member DM body (with <code>{name}</code> placeholder).</li>
   <li><code>/birthdays</code>: Show upcoming birthdays inside your lookahead window (default 14 days).</li>
+</ul>
+<hr>
+<h2 id="profession-buddy">🤝 Profession Buddy System</h2>
+<p>Pair your War Leaders with Engineers so every War Leader knows who repairs for them and every Engineer knows who to follow. Members look up their buddy any time for free. 💎 Premium adds automatic pairing, one-click re-pairing, self-service profession buttons, and buddy-change DMs. Open <code>/buddy</code> for the hub.</p>
+<ul>
+  <li><code>/setup</code> → <strong>"🤝 Buddy System"</strong>: Configure the buddy sheet tab, whether one War Leader can take two Engineers, how to break ties when Engineers are scarce, an optional reliability ranking, a leadership alerts channel, and (💎 Premium) buddy-change DMs.</li>
+  <li><code>/buddy</code>: <strong>Buddy hub.</strong> Opens an embed with your current pairings plus a button grid:
+    <ul>
+      <li><strong>Anyone:</strong> <strong>"🔍 Who's my buddy?"</strong> shows your own pairing; <strong>"📋 View buddy list"</strong> shows every War Leader ↔ Engineer pairing.</li>
+      <li><strong>Leadership:</strong> <strong>"✏️ Manage pairings"</strong> edits pairs by hand, <strong>"🔄 Refresh from sheet"</strong> re-reads your sheet and applies hand edits, <strong>"📤 Post buddy list"</strong> posts the list to the channel, and <strong>"⚙️ Open setup"</strong> jumps into the wizard.</li>
+      <li><strong>💎 Premium:</strong> <strong>"🪄 Auto-assign"</strong> pairs everyone automatically (pairing your strongest War Leaders with your most reliable Engineers when you keep a reliability score), <strong>"♻️ Re-pair from scratch"</strong> wipes and rebuilds every pairing, and <strong>"📌 Post self-service buttons"</strong> drops one-click profession buttons members use to update their own role.</li>
+    </ul>
+  </li>
 </ul>
 <hr>
 <h2 id="desert-storm">⚔️ Desert Storm</h2>
@@ -112,6 +129,13 @@
 <h2 id="shiny-tasks">🌟 Shiny Tasks</h2>
 <p>Daily auto-post listing every Last War server in your alliance's transfer range that has shiny tasks today. Free for every alliance. No more checking by hand and copy-pasting the list into your in-game mail.</p>
 <ul><li><code>/setup</code> → <strong>"🌟 Shiny Tasks"</strong>: Configure the announcement channel, server range (your transfer-eligible window), post time, and message template.</li></ul>
+<hr>
+<h2 id="member-stats">📊 Member Stats</h2>
+<p>Pull everything the bot knows about a member, power, storm sign-ups and attendance, train drives, and survey activity, into one embed. Free for every alliance.</p>
+<ul>
+  <li><code>/my_stats</code>: Anyone can see their own stats, shown privately to them with a button to share if they want.</li>
+  <li><code>/member_stats</code>: Leadership picks any member from a dropdown and sees their full stats, including leadership-only details like storm primary / sub / sit-out placement and recency dates.</li>
+</ul>
 <hr>
 <h2 id="member-roster-sync">💎 Member Sync</h2>
 <p>Premium-only. Writes every member's Discord ID and name to a sheet tab so DM-based features (birthday DMs, train DMs, storm reminders, scheduled survey reminders, auto-mention) can find members by name. Most alliances configure this once and let auto-sync keep it current.</p>
