@@ -67,11 +67,11 @@
       <li>Growth Breakdown classification with default thresholds + on-demand button</li>
       <li>Daily Shiny Tasks announcement (transfer-eligible servers)</li>
       <li>Train Conductor Rotation: fair daily conductor drafting, opt-in</li>
-      <li>Profession Buddy lookup (<code>/buddy</code>) &amp; manual pairings</li>
-      <li>Member Stats (<code>/my_stats</code>, <code>/member_stats</code>)</li>
+      <li>Profession Buddy lookup &amp; manual pairings</li>
+      <li>Member Stats: your own and (for leadership) any member's</li>
       <li>Outage catch-up digest after downtime</li>
-      <li>Config export / import (<code>/config export</code>, <code>/config import</code>)</li>
-      <li>Event log (<code>/events</code> → 📜 button) &amp; train prompt log (<code>/train</code> → 📜 Prompt log): 7-day window</li>
+      <li>Config export / import</li>
+      <li>Event log &amp; train prompt log: 7-day window</li>
       <li>Storm log lookback: last <strong>4</strong> entries</li>
     </ul>
     <div class="plan-cta">
@@ -105,7 +105,7 @@
       <li>Growth Breakdown auto-post on every snapshot, bucket filter, custom thresholds &amp; labels</li>
       <li><strong>Storm sign-up workflow</strong>: weekly sign-up polls (manual or auto-scheduled), officer view with on-behalf voting, roster builder with auto-fill, post-event attendance, and roster history</li>
       <li><strong>Image-rendered team roster</strong> ready to paste into your in-game mail</li>
-      <li>Event log (<code>/events</code> → 📜 button) &amp; train prompt log (<code>/train</code> → 📜 Prompt log): 30-day window</li>
+      <li>Event log &amp; train prompt log: 30-day window</li>
       <li>Unlimited storm log lookback</li>
       <li>Threads as channel destinations</li>
     </ul>
@@ -153,18 +153,18 @@
 <tr><td>Train themes / tones</td><td><strong>3 each</strong></td><td>Unlimited</td></tr>
 <tr><td>Tracked growth metrics</td><td><strong>5</strong></td><td>Unlimited</td></tr>
 <tr><td>Growth snapshot frequency</td><td>Monthly</td><td>Monthly <strong>or</strong> custom interval (every N days)</td></tr>
-<tr><td>Growth Breakdown</td><td>Default thresholds + on-demand <code>/growth breakdown</code></td><td>+ auto-post after every snapshot, bucket filter, custom thresholds &amp; labels via <code>/setup</code> → 📊 Growth Breakdown</td></tr>
+<tr><td>Growth Breakdown</td><td>Default thresholds + on-demand view</td><td>+ auto-post after every snapshot, bucket filter, custom thresholds &amp; labels</td></tr>
 <tr><td>Daily Shiny Tasks announcement</td><td>✅ Full feature</td><td>✅ Same</td></tr>
 <tr><td>Config export / import</td><td>✅ Full feature</td><td>✅ Same</td></tr>
-<tr><td>Event log window (<code>/events</code> → 📜 button)</td><td><strong>7 days</strong></td><td><strong>30 days</strong></td></tr>
-<tr><td>Train prompt log window (<code>/train</code> → 📜 Prompt log)</td><td><strong>7 days</strong></td><td><strong>30 days</strong></td></tr>
+<tr><td>Event log window</td><td><strong>7 days</strong></td><td><strong>30 days</strong></td></tr>
+<tr><td>Train prompt log window</td><td><strong>7 days</strong></td><td><strong>30 days</strong></td></tr>
 <tr><td>Train Conductor Rotation (fair daily conductor drafting, presets, member &amp; day rules)</td><td>✅ Full feature, opt-in</td><td>✅ Same</td></tr>
 <tr><td>Profession Buddy System</td><td>Lookup + manual pairings</td><td>+ Auto-assign, re-pair from scratch, self-service profession buttons, reliability-ranked pairing, buddy-change DMs</td></tr>
-<tr><td>Member Stats (<code>/my_stats</code>, <code>/member_stats</code>)</td><td>✅ Full feature</td><td>✅ Same</td></tr>
+<tr><td>Member Stats (own + leadership lookup of any member)</td><td>✅ Full feature</td><td>✅ Same</td></tr>
 <tr><td>Outage catch-up digest after downtime</td><td>✅ Full feature</td><td>✅ Same</td></tr>
 <tr><td>Storm participation log lookback</td><td><strong>4 most-recent entries</strong></td><td>Unlimited</td></tr>
 <tr><td>Storm sign-up workflow (weekly poll, roster builder, attendance, history)</td><td>✗</td><td>✅ Full feature</td></tr>
-<tr><td>Per-team time-slot mapping with one-week override</td><td>✗</td><td>✅ Pin each team to a game-defined slot, swap for a single week from the Post sign-up poll button</td></tr>
+<tr><td>Per-team time-slot mapping with one-week override</td><td>✗</td><td>✅ Pin each team to a game-defined slot, swap for a single week without touching setup</td></tr>
 <tr><td>Per-member assignment DMs after Approve &amp; Post</td><td>✗</td><td>✅ Configurable templates per role (Starter, Paired Sub, Pool Sub)</td></tr>
 <tr><td>Image-rendered team roster for in-game mail</td><td>Text-only mail draft</td><td>✅ Text <strong>or</strong> image mail draft</td></tr>
 <tr><td>Channel destinations</td><td>Text channels</td><td>Text channels <strong>and</strong> threads</td></tr>
@@ -176,12 +176,12 @@
 <table>
 <thead><tr><th>Feature</th><th>What it does</th></tr></thead>
 <tbody>
-<tr><td><strong>Member Sync</strong></td><td>Writes every member's Discord ID + name to a sheet tab so other Premium features can find members by name, without overwriting any other columns your alliance maintains alongside them. <code>/setup</code> → 👥 Member Sync, then <code>/members sync</code> any time.</td></tr>
+<tr><td><strong>Member Sync</strong></td><td>Writes every member's Discord ID + name to a sheet tab so other Premium features can find members by name, without overwriting any other columns your alliance maintains alongside them.</td></tr>
 <tr><td><strong>Birthday DMs</strong></td><td>DM each member a personal happy-birthday note when their day fires.</td></tr>
 <tr><td><strong>Train assignment DMs</strong></td><td>DM the assigned member when their train day starts.</td></tr>
-<tr><td><strong>Auto-mention in train reminders</strong></td><td>Replace plain names with <code>&lt;@id&gt;</code> Discord mentions in the daily train reminder.</td></tr>
-<tr><td><strong>DM-via-roster for <code>/survey remind</code></strong></td><td>Send the survey reminder as a DM to every roster member (free tier posts to a channel instead).</td></tr>
-<tr><td><strong>Send DM reminder to roster (storm)</strong></td><td>The Send DM reminder button on <code>/desertstorm</code> / <code>/canyonstorm</code> DMs every roster member a participation reminder before each storm.</td></tr>
+<tr><td><strong>Auto-mention in train reminders</strong></td><td>Replace plain names with real Discord @mentions in the daily train reminder.</td></tr>
+<tr><td><strong>DM-via-roster survey reminders</strong></td><td>Send the survey reminder as a DM to every roster member (free tier posts to a channel instead).</td></tr>
+<tr><td><strong>Send DM reminder to roster (storm)</strong></td><td>DM every roster member a participation reminder before each storm.</td></tr>
 <tr><td><strong>Profession Buddy auto-assign + DMs</strong></td><td>Auto-pair every War Leader with an Engineer (using your optional reliability scores), re-pair from scratch, post self-service profession buttons, and DM members when their buddy changes. Free tier keeps lookup and manual pairings.</td></tr>
 <tr><td><strong>Storm sign-up poll + officer view</strong></td><td>Post a weekly sign-up poll (manually or on an automatic weekday schedule) and review the responses in an officer-only view that lets you vote on behalf of members who didn't sign up themselves.</td></tr>
 <tr><td><strong>Storm roster builder</strong></td><td>Pick a strategy preset, see your sign-ups laid out by zone and slot, and either drag in members by hand or hit Auto-fill to let the bot split your sign-ups into starters and subs by closest power match.</td></tr>

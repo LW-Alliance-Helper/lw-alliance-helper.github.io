@@ -46,7 +46,7 @@
 </ul>
 <hr>
 <h2 id="train-schedule">🚂 Train Schedule</h2>
-<p>One command runs the whole train surface. <code>/train</code> opens a hub showing your alliance's train configuration plus a button grid. The hub adapts to whether you have turned on <strong>Conductor Rotation</strong> (a free, opt-in feature that drafts a fair conductor for each day automatically).</p>
+<p>One command runs the whole train surface. <code>/train</code> opens a hub showing your alliance's train configuration plus a button grid. The hub adapts to whether you have turned on <strong>Conductor Rotation</strong> (an opt-in feature that drafts a fair conductor for each day automatically).</p>
 <ul>
   <li><code>/setup</code> → <strong>"🚂 Train"</strong>: Configure the train tab, blurb prompts, reminders, the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder), and (optionally) Conductor Rotation.</li>
   <li><code>/train</code>: <strong>Train hub.</strong> Opens an embed with your current train config plus a button grid that changes with whether Conductor Rotation is on.
@@ -56,7 +56,7 @@
     </ul>
   </li>
 </ul>
-<p><strong>🔁 Conductor Rotation (free, opt-in).</strong> Turn it on from train setup and the bot drafts each day's conductor fairly: members who have driven fewest come first, ties broken by who drove longest ago, then a stable daily random pick. Per-day rules scope a day to a specific role (Leadership, VS, Contest, or Event days), and per-member rules skip someone for a stretch. A weekly draft posts for leadership to review and adjust, and a daily confirmation posts before the conductor goes public. Fairness counts your whole Train History sheet, so back-filling past drives is just adding rows.</p>
+<p><strong>🔁 Conductor Rotation (opt-in).</strong> Turn it on from train setup and the bot drafts each day's conductor fairly: members who have driven fewest come first, ties broken by who drove longest ago, then a stable daily random pick. Per-day rules scope a day to a specific role (Leadership, VS, Contest, or Event days), and per-member rules skip someone for a stretch. A weekly draft posts for leadership to review and adjust, and a daily confirmation posts before the conductor goes public. Fairness counts your whole Train History sheet, so back-filling past drives is just adding rows.</p>
 <hr>
 <h2 id="birthdays">🎂 Birthdays</h2>
 <p>Read birthday data from your Google Sheet. The bot can post announcements in Discord and auto-add members to the train schedule on their birthday.</p>
@@ -66,7 +66,7 @@
 </ul>
 <hr>
 <h2 id="profession-buddy">🤝 Profession Buddy System</h2>
-<p>Pair your War Leaders with Engineers so every War Leader knows who repairs for them and every Engineer knows who to follow. Members look up their buddy any time for free. 💎 Premium adds automatic pairing, one-click re-pairing, self-service profession buttons, and buddy-change DMs. Open <code>/buddy</code> for the hub.</p>
+<p>Pair your War Leaders with Engineers so every War Leader knows who repairs for them and every Engineer knows who to follow. Members look up their buddy any time. 💎 Premium adds automatic pairing, one-click re-pairing, self-service profession buttons, and buddy-change DMs. Open <code>/buddy</code> for the hub.</p>
 <ul>
   <li><code>/setup</code> → <strong>"🤝 Buddy System"</strong>: Configure the buddy sheet tab, whether one War Leader can take two Engineers, how to break ties when Engineers are scarce, an optional reliability ranking, a leadership alerts channel, and (💎 Premium) buddy-change DMs.</li>
   <li><code>/buddy</code>: <strong>Buddy hub.</strong> Opens an embed with your current pairings plus a button grid:
@@ -127,11 +127,11 @@
 </ul>
 <hr>
 <h2 id="shiny-tasks">🌟 Shiny Tasks</h2>
-<p>Daily auto-post listing every Last War server in your alliance's transfer range that has shiny tasks today. Free for every alliance. No more checking by hand and copy-pasting the list into your in-game mail.</p>
+<p>Daily auto-post listing every Last War server in your alliance's transfer range that has shiny tasks today. No more checking by hand and copy-pasting the list into your in-game mail.</p>
 <ul><li><code>/setup</code> → <strong>"🌟 Shiny Tasks"</strong>: Configure the announcement channel, server range (your transfer-eligible window), post time, and message template.</li></ul>
 <hr>
 <h2 id="member-stats">📊 Member Stats</h2>
-<p>Pull everything the bot knows about a member, power, storm sign-ups and attendance, train drives, and survey activity, into one embed. Free for every alliance.</p>
+<p>Pull everything the bot knows about a member, power, storm sign-ups and attendance, train drives, and survey activity, into one embed.</p>
 <ul>
   <li><code>/my_stats</code>: Anyone can see their own stats, shown privately to them with a button to share if they want.</li>
   <li><code>/member_stats</code>: Leadership picks any member from a dropdown and sees their full stats, including leadership-only details like storm primary / sub / sit-out placement and recency dates.</li>
@@ -146,7 +146,7 @@
 </ul>
 <hr>
 <h2 id="data-portability">📦 Data Portability</h2>
-<p>Move your alliance's bot config to a new Discord server, or snapshot it as a backup you can restore later. Your alliance's <em>data</em> always lives in your own Google Sheet; these commands carry the bot-side wizard answers (templates, channels, schedules, custom questions) alongside it. Free for every alliance.</p>
+<p>Move your alliance's bot config to a new Discord server, or snapshot it as a backup you can restore later. Your alliance's <em>data</em> always lives in your own Google Sheet; these commands carry the bot-side wizard answers (templates, channels, schedules, custom questions) alongside it.</p>
 <ul>
   <li><code>/config overview</code>: Show what this server has saved plus pointers into export and import.</li>
   <li><code>/config export</code>: Pick the categories you want to export (core setup, events, DS, CS, train, birthday, growth, surveys, shiny tasks, member roster) and the bot DMs you a JSON file with the saved config from those categories. Categories with no saved data don't appear in the picker.</li>
