@@ -48,7 +48,7 @@
 <h2 id="train-schedule">🚂 Train Schedule</h2>
 <p>One command runs the whole train surface. <code>/train</code> opens a hub showing your alliance's train configuration plus a button grid. The hub adapts to whether you have turned on <strong>Conductor Rotation</strong> (an opt-in feature that drafts a fair conductor for each day automatically).</p>
 <ul>
-  <li><code>/setup</code> → <strong>"🚂 Train"</strong>: Configure the train tab, blurb prompts, reminders, the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder), and (optionally) Conductor Rotation.</li>
+  <li><code>/setup</code> → <strong>"🚂 Train"</strong>: Configure the train tab, blurb prompts, reminders, the 💎 Premium DM-to-assignee body (with <code>{name}</code> placeholder), and (optionally) Conductor Rotation. Free rotation points at any roster tab and name column; role-scoped days are 💎 Premium.</li>
   <li><code>/train</code>: <strong>Train hub.</strong> Opens an embed with your current train config plus a button grid that changes with whether Conductor Rotation is on.
     <ul>
       <li><strong>With Conductor Rotation on:</strong> <strong>"📋 This week's draft"</strong> opens the weekly draft (◀ / ▶ week navigation, per-day reassignment, skip, and regenerate), <strong>"📊 Assignment logs"</strong> shows fairness counts and recent drives, <strong>"📅 Schedule presets"</strong> manages your rotation patterns, <strong>"👤 Member rules"</strong> sets per-member skips and per-day role rules, and <strong>"⚙️ Open setup"</strong> jumps into the train wizard.</li>
@@ -56,7 +56,7 @@
     </ul>
   </li>
 </ul>
-<p><strong>🔁 Conductor Rotation (opt-in).</strong> Turn it on from train setup and the bot drafts each day's conductor fairly: members who have driven fewest come first, ties broken by who drove longest ago, then a stable daily random pick. Per-day rules scope a day to a specific role (Leadership, VS, Contest, or Event days), and per-member rules skip someone for a stretch. A weekly draft posts for leadership to review and adjust, and a daily confirmation posts before the conductor goes public. Fairness counts your whole Train History sheet, so back-filling past drives is just adding rows.</p>
+<p><strong>🔁 Conductor Rotation (opt-in).</strong> Turn it on from train setup and the bot drafts each day's conductor fairly: members who have driven fewest come first, ties broken by who drove longest ago, then a stable daily random pick. It draws from a roster tab you point it at, just a name column, with no Discord IDs needed on the free tier. Per-member rules skip someone for a stretch. 💎 Per-day <strong>role-scoped</strong> rules (Leadership, VS, Contest, or Event days that rotate only a Discord role's members) are Premium; on the free tier every day rotates the full roster, and a lapsed subscription falls back to that rather than leaving role days unassigned. A weekly draft posts for leadership to review and adjust, and a daily confirmation posts before the conductor goes public. Fairness counts your whole Train History sheet, so back-filling past drives is just adding rows.</p>
 <hr>
 <h2 id="birthdays">🎂 Birthdays</h2>
 <p>Read birthday data from your Google Sheet. The bot can post announcements in Discord and auto-add members to the train schedule on their birthday.</p>
