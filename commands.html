@@ -30,7 +30,7 @@
 </figure>
 <hr>
 <h2 id="setup-hub">⚙️ Setup Hub</h2>
-<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Growth Breakdown, Shiny Tasks, and (💎 Premium) Member Sync. Three more buttons handle housekeeping: <strong>"View Configuration"</strong> prints every wizard's saved answers in one place, <strong>"📢 Release announcements: ON / OFF"</strong> toggles the leadership-channel embed the bot posts on each new major or minor release (on by default), and <strong>"Reset"</strong> clears your server's configuration so you can start over.</p>
+<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Growth Breakdown, Shiny Tasks, and (💎 Premium) Member Sync and Map Manager. Three more buttons handle housekeeping: <strong>"View Configuration"</strong> prints every wizard's saved answers in one place, <strong>"📢 Release announcements: ON / OFF"</strong> toggles the leadership-channel embed the bot posts on each new major or minor release (on by default), and <strong>"Reset"</strong> clears your server's configuration so you can start over.</p>
 <ul><li><code>/setup</code>: Open the setup hub. First-time use walks Core Setup (member role, leadership role, leadership channel, timezone, Google Sheet). After that, the hub lets you pick any feature to add, edit, or disable.</li></ul>
 <hr>
 <h2 id="event-announcements">📣 Event Announcements</h2>
@@ -151,6 +151,12 @@
   <li><code>/config overview</code>: Show what this server has saved plus pointers into export and import.</li>
   <li><code>/config export</code>: Pick the categories you want to export (core setup, events, DS, CS, train, birthday, growth, surveys, shiny tasks, member roster) and the bot DMs you a JSON file with the saved config from those categories. Categories with no saved data don't appear in the picker.</li>
   <li><code>/config import &lt;file&gt;</code>: Attach an export JSON to apply it to this server. The bot walks a guided remap wizard for every channel and role referenced in the export (pick the new equivalent, keep the current value, or skip), then applies per category with a final summary embed naming what landed and what was skipped.</li>
+</ul>
+<hr>
+<h2 id="map-manager">🗺️ Map Manager</h2>
+<p>💎 Premium. Connect your alliance to the Map Manager web app, a visual dashboard that displays your roster, growth, and storm-participation data on the web. The data stays in your Google Sheet; Map Manager reads it through the bot to render it. Linking and managing the connection is admin-only.</p>
+<ul>
+  <li><code>/map_manager</code>: 💎 Open the Map Manager hub. <strong>Not linked yet:</strong> 🔗 Link this server, then enter your in-game server number and alliance tag to connect. <strong>Already linked:</strong> ✏️ Change link (update the server or alliance), 🔌 Unlink (disconnect this server; your data stays in Map Manager), and 🌐 Open Map Manager (jump to your alliance's page). Also reachable from <code>/setup</code> → 🗺️ Map Manager.</li>
 </ul>
 <hr>
 <h2 id="utilities">🔧 Utilities</h2>
