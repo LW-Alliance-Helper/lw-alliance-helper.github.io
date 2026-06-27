@@ -211,6 +211,14 @@
 <p><strong>Day-to-day use:</strong></p>
 <ul><li>If auto-sync is on, no day-to-day work: the roster stays current as members come and go.</li><li>Use <code>/members sync</code> to manually rebuild the roster sheet now (e.g. after a bulk role change, or if auto-sync was off and you've made changes).</li><li>Use <code>/members overview</code> to see the roster source, last-sync time, and current state at a glance.</li></ul>
 <hr>
+<h3 id="map-manager-setup-map-manager">💎 Map Manager</h3>
+<p class="command-path"><code>/map_manager</code> &nbsp;&middot;&nbsp; <code>/setup</code> → <strong>"🗺️ Map Manager"</strong></p>
+<p><strong>What to create in your sheet:</strong> Nothing. Map Manager reads the data your alliance already tracks (roster, growth snapshots, storm participation) straight from your existing sheet, through the bot.</p>
+<p>Premium-only. Map Manager is a companion web dashboard that turns your alliance data into a visual, on-the-web view: rosters, growth trends, and storm participation, all without anyone opening the Google Sheet. The bot is the bridge: it serves your data to Map Manager over an authenticated, opt-in connection, so the Sheet stays the single source of truth and nothing is copied or stored elsewhere. Linking is admin-only, since it asserts that this Discord server represents your alliance.</p>
+<p>To link your alliance:</p>
+<ol><li>Run <code>/map_manager</code>, or open <code>/setup</code> and click <strong>"🗺️ Map Manager"</strong>. On the free tier the button is disabled with a 💎 prefix, so this is a natural moment to <a href="pricing.html">upgrade to Premium</a>.</li><li>Click <strong>"🔗 Link this server"</strong> and enter your in-game <strong>server number</strong> (e.g. 738) and your <strong>alliance tag or name</strong> (e.g. Nox).</li><li>The bot connects your guild to Map Manager and replies with a link. Open it and <strong>sign in with Discord</strong> to see your alliance dashboard. The first time you open it, Map Manager guides you through picking your season grouping.</li></ol>
+<p><strong>Changing or removing the link:</strong> re-open <code>/map_manager</code> any time. When you're linked, the hub offers <strong>"✏️ Change link"</strong> (update the server number or alliance name), <strong>"🔌 Unlink"</strong> (disconnect this Discord server; your data stays in Map Manager), and <strong>"🌐 Open Map Manager"</strong> to jump back to your alliance page.</p>
+<hr>
 <h3 id="data-portability">📦 Data Portability</h3>
 <p class="command-path"><code>/config export</code> &nbsp;&middot;&nbsp; <code>/config import</code></p>
 <p><strong>What to create in your sheet:</strong> Nothing.</p>
