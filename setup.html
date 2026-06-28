@@ -211,6 +211,27 @@
 <p><strong>Day-to-day use:</strong></p>
 <ul><li>If auto-sync is on, no day-to-day work: the roster stays current as members come and go.</li><li>Use <code>/members sync</code> to manually rebuild the roster sheet now (e.g. after a bulk role change, or if auto-sync was off and you've made changes).</li><li>Use <code>/members overview</code> to see the roster source, last-sync time, and current state at a glance.</li></ul>
 <hr>
+<h3 id="transfer-management-setup-transfers">🔁 Transfer Management 💎</h3>
+<p class="command-path"><code>/setup</code> → <strong>"🔁 Transfers"</strong> for configuration · <code>/transfers</code> for the hub</p>
+<p><strong>What to create in your sheet:</strong> Nothing new. Point the bot at the recruiting sheet you already use. The only column it needs is the applicant's in-game name; everything else is optional. If you turn on decision write-back, the bot can add its own status columns for you.</p>
+<p>Premium-only. Transfer Management watches your recruiting sheet and brings the moments that matter into Discord, so a promising applicant never slips through. You keep working in your sheet exactly as you do today; the bot reads it on a schedule and posts when something changes. Open <code>/setup</code> and click <strong>"🔁 Transfers"</strong> to run the wizard:</p>
+<ol>
+  <li><strong>Your recruiting sheet</strong>: tell the bot which sheet and tab to watch (paste the sheet link or ID).</li>
+  <li><strong>Column mapping</strong>: the bot reads your header row and auto-suggests which columns are the name, any extra identity columns, the status columns to watch, and the columns to show in notices. Only the name column is required, so the mapping works on whatever layout your sheet already uses.</li>
+  <li><strong>Notification channel and style</strong>: where notices post, and whether you want one message per applicant or a single batched digest each check.</li>
+  <li><strong>New-applicant filter</strong> <em>(optional)</em>: only get pinged for applicants who meet your bar, for example a power or tier threshold across one or more columns.</li>
+  <li><strong>Optional sources</strong>: connect a server-wide sheet and/or an intake-form sheet, and the bot auto-copies matching rows (by your filter) into your own sheet so they surface as new applicants.</li>
+  <li><strong>In-game message templates</strong>: customise the apply / confirm / decline messages the bot drafts with placeholders, or use the defaults.</li>
+  <li><strong>Decisions</strong> <em>(optional)</em>: set up Want / Confirm / Decline (or your own status), and the bot adds the columns to your sheet and writes your choice back when you click the button on a notice.</li>
+</ol>
+<blockquote><p><strong>⚠️ Server-wide sheets:</strong> if you connect a shared sheet owned by someone else, the bot's service account needs read access to it, so coordinate with whoever owns it. The bot only ever <em>writes</em> to your own recruiting sheet, never to a shared one.</p></blockquote>
+<p><strong>Day-to-day use:</strong></p>
+<ul>
+  <li>Run <code>/transfers</code> any time to open the hub: the current watch status (sheet, channel, filter, sources) plus <strong>"📋 View applicants"</strong> and <strong>"⚙️ Setup Transfers"</strong>.</li>
+  <li>When a new applicant appears or a recruiter changes a status in your sheet, the bot posts a notice with <strong>"📄 Full details"</strong>, one-click draft-a-message buttons, and (if you set up decisions) buttons to mark the applicant right from Discord.</li>
+  <li>Your sheet stays the source of truth. The bot reflects and acts on it; it never becomes a second copy of your recruiting data.</li>
+</ul>
+<hr>
 <h3 id="data-portability">📦 Data Portability</h3>
 <p class="command-path"><code>/config export</code> &nbsp;&middot;&nbsp; <code>/config import</code></p>
 <p><strong>What to create in your sheet:</strong> Nothing.</p>

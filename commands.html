@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Commands | LW Alliance Helper</title>
-<meta name="description" content="Every slash command provided by LW Alliance Helper, grouped by feature: events, train with conductor rotation, birthdays, profession buddy, Desert Storm, Canyon Storm, survey, growth, member stats, premium, utilities.">
+<meta name="description" content="Every slash command provided by LW Alliance Helper, grouped by feature: events, train with conductor rotation, birthdays, profession buddy, Desert Storm, Canyon Storm, survey, growth, member stats, transfer management, premium, utilities.">
 <link rel="icon" type="image/png" href="assets/lw-alliance-helper-logo.png">
 <link rel="canonical" href="https://lw-alliance-helper.github.io/commands.html">
 <meta property="og:type" content="article">
@@ -135,6 +135,13 @@
 <ul>
   <li><code>/my_stats</code>: Anyone can see their own stats, shown privately to them with a button to share if they want.</li>
   <li><code>/member_stats</code>: Leadership picks any member from a dropdown and sees their full stats, including leadership-only details like storm primary / sub / sit-out placement and recency dates.</li>
+</ul>
+<hr>
+<h2 id="transfer-management">🔁 Transfer Management 💎</h2>
+<p>Premium-only. A passive watcher over your recruiting sheet: the bot pings your chosen channel when a new applicant appears or a recruiter marks someone Confirmed, Declined, or anything in between. It drafts your in-game messages, can pull matching players from a server-wide sheet or intake form, and (if you set it up) writes your decisions back to your own sheet. Your sheet stays the source of truth. Open <code>/transfers</code> for the hub.</p>
+<ul>
+  <li><code>/setup</code> → <strong>"🔁 Transfers"</strong>: 💎 Run the setup wizard: tell the bot how your sheet is laid out, auto-map the columns, pick a notification channel and style (one message per applicant or a batched digest), build a new-applicant filter, connect optional shared-sheet / form sources, and set up decisions (Confirm / Decline / a status) the bot adds to your sheet and writes back from Discord.</li>
+  <li><code>/transfers</code>: <strong>Transfer hub.</strong> Shows the watch status (sheet, channel, filter, sources) plus <strong>"📋 View applicants"</strong> and <strong>"⚙️ Setup Transfers"</strong>. New-applicant and status-change notices post to your chosen channel with <strong>"📄 Full details"</strong>, draft-a-message buttons, and (if you set up decisions) buttons to mark applicants right from Discord.</li>
 </ul>
 <hr>
 <h2 id="member-roster-sync">💎 Member Sync</h2>
