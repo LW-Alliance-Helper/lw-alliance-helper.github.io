@@ -40,7 +40,7 @@
   <li><code>/events</code>: <strong>Event hub.</strong> Opens an embed showing the alliance's current event config plus a button grid for every action.
     <ul>
       <li><strong>Read row:</strong> <strong>"📅 Today's events"</strong> opens the draft editor for the next event day. <strong>"📆 Upcoming events"</strong> shows configured event types plus their next firing dates. <strong>"📜 Event log"</strong> shows recent approved event posts (free tier: 7 days; 💎 Premium: 30 days).</li>
-      <li><strong>Write row:</strong> <strong>"➕ Create an event"</strong> opens a two-path wizard: pick from a curated preset list (Alliance Exercise variants, Zombie Siege, Glacieradon, Sky Predator) for a quick prefill, or define your own from scratch. <strong>"🗑️ Delete an event"</strong> removes an event from the schedule.</li>
+      <li><strong>Write row:</strong> <strong>"➕ Create an event"</strong> opens a two-path wizard: pick from a curated preset list (Alliance Exercise variants, Zombie Siege, Glacieradon, Sky Predator) for a quick prefill, or define your own from scratch. <strong>"⏸️ Pause or resume"</strong> stops an event for a season and turns it back on later with every setting intact — when you resume a recurring event it offers a fresh anchor date, since the in-game cycle often shifts over a break. <strong>"🗑️ Delete an event"</strong> removes an event permanently.</li>
     </ul>
   </li>
 </ul>
@@ -110,6 +110,7 @@
 <hr>
 <h2 id="survey">📋 Survey</h2>
 <p>Collect member statistics through a private Discord thread survey. Responses are saved directly to your Google Sheet and leadership is notified for each submission. <strong>Premium</strong> alliances can configure multiple named surveys (each with its own channel, intro, and reminder body) plus advanced question types (multi-select, date) and min/max bounds on numeric questions.</p>
+<p>Survey threads are private, containing only the member and the bot, so a server-wide translate bot can't see the prompts. If your alliance has members who don't read English, you can name a translate bot in <code>/setup</code> and it will be added to every survey thread automatically. Free on every tier.</p>
 <ul>
   <li><code>/setup</code> → <strong>"📋 Survey"</strong>: Configure the default survey: questions, channels, sheet tabs, and intro message.</li>
   <li><code>/survey overview</code>: View your configured survey(s). 💎 Premium tier renders a list of every survey plus <strong>"Add"</strong>, <strong>"Edit"</strong>, and <strong>"Remove"</strong> buttons, the single surface for managing multiple surveys.</li>
@@ -139,6 +140,7 @@
 <hr>
 <h2 id="transfer-management">🔁 Transfer Management 💎</h2>
 <p>Premium-only. A passive watcher over your recruiting sheet: the bot pings your chosen channel when a new applicant appears or a recruiter marks someone Confirmed, Declined, or anything in between. It drafts your in-game messages, can pull matching players from a server-wide sheet or intake form, and (if you set it up) writes your decisions back to your own sheet. Your sheet stays the source of truth. Open <code>/transfers</code> for the hub.</p>
+<p>If the watched tab is renamed or deleted, or the bot loses access to the sheet, leadership gets a notice saying exactly what broke, plus a warning on the <code>/transfers</code> hub. The watcher tells you once rather than repeatedly, re-nudges after a day if it's still broken, and posts a recovery line as soon as it can read your sheet again.</p>
 <ul>
   <li><code>/setup</code> → <strong>"🔁 Transfers"</strong>: 💎 Run the setup wizard: tell the bot how your sheet is laid out, auto-map the columns, pick a notification channel and style (one message per applicant or a batched digest), build a new-applicant filter, connect optional shared-sheet / form sources, and set up decisions (Confirm / Decline / a status) the bot adds to your sheet and writes back from Discord.</li>
   <li><code>/transfers</code>: <strong>Transfer hub.</strong> Shows the watch status (sheet, channel, filter, sources) plus <strong>"📋 View applicants"</strong> and <strong>"⚙️ Setup Transfers"</strong>. New-applicant and status-change notices post to your chosen channel with <strong>"📄 Full details"</strong>, draft-a-message buttons, and (if you set up decisions) buttons to mark applicants right from Discord.</li>
