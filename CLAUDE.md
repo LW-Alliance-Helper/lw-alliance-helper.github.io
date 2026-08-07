@@ -13,9 +13,8 @@ bot itself) has its own `CLAUDE.md` with bot-side conventions.
 
 - **Solo project.** Push directly to `main`. Always fast-forward
   merge. No PRs unless explicitly asked.
-- **Commit messages:** use HEREDOC, end with the
-  `Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>`
-  trailer.
+- **Commit messages:** use HEREDOC. No `Co-Authored-By` / attribution
+  trailer; the user opted out of it. Matches the bot repo's rule.
 - **Never amend**, always make a new commit.
 - GitHub Pages auto-rebuilds on push to `main`. No build step.
 - **No time estimates, no S/M/L sizing.** Frame any proposal or
