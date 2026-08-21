@@ -19,33 +19,37 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="active" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="privacy-policy">Privacy Policy</h1>
-<p><em>Last updated: June 28, 2026</em></p>
-<p>This Privacy Policy explains what information LW Alliance Helper (the &quot;Bot&quot;) collects, how it is used, and how it is stored. By adding LW Alliance Helper to your Discord server and using its features, you agree to this policy.</p>
+<p><em>Last updated: August 21, 2026</em></p>
+<p>This Privacy Policy explains what information LW Alliance Helper (the &quot;Bot&quot;) collects, how it is used, and how it is stored. By adding LW Alliance Helper to your Discord server, or by being a member of a server where it is installed, you agree to this policy.</p>
 <hr>
 <h2 id="who-we-are">Who We Are</h2>
 <p>LW Alliance Helper is operated as a Discord bot for Last War alliance leadership teams. If you have questions about this policy, the best way to reach us is by opening an issue on our <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/issues/new/choose" target="_blank" rel="noopener">issue tracker</a>. Note that issues are public, so please don&#x27;t include personal information (such as data you&#x27;d like deleted) in the issue itself; we&#x27;ll follow up with you privately to handle any sensitive details.</p>
 <hr>
 <h2 id="where-your-data-lives">Where Your Data Lives</h2>
-<p>Alliance Helper keeps a clean separation: your <strong>alliance&#x27;s data</strong> lives in <em>your</em> Google Sheet, on a Google account <em>you</em> own and control. The bot&#x27;s own database stores only the configuration that tells the bot what to do, plus a little operational bookkeeping.</p>
+<p>Alliance Helper keeps a clean separation: your <strong>alliance&#x27;s data</strong> lives in <em>your</em> Google Sheet, on a Google account <em>you</em> own and control. The bot&#x27;s own database stores the configuration that tells the bot what to do, some operational bookkeeping, and the Champion Duel tournament records described below.</p>
 <table>
 <thead><tr><th>What</th><th>Where it lives</th><th>Who owns it</th></tr></thead>
 <tbody>
 <tr><td>Power scores, growth snapshots, train history, participation logs, member roster (when synced), survey responses, birthdays, storm sign-ups, weekly storm rosters, post-event attendance, recruiting/transfer applicant tracking</td><td><strong>Your Google Sheet</strong></td><td><strong>You.</strong> The bot writes; your Sheet is where it lives.</td></tr>
-<tr><td>Wizard answers, channel/role IDs, schedule settings, draft state, premium assignment, persistent view registry</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is config and bookkeeping, not alliance data.</td></tr>
+<tr><td>Wizard answers, channel/role IDs, schedule settings, draft state, event sign-ups, premium assignment, persistent view registry</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is config and bookkeeping, not alliance data.</td></tr>
+<tr><td>Champion Duel tournament records (the registration list, group standings, results and line-ups)</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is tournament information the game publishes, not alliance data.</td></tr>
 </tbody>
 </table>
 <p><strong>What this means for you:</strong></p>
 <ul>
-<li><strong>You own the data.</strong> Every piece of data that&#x27;s <em>about</em> your alliance (its members, history, results, tracking over time) is stored in your Sheet, not ours. The bot reads and writes; we don&#x27;t keep duplicates of your alliance data.</li>
-<li><strong>Leaving doesn&#x27;t trap your data.</strong> If you stop using the bot, revoke the service-account share on your Sheet (<strong>Share → remove the bot&#x27;s service-account email</strong>). You keep everything that matters. There&#x27;s no export step or migration request, because we never had a separate copy.</li>
+<li><strong>You own the data.</strong> Every piece of data that&#x27;s <em>about</em> your alliance (its members, history, results, tracking over time) is stored in your Sheet, not ours. The bot reads and writes; we don&#x27;t keep duplicates of your alliance&#x27;s Sheet data.</li>
+<li><strong>Leaving doesn&#x27;t trap your data.</strong> If you stop using the bot, revoke the service-account share on your Sheet (<strong>Share → remove the bot&#x27;s service-account email</strong>). You keep everything that matters. There&#x27;s no export step or migration request, because we never had a separate copy of your Sheet.</li>
 <li><strong>Premium adds features, it does not take away any data or lock you in to a plan.</strong> Subscribing unlocks features that build on the same setup (DMs, scheduled reminders, Member Sync). Nothing about your alliance data moves to a different system; storage works the same as on the free tier.</li>
 </ul>
-<p>This is a deliberate choice. If you ever want to move to another tool (or build your own), your data is already in your own Google Sheet, on a Google account you control.</p>
+<p>This is a deliberate choice. If you ever want to move to another tool (or build your own), your alliance&#x27;s data is already in your own Google Sheet, on a Google account you control.</p>
+<hr>
+<h2 id="what-we-collect-from-discord">What We Collect from Discord, and Why</h2>
+<p>When you use LW Alliance Helper, we collect your Discord user ID, display name and the ID of the server you are using it in. We use this to run the features your alliance has set up: matching you to your row in your alliance&#x27;s sheet, sending the DMs your leadership has enabled, and recording sign-ups and contributions so they stay accurate, attributable and reliable.</p>
+<p>We do not sell your data and we do not use it for advertising.</p>
+<p>If you would like your information removed, open a <a href="https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot/issues/new?template=data_removal.yml" target="_blank" rel="noopener">data removal request</a>. Removing the data we have does not stop the bot from collecting it again; to do that you must leave any server with the bot installed.</p>
 <hr>
 <h2 id="what-information-we-collect">What Information We Collect</h2>
 <p>LW Alliance Helper collects only the information necessary to provide its features. This includes:</p>
-<p><strong>From Discord:</strong></p>
-<ul><li>Discord server (guild) IDs: used to store per-server configuration settings</li><li>Discord user IDs: used to match members to their rows in your Google Sheet</li><li>Discord display names: used in survey notifications and birthday announcements</li><li>Discord channel and role IDs: stored as part of your server&#x27;s configuration</li></ul>
 <p><strong>Server install metadata (for support triage):</strong> when the bot is added to a server, it stores a small record so that errors logged against a guild ID can be matched to an alliance for support purposes. This record contains the guild ID, the current guild name, the server owner&#x27;s Discord ID, and the Discord ID of the user who invited the bot when this can be read from the audit log. Two timestamps are kept: the first time the bot saw the server and the most recent time it reconnected. The record is updated whenever the bot starts up so the guild name stays current, and it is deleted automatically when the bot is removed from a server.</p>
 <p>When <strong>Member Sync</strong> is configured (a Premium feature), the bot also writes each member&#x27;s server-join date and assigned role names to a tab in your Google Sheet, alongside their Discord ID and display name. This is opt-in and only happens after leadership opens <code>/setup</code> and configures it via the 👥 Member Sync button.</p>
 <p><strong>From your Google Sheet (submitted by your members):</strong></p>
@@ -54,7 +58,7 @@
 <ul><li>Your Google Sheet ID</li><li>Your server&#x27;s configured timezone, channels, roles, and feature settings</li></ul>
 <hr>
 <h2 id="what-we-do-not-collect">What We Do Not Collect</h2>
-<ul><li>We do not collect passwords, payment information, or personal contact details</li><li>We do not read any Discord messages beyond what is typed in response to an active bot prompt</li><li>We do not access any Google Sheet data beyond the tabs and columns you configure the bot to use</li><li>We do not track member activity, online status, or behaviour</li></ul>
+<ul><li>We do not collect passwords, payment information, or personal contact details</li><li>We do not read any Discord messages beyond what is typed in response to an active bot prompt</li><li>We do not access any Google Sheet data beyond the tabs and columns you configure the bot to use</li><li>We do not track your members&#x27; activity, online status, or behaviour</li></ul>
 <hr>
 <h2 id="how-information-is-used">How Information Is Used</h2>
 <p>Information collected by LW Alliance Helper is used solely to provide the bot&#x27;s features:</p>
@@ -68,8 +72,12 @@
 <hr>
 <h2 id="how-information-is-stored">How Information Is Stored</h2>
 <p><strong>Server configuration</strong> is stored in a private SQLite database hosted on Railway (our hosting provider). This database is accessible only to the bot and is not shared with any third parties.</p>
-<p><strong>Member data</strong> (survey responses, birthday information, squad powers, etc.) is stored in <strong>your own Google Sheet</strong>, not in our database. We write to your sheet on your behalf when commands are run, but we do not retain copies of that data.</p>
+<p><strong>Your alliance&#x27;s member data</strong> (survey responses, birthday information, squad powers, and everything else your members submit through your sheet) is stored in <strong>your own Google Sheet</strong>. We write to your sheet on your behalf when commands are run, but we do not retain copies of that data.</p>
 <p><strong>Google Sheet access</strong> is granted by you when you share your sheet with the bot&#x27;s service account during setup. You can revoke this access at any time by removing the service account from your sheet&#x27;s sharing settings.</p>
+<hr>
+<h2 id="champion-duel">Champion Duel</h2>
+<p>Champion Duel is a tournament run by Last War, not by us. To show an alliance who they are facing and predict matches, the bot keeps a record of the draw (the registration list, group standings, results and line-ups) in its own database rather than in your Google Sheet.</p>
+<p>All of it is information the game shows to everyone entered in the same draw.</p>
 <hr>
 <h2 id="data-sharing">Data Sharing</h2>
 <p>We do not sell, trade, or share your data with any third parties, with the following exceptions:</p>
@@ -85,6 +93,7 @@
 <p>Server configuration data is retained for as long as your server uses the bot. If you open <code>/setup</code> and click <strong>Reset</strong> (or remove the bot from your server), your configuration data can be deleted upon request.</p>
 <p>The install-metadata record described above is deleted automatically when the bot is removed from your server, and can also be deleted on request at any time.</p>
 <p>Member data in your Google Sheet is entirely under your control. We do not retain copies of it.</p>
+<p>We keep the information described above for as long as it is needed to provide the features it supports.</p>
 <hr>
 <h2 id="your-rights">Your Rights</h2>
 <p>You have the right to:</p>
