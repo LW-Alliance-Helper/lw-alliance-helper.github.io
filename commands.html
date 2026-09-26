@@ -30,7 +30,7 @@
 </figure>
 <hr>
 <h2 id="setup-hub">⚙️ Setup Hub</h2>
-<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Growth Breakdown, Shiny Tasks, and (💎 Premium) Member Sync. Three more buttons handle housekeeping: <strong>"View Configuration"</strong> prints every wizard's saved answers in one place, <strong>"📢 Release announcements: ON / OFF"</strong> toggles the leadership-channel embed the bot posts on each new major or minor release (on by default), and <strong>"Reset"</strong> clears your server's configuration so you can start over.</p>
+<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Growth Breakdown, Shiny Tasks, Alliance Duel (VS), and (💎 Premium) Member Sync. Three more buttons handle housekeeping: <strong>"View Configuration"</strong> prints every wizard's saved answers in one place, <strong>"📢 Release announcements: ON / OFF"</strong> toggles the leadership-channel embed the bot posts on each new major or minor release (on by default), and <strong>"Reset"</strong> clears your server's configuration so you can start over.</p>
 <ul><li><code>/setup</code>: Open the setup hub. First-time use walks Core Setup (member role, leadership role, leadership channel, timezone, Google Sheet). After that, the hub lets you pick any feature to add, edit, or disable.</li></ul>
 <hr>
 <h2 id="event-announcements">📣 Event Announcements</h2>
@@ -106,6 +106,35 @@
 <ul>
   <li><code>/setup</code> → <strong>"🏜️ Canyon Storm"</strong>: Configure teams, sheet tab, log channel, post channel, mail template, and (optional) participation tracking with custom questions. 💎 Premium also configures the sign-up channel, auto-schedule, and sign-up / roster / attendance sheet tabs.</li>
   <li><code>/canyonstorm</code>: <strong>Event hub.</strong> Same 11-button layout as Desert Storm above. Every button behaves identically.</li>
+</ul>
+<hr>
+<h2 id="alliance-duel">🏆 Alliance Duel (VS)</h2>
+<p>Track your Alliance Duel league in your own Google Sheet: each day's score, each week's result, and your record against every alliance you've faced. The bot reads it back as this week's matchup, the running league-point score, and the days your alliance tends to win and lose. 💎 Premium tracks your whole 16-alliance League bracket and works out who you're likely to face next, your path through the bracket, and which alliances to scout first. Open <code>/vs</code> for the hub.</p>
+<ul>
+  <li><code>/setup</code> → <strong>"🏆 Alliance Duel (VS)"</strong>: Set up the tracker: your alliance's tag and warzone, whether to track just your alliance or 💎 your whole League bracket, and which sheet tab to use (the bot creates it for you). The same screen holds the three posting options below, plus <strong>"📖 Column guide"</strong> and <strong>"🔍 Check my data for errors"</strong>.</li>
+  <li><code>/vs</code>: <strong>Alliance Duel hub</strong> (leadership). Opens this week's matchup with its running league-point score and each day's result, plus a button grid:
+    <ul>
+      <li><strong>Read row:</strong> <strong>"🆚 This week"</strong> shows this week's matchups. <strong>"📇 Bracket"</strong> (💎) lists all 16 alliances and what you've recorded about them. <strong>"🔍 Scout"</strong> (💎) opens one alliance: your record against them and how the week projects. <strong>"🛣️ My path"</strong> (💎) walks your likely route through the bracket and names which alliances to scout first. <strong>"🔍 Trends"</strong> shows the days your alliance wins and loses.</li>
+      <li><strong>Write row:</strong> <strong>"✏️ Enter daily score"</strong> records a day's result. <strong>"➕ Add or edit alliance"</strong> records an alliance's tag, warzone, power, members and gift level. <strong>"✏️ Declare this week"</strong> marks whether you're pushing to win or saving for a later week, and can tell members. <strong>"➕ Start a new league"</strong> or <strong>"➕ Start next week's rows"</strong> appears when there's something to start. <strong>"⚙️ Sheet setup and check"</strong> jumps into setup.</li>
+      <li><strong>Catching up:</strong> <strong>"Enter weekly results"</strong> fills in any past week, <strong>"🔢 Set an alliance's rank"</strong> records where an alliance sits in the bracket, and <strong>"✏️ Edit league details"</strong> corrects the season, tier or group.</li>
+    </ul>
+    💎 buttons render disabled on the free tier so officers can see at a glance what <code>/upgrade</code> unlocks.
+  </li>
+</ul>
+<p><strong>📣 Posts the bot can make for you.</strong> Each has its own on/off switch, channel and (where it runs on a clock) time. <strong>"🔔 Daily score prompt"</strong> asks leadership for yesterday's score each morning, Tuesday through Sunday, with a button to record it. <strong>"📣 Event posts"</strong> fire as you record results: where the week stands after each day, plus 💎 your next opponent and 💎 a season recap. <strong>"📣 Day theme reminder"</strong> tells members what today's duel rewards, Monday to Saturday, and can carry a standing note from leadership. It needs no tracker setup and no sheet.</p>
+<hr>
+<h2 id="champion-duel">👑 Champion Duel</h2>
+<p>Scout players, simulate matches, and follow your alliance through Champion Duel. Anyone in your server can open it, and every squad, line-up and group your members record makes the predictions better for every alliance. 💎 Premium adds odds of advancing and head to head reads: an opponent's typical line-up and what to set against it. Open <code>/champion_duel</code> for the hub.</p>
+<ul>
+  <li><code>/champion_duel</code>: <strong>Champion Duel hub</strong> (everyone). The first time, <strong>"⚙️ Set your warzone"</strong> tells the bot where your alliance plays, then <strong>"➕ Add your Participating Warzones"</strong> takes the 16 warzones listed at the bottom of the in-game Match Overview box, plus the start date.
+    <ul>
+      <li><strong>Yours:</strong> <strong>"🏅 Your standing"</strong> shows where you sit in your stage (claim your account first with <strong>"🔗 Tell us which account is yours"</strong>). <strong>"🏰 Your alliance"</strong> shows where all of your players are, across every group. Before you've claimed an account, <strong>"🏟️ Your group"</strong> lists your group instead. Inside these screens, <strong>"🔮 Odds of advancing"</strong> (💎) shows how often each player gets through, across thousands of simulated stages.</li>
+      <li><strong>Every day:</strong> <strong>"🎯 Head to head"</strong> (💎) compares you with one opponent: their typical line-up, your recommended line-up, and how other line-ups would fare. <strong>"🔮 Today's picks"</strong> builds a card of the day's matchups that you can post to a channel.</li>
+      <li><strong>Any time:</strong> <strong>"🔍 Find a player"</strong> looks up a player's squads and power. <strong>"🆚 Simulate a match"</strong> predicts any two players, and you can post the result.</li>
+      <li><strong>Recording:</strong> <strong>"📥 Record a group"</strong>, <strong>"✏️ Change your warzone"</strong> and <strong>"➕ Add a Champion Duel"</strong>. A player's card adds <strong>"✏️ Record their squads"</strong>, <strong>"➕ Record a line-up"</strong>, <strong>"🏅 Set their group"</strong>, and <strong>"🔗 This is my account"</strong>.</li>
+    </ul>
+    Premium buttons show with a 🔒 and are disabled on the free tier, so members can see what <code>/upgrade</code> unlocks.
+  </li>
 </ul>
 <hr>
 <h2 id="survey">📋 Survey</h2>
