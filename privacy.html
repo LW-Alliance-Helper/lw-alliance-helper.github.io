@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body><header class="site-header"><nav class="nav" aria-label="Main navigation"><a class="brand" href="index.html"><img src="assets/lw-alliance-helper-logo.png" alt="LW Alliance Helper bot logo"><span>LW Alliance Helper</span></a><button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button><div class="nav-links"><a class="" href="index.html">Home</a><a class="" href="setup.html">Setup</a><a class="" href="commands.html">Commands</a><a class="" href="pricing.html">Pricing</a><a class="active" href="privacy.html">Privacy</a><a class="" href="terms.html">Terms</a></div></nav></header><main class="container"><article class="content-card"><h1 id="privacy-policy">Privacy Policy</h1>
-<p><em>Last updated: September 5, 2026</em></p>
+<p><em>Last updated: September 30, 2026</em></p>
 <p>This Privacy Policy explains what information LW Alliance Helper (the &quot;Bot&quot;) collects, how it is used, and how it is stored. By adding LW Alliance Helper to your Discord server, or by being a member of a server where it is installed, you agree to this policy.</p>
 <hr>
 <h2 id="who-we-are">Who We Are</h2>
@@ -31,7 +31,7 @@
 <thead><tr><th>What</th><th>Where it lives</th><th>Who owns it</th></tr></thead>
 <tbody>
 <tr><td>Power scores, growth snapshots, train history, participation logs, member roster (when synced), survey responses, birthdays, storm sign-ups, weekly storm rosters, post-event attendance, recruiting/transfer applicant tracking</td><td><strong>Your Google Sheet</strong></td><td><strong>You.</strong> The bot writes; your Sheet is where it lives.</td></tr>
-<tr><td>Wizard answers, channel/role IDs, schedule settings, draft state, event sign-ups, premium assignment, persistent view registry</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is config and bookkeeping, not alliance data.</td></tr>
+<tr><td>Wizard answers, channel/role IDs, schedule settings, draft state, event sign-ups, Leadership Duties lists and reminders, premium assignment, persistent view registry</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is config and bookkeeping, not alliance data.</td></tr>
 <tr><td>Champion Duel tournament records (the registration list, group standings, results and line-ups)</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is tournament information the game publishes, not alliance data.</td></tr>
 <tr><td>Alliance Duel (VS) league records (day scores, week results and the league table)</td><td>Bot&#x27;s SQLite database (private, hosted on Railway)</td><td>The bot. This is league information the game shows every alliance in the bracket, not alliance data.</td></tr>
 </tbody>
@@ -56,7 +56,7 @@
 <p><strong>From your Google Sheet (submitted by your members):</strong></p>
 <ul><li>Any data your members submit through the survey feature (e.g. squad powers, profession, game statistics). The specific fields depend on the questions you configure.</li><li>Birthday data, if you configure birthday tracking and have that information in your sheet</li></ul>
 <p><strong>Configuration data:</strong></p>
-<ul><li>Your Google Sheet ID</li><li>Your server&#x27;s configured timezone, channels, roles, and feature settings</li></ul>
+<ul><li>Your Google Sheet ID</li><li>Your server&#x27;s configured timezone, channels, roles, and feature settings</li><li><strong>Leadership Duties</strong> (a Premium feature): your duty list (names, descriptions and categories), who is assigned to each duty by Discord ID, reminder messages and schedules, and where the contact buttons are posted. If someone assigned leaves your server, the display name they had is kept next to their open position until leadership edits that duty. Contact threads are ordinary Discord threads; the bot does not store what is written in them.</li></ul>
 <p><strong>Champion Duel records:</strong> we keep a record of the in-game grouping information supplied by our users (including the registration list, group standings, results and line-ups) in Champion Duel&#x27;s own database rather than in your Google Sheet. All of it comes from what the game shows players within that grouping.</p>
 <p><strong>Alliance Duel (VS) records:</strong> we keep a record of the league information supplied by our users (including day scores, week results and the league table) in the bot&#x27;s own database rather than only in your Google Sheet. All of it comes from what the game shows the alliances in that league.</p>
 <hr>
