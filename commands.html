@@ -30,7 +30,7 @@
 </figure>
 <hr>
 <h2 id="setup-hub">⚙️ Setup Hub</h2>
-<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Growth Breakdown, Shiny Tasks, Alliance Duel (VS), and (💎 Premium) Member Sync. Three more buttons handle housekeeping: <strong>"View Configuration"</strong> prints every wizard's saved answers in one place, <strong>"📢 Release announcements: ON / OFF"</strong> toggles the leadership-channel embed the bot posts on each new major or minor release (on by default), and <strong>"Reset"</strong> clears your server's configuration so you can start over.</p>
+<p>One command opens the whole configuration surface. <code>/setup</code> shows your alliance's current configuration plus a button for every feature wizard: Core Setup, Events, Train, Birthdays, Desert Storm, Canyon Storm, Survey, Growth, Shiny Tasks, Alliance Duel (VS), and (💎 Premium) Member Sync. Three more buttons handle housekeeping: <strong>"View Configuration"</strong> prints every wizard's saved answers in one place, <strong>"📢 Release announcements: ON / OFF"</strong> toggles the leadership-channel embed the bot posts on each new major or minor release (on by default), and <strong>"Reset"</strong> clears your server's configuration so you can start over.</p>
 <ul><li><code>/setup</code>: Open the setup hub. First-time use walks Core Setup (member role, leadership role, leadership channel, timezone, Google Sheet). After that, the hub lets you pick any feature to add, edit, or disable.</li></ul>
 <hr>
 <h2 id="event-announcements">📣 Event Announcements</h2>
@@ -148,12 +148,13 @@
 </ul>
 <hr>
 <h2 id="growth-tracking">📈 Growth Tracking</h2>
-<p>Take periodic snapshots of your members' stats to track alliance growth over time. Each snapshot also classifies every member's percent change into a bucket (<strong>Increased</strong>, <strong>Steady</strong>, <strong>Low</strong>, <strong>None</strong>, or <strong>Decline</strong>) written to a separate <code>Growth Breakdown</code> sheet tab so you can see who is climbing and who is stalled at a glance.</p>
+<p>Take periodic snapshots of your members' stats to track alliance growth over time. Each snapshot also classifies every member's percent change into a bucket (<strong>Increased</strong>, <strong>Steady</strong>, <strong>Low</strong>, <strong>No Change</strong>, or <strong>Decline</strong>) written to a separate <code>Growth Breakdown</code> sheet tab so you can see who is climbing and who is stalled at a glance.</p>
 <ul>
-  <li><code>/setup</code> → <strong>"📈 Growth"</strong>: Configure source tab, metrics to track, and snapshot schedule.</li>
-  <li><code>/setup</code> → <strong>"📊 Growth Breakdown"</strong>: 💎 Configure the breakdown auto-post channel, bucket filter, custom thresholds, and custom bucket labels. The breakdown <em>computation</em> ships on every tier; this wizard unlocks the customisation layer.</li>
-  <li><code>/growth overview</code>: Show growth status with options to run a snapshot, view the most recent breakdown, or edit config.</li>
-  <li><code>/growth breakdown</code>: Jump straight to the most-recent bucket breakdown (Increased / Steady / Low / None / Decline), rendered as an ephemeral embed grouped by metric and bucket.</li>
+  <li><code>/growth</code>: Open the growth hub: whether tracking is on, the schedule with the next and latest snapshot, your metrics, and buttons for the breakdown, a snapshot now, and setup.</li>
+  <li><code>/growth</code> → <strong>"📊 Breakdown"</strong>: See who grew and who stalled between two snapshots, grouped by metric and bucket, with a dropdown of earlier breakdowns.</li>
+  <li><code>/growth</code> → <strong>"📸 Run snapshot now"</strong>: Record today's numbers right away. Running it again the same day updates them.</li>
+  <li><code>/growth</code> → <strong>"⚙️ Open setup"</strong> (or <code>/setup</code> → <strong>"📈 Growth"</strong>): Configure source tab, metrics to track, and snapshot schedule.</li>
+  <li><code>/growth</code> → <strong>"📊 Breakdown"</strong> → <strong>"⚙️ Open setup"</strong>: 💎 Configure the breakdown auto-post channel, bucket filter, custom thresholds, and custom bucket labels. The breakdown itself works on every tier; this wizard unlocks the customization layer.</li>
 </ul>
 <hr>
 <h2 id="shiny-tasks">🌟 Shiny Tasks</h2>
