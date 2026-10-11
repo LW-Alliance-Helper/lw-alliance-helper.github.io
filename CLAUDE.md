@@ -34,11 +34,20 @@ bot itself) has its own `CLAUDE.md` with bot-side conventions.
 | `commands.html` | Every slash command grouped by feature (📣 Events, 🚂 Train, 🎂 Birthdays, ⚔️ DS, 🏜️ CS, 📋 Survey, 📈 Growth, 💎 Member Sync, 🔧 Utilities). |
 | `pricing.html` | Free vs Premium comparison. Plan cards + full feature comparison table + Premium-only features. |
 | `privacy.html` / `terms.html` | Legal. |
-| `assets/` | Logo, premium icon, `nav.js`, `stats.json` (alliance count). |
+| `assets/` | Logo, premium icon, `nav.js`, `stats.json` (alliance count, and the release the bot is running). |
 | `styles.css` | All styling. |
 
 `stats.json` is updated daily by `stats_publisher.py` in the bot repo
-via the GitHub Contents API.
+via the GitHub Contents API. The home page's "Latest Release" line is
+written into `index.html` so it always shows, and the `version` /
+`released` pair in `stats.json` replaces it once the bot has published
+one. Set the written version and date at each release.
+
+**Support is the Community Server and email, never a GitHub link.**
+The bot's repo is private, so a link into it is a 404 for a visitor.
+There is no "Report an issue" or "Roadmap" link. Questions and data
+removal requests point at the Community Server (a channel invite where
+one channel is meant) or `lwalliancehelper@gmail.com`.
 
 ---
 

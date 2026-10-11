@@ -9,7 +9,7 @@ Looking for the bot itself? It's an invite link, setup walkthrough, command refe
 - **Commands**: <https://lw-alliance-helper.github.io/commands.html>
 - **Pricing**: <https://lw-alliance-helper.github.io/pricing.html>
 
-The bot code lives in the companion repo: <https://github.com/LW-Alliance-Helper/lw-alliance-helper-bot>
+The bot's own code is in a private repository.
 
 ---
 

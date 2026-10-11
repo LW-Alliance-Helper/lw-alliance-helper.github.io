@@ -186,7 +186,7 @@ ul,ol{padding-left:1.35rem}
 .footer-links a{color:#fff!important;}
 
 /* ── Release info block ──────────────────────────────────────────────────
-   Compact "Latest Release" + changelog/roadmap links. Lives inside
+   Compact "Latest Release" + the release notes link. Lives inside
    .hero-column under the Community CTA. Signals the bot is actively
    shipping without needing a full-width strip. Update the version line
    inline with each release. Spacing handled by parent .hero-column gap. */
