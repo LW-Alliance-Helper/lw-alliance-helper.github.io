@@ -1,7 +1,7 @@
 # LW Alliance Helper website project context
 
 Public-facing GitHub Pages site for **LW Alliance Helper** (the
-Discord bot). Hosted at <https://lw-alliance-helper.github.io>.
+Discord bot). Hosted at <https://lwalliancehelper.com>.
 
 **This file carries context across chat sessions.** New chats in this
 repo auto-load this. Companion repo: `../lw-alliance-helper-bot` (the

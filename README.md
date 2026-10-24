@@ -1,13 +1,13 @@
 # LW Alliance Helper website
 
-Source for the public site at **<https://lw-alliance-helper.github.io>**.
+Source for the public site at **<https://lwalliancehelper.com>**.
 
 Looking for the bot itself? It's an invite link, setup walkthrough, command reference, pricing, and privacy policy:
 
-- **Live site**: <https://lw-alliance-helper.github.io>
-- **Setup guide**: <https://lw-alliance-helper.github.io/setup.html>
-- **Commands**: <https://lw-alliance-helper.github.io/commands.html>
-- **Pricing**: <https://lw-alliance-helper.github.io/pricing.html>
+- **Live site**: <https://lwalliancehelper.com>
+- **Setup guide**: <https://lwalliancehelper.com/setup.html>
+- **Commands**: <https://lwalliancehelper.com/commands.html>
+- **Pricing**: <https://lwalliancehelper.com/pricing.html>
 
 The bot's own code is in a private repository.
 
