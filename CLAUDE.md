@@ -49,7 +49,10 @@ it at every release of the LW Alliance Helper app (the app's
 `package.json` version, and the day it reached production). The app's
 `/api/health` returns its version but doesn't allow other sites to read
 it, so the page can't fill it in itself until the app allows
-`lwalliancehelper.com` to.
+`lwalliancehelper.com` to. The "Full release notes" link under both
+lines is an invite to the Community Server's #changelog, where Kevin
+posts both bot and app release notes (Kevin, 2026-11-09). Never link
+the app's or bot's GitHub Releases: both repos are private.
 
 **Support is the Community Server and email, never a GitHub link.**
 The bot's repo is private, so a link into it is a 404 for a visitor.
