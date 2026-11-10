@@ -32,6 +32,7 @@ bot itself) has its own `CLAUDE.md` with bot-side conventions.
 | `index.html` | Landing page. Hero, feature overview, day-to-day quick reference table, troubleshooting. Includes the auto-updating alliance-count badge. |
 | `setup.html` | Step-by-step setup guide. Inviting the bot, sharing the Sheet, walking through each `/setup` feature wizard. |
 | `commands.html` | Every slash command grouped by feature (📣 Events, 🚂 Train, 🎂 Birthdays, ⚔️ DS, 🏜️ CS, 📋 Survey, 📈 Growth, 💎 Member Sync, 🔧 Utilities). |
+| `app.html` | Introduces the LW Alliance Helper app (https://app.lwalliancehelper.com): how leadership links the server, what members and leadership get, and the one Premium part (uploading screenshots for a game profile). Linked from every page's header and footer. |
 | `pricing.html` | Free vs Premium comparison. Plan cards + full feature comparison table + Premium-only features. |
 | `privacy.html` / `terms.html` | Legal. |
 | `assets/` | Logo, premium icon, `nav.js`, `stats.json` (alliance count, and the release the bot is running). |
