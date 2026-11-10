@@ -39,10 +39,17 @@ bot itself) has its own `CLAUDE.md` with bot-side conventions.
 | `styles.css` | All styling. |
 
 `stats.json` is updated daily by `stats_publisher.py` in the bot repo
-via the GitHub Contents API. The home page's "Latest Release" line is
+via the GitHub Contents API. The home page's "Latest bot release" line is
 written into `index.html` so it always shows, and the `version` /
 `released` pair in `stats.json` replaces it once the bot has published
 one. Set the written version and date at each release.
+
+**The "Latest app release" line under it is written by hand only.** Set
+it at every release of the LW Alliance Helper app (the app's
+`package.json` version, and the day it reached production). The app's
+`/api/health` returns its version but doesn't allow other sites to read
+it, so the page can't fill it in itself until the app allows
+`lwalliancehelper.com` to.
 
 **Support is the Community Server and email, never a GitHub link.**
 The bot's repo is private, so a link into it is a 404 for a visitor.
